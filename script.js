@@ -277,13 +277,21 @@ function getFirstName(name) {
 
 /* ── READ-ALOUD SPEED ───────────────────────────────
    One setting for every 🔊 on the site: Normal, Slow,
-   Slower. It multiplies each speaker's own rate, so a
-   paragraph and an answer choice slow down together. The
-   choice is remembered on this device only. */
+   Slower, remembered on this device only.
+   Lowering the voice rate alone is not enough: measured
+   10/4 on the Mac default voice (Samantha), rate 0.6 read a
+   sentence only ~19% slower than rate 1, and 0.3 only ~39%.
+   So the slow settings ALSO read in short phrases with a
+   pause after each one — pauses slow the reading on every
+   voice, whatever it does with the rate.
+     factor  multiplies the speaker's own rate
+     chunk   most words per phrase (0 = read it all at once);
+             a phrase also ends at , ; : . ! ?
+     pause   silence after each phrase, in ms */
 const READ_SPEEDS = [
-  { label: 'Normal', factor: 1 },
-  { label: 'Slow',   factor: 0.8 },
-  { label: 'Slower', factor: 0.65 }
+  { label: 'Normal', factor: 1,    chunk: 0, pause: 0   },
+  { label: 'Slow',   factor: 0.75, chunk: 6, pause: 700  },
+  { label: 'Slower', factor: 0.6,  chunk: 4, pause: 1000 }
 ];
 const SPEED_KEY = 'rliab_read_speed_v1';
 let readSpeed = 0;
@@ -313,7 +321,11 @@ function speakNear(btn) {
 }
 
 let hlTimer = null;
+let speechToken = 0;     // bumped on every stop, so a phrase chain that was stopped never resumes
+let chunkTimer = null;   // the pause between phrases
 function stopActiveSpeech() {
+  speechToken++;
+  clearTimeout(chunkTimer);
   clearTimeout(hlTimer);
   window.speechSynthesis.cancel();
   document.querySelectorAll('.wrd.hl').forEach(e => e.classList.remove('hl'));
@@ -356,21 +368,57 @@ function speakSpans(btn, el, rate) {
   activeSpeakBtn = btn;
   btn.textContent = '⏹';
 
-  let hlIdx = 0;
-  const u = new SpeechSynthesisUtterance(spoken(spans.map(s => s.textContent).join(' ')));
-  u.lang = 'en-US'; u.rate = (rate || 0.9) * READ_SPEEDS[readSpeed].factor;
-  u.onboundary = e => {
-    if (e.name !== 'word') return;
-    spans.forEach(s => s.classList.remove('hl'));
-    if (spans[hlIdx]) spans[hlIdx].classList.add('hl');
-    hlIdx++;
-  };
-  u.onend = () => {
+  const speed  = READ_SPEEDS[readSpeed];
+  const chunks = phraseChunks(spans, speed.chunk);
+  const token  = speechToken;
+  const finish = () => {
     spans.forEach(s => s.classList.remove('hl'));
     if (activeSpeakBtn === btn) { btn.textContent = '🔊'; activeSpeakBtn = null; }
   };
-  addHighlightFallback(u, spans);
-  window.speechSynthesis.speak(u);
+
+  // One utterance per phrase, a pause, then the next — the word
+  // highlight runs inside each phrase exactly as it did before.
+  const sayPhrase = k => {
+    if (token !== speechToken) return;
+    if (k >= chunks.length) { finish(); return; }
+    const part = chunks[k];
+    let hlIdx = 0;
+    const u = new SpeechSynthesisUtterance(spoken(part.map(s => s.textContent).join(' ')));
+    u.lang = 'en-US'; u.rate = (rate || 0.9) * speed.factor;
+    u.onboundary = e => {
+      if (e.name !== 'word') return;
+      part.forEach(s => s.classList.remove('hl'));
+      if (part[hlIdx]) part[hlIdx].classList.add('hl');
+      hlIdx++;
+    };
+    u.onend = () => {
+      part.forEach(s => s.classList.remove('hl'));
+      if (token !== speechToken) return;
+      chunkTimer = setTimeout(() => sayPhrase(k + 1), k + 1 < chunks.length ? speed.pause : 0);
+    };
+    u.onerror = e => {
+      if (token !== speechToken || e.error === 'interrupted' || e.error === 'canceled') return;
+      speechToken++;   // a voice error ends the reading instead of skipping ahead
+      finish();
+    };
+    addHighlightFallback(u, part);
+    window.speechSynthesis.speak(u);
+  };
+  sayPhrase(0);
+}
+
+/* Split a run of word spans into short phrases: at most `max` words,
+   and a phrase always ends after , ; : . ! ? (closing quotes allowed). */
+function phraseChunks(spans, max) {
+  if (!max) return [spans];
+  const out = [];
+  let cur = [];
+  spans.forEach(s => {
+    cur.push(s);
+    if (cur.length >= max || /[,;:.!?…]['’”)"]*$/.test(s.textContent)) { out.push(cur); cur = []; }
+  });
+  if (cur.length) out.push(cur);
+  return out;
 }
 
 /* ── ITEM-TYPE HELPERS ──────────────────────────────
