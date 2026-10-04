@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Read-Aloud Speed Test</title>
+<!--
+  Teacher tool: open this on any device (a student Chromebook, a Mac, an iPad)
+  to hear and time the review's three read-aloud speeds on THAT device's voice.
+  It uses the same rates and sentence pauses as script.js (READ_SPEEDS):
+  Normal 0.9 · Slow 0.9×0.75 + 700 ms between sentences · Slower 0.9×0.55 + 1200 ms.
+  Keep these numbers in step with script.js if the speeds change.
+-->
+<style>
+  :root { --primary:#0f766e; --text:#1e293b; --muted:#64748b; --line:#ccfbf1; --bg:#f0fdfa; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background:#134e4a; color:var(--text); }
+  main { max-width: 760px; margin: 24px auto; background:#fff; border-radius:16px; padding: 24px 20px; }
+  h1 { margin:0 0 4px; color:var(--primary); font-size:1.5rem; }
+  .sub { color:var(--muted); margin:0 0 18px; font-size:.95rem; }
+  .sample { font-family: Georgia, serif; background:var(--bg); border-left:5px solid #5eead4; border-radius:0 10px 10px 0; padding:10px 14px; line-height:1.7; }
+  .row { display:flex; flex-wrap:wrap; gap:10px; margin:18px 0; }
+  button { font: inherit; font-weight:600; border:2px solid var(--primary); background:#fff; color:var(--primary); border-radius:999px; padding:8px 16px; cursor:pointer; }
+  button.main { background:var(--primary); color:#fff; }
+  button:disabled { opacity:.5; cursor:not-allowed; }
+  table { width:100%; border-collapse:collapse; margin-top:8px; }
+  th, td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); }
+  th { color:var(--muted); font-size:.85rem; font-weight:600; }
+  .big { font-size:1.15rem; font-weight:700; }
+  .note { color:var(--muted); font-size:.88rem; line-height:1.5; }
+  .device { background:#fffbeb; border:1px solid #fde68a; border-radius:10px; padding:10px 12px; font-size:.9rem; line-height:1.6; word-break: break-word; }
+</style>
+</head>
+<body>
+<main>
+  <h1>🔊 Read-Aloud Speed Test</h1>
+  <p class="sub">Plays and times the review's three reading speeds on <strong>this device's</strong> voice.</p>
+
+  <p class="sample" id="sample">On Tuesday, Ms. Rivera showed Mateo's class a video about where garbage goes. Most of it, it turned out, rides in a truck to a giant hill outside of town and just sits there for years and years. Ms. Rivera said that almost a third of what a family throws away is food scraps: banana peels, apple cores, coffee grounds, the ends of carrots.</p>
+
+  <div class="row">
+    <button class="main" id="runAll">▶ Play all three and time them</button>
+    <button data-play="0">Play Normal</button>
+    <button data-play="1">Play 🐢 Slow</button>
+    <button data-play="2">Play 🐢🐢 Slower</button>
+    <button id="stop">⏹ Stop</button>
+  </div>
+
+  <table>
+    <thead><tr><th>Speed</th><th>Time</th><th>Compared with Normal</th></tr></thead>
+    <tbody id="results">
+      <tr><td>Normal</td><td>—</td><td>—</td></tr>
+      <tr><td>🐢 Slow</td><td>—</td><td>—</td></tr>
+      <tr><td>🐢🐢 Slower</td><td>—</td><td>—</td></tr>
+    </tbody>
+  </table>
+
+  <h2 style="font-size:1rem;margin:22px 0 6px;">This device</h2>
+  <div class="device" id="device">Loading voices…</div>
+  <p class="note">Screenshot this page after the test and send it over — the times and the voice name are what matter.</p>
+</main>
+
+<script>
+const SPEEDS = [
+  { label: 'Normal',       factor: 1,    pause: 0    },
+  { label: '🐢 Slow',      factor: 0.75, pause: 700  },
+  { label: '🐢🐢 Slower',  factor: 0.55, pause: 1200 }
+];
+const BASE_RATE = 0.9;
+const text = document.getElementById('sample').textContent.trim();
+const times = [null, null, null];
+let token = 0, pauseTimer = null;
+
+function sentences(t) {
+  // same rule as the review: end after . ! ?, never after a title like "Ms."
+  const words = t.split(/\s+/), out = [];
+  let cur = [];
+  words.forEach(w => {
+    cur.push(w);
+    if (/[.!?…]['’”)"]*$/.test(w) && !/^(Mr|Mrs|Ms|Dr|St)\.$/.test(w)) { out.push(cur.join(' ')); cur = []; }
+  });
+  if (cur.length) out.push(cur.join(' '));
+  return out;
+}
+
+function stopAll() {
+  token++;
+  clearTimeout(pauseTimer);
+  speechSynthesis.cancel();
+}
+
+function play(i) {
+  stopAll();
+  const my = token, s = SPEEDS[i];
+  const parts = s.pause ? sentences(text) : [text];
+  const t0 = performance.now();
+  return new Promise(resolve => {
+    const say = k => {
+      if (my !== token) return resolve(null);
+      if (k >= parts.length) return resolve(Math.round(performance.now() - t0));
+      const u = new SpeechSynthesisUtterance(parts[k]);
+      u.lang = 'en-US';
+      u.rate = BASE_RATE * s.factor;
+      u.onend = () => { if (my === token) pauseTimer = setTimeout(() => say(k + 1), k + 1 < parts.length ? s.pause : 0); };
+      u.onerror = e => { if (e.error !== 'interrupted' && e.error !== 'canceled') resolve('error: ' + e.error); };
+      speechSynthesis.speak(u);
+    };
+    say(0);
+  });
+}
+
+function showResults() {
+  const rows = document.querySelectorAll('#results tr');
+  times.forEach((ms, i) => {
+    const cells = rows[i].children;
+    cells[1].innerHTML = typeof ms === 'number' ? `<span class="big">${(ms / 1000).toFixed(1)} s</span>` : (ms || '—');
+    cells[2].textContent = (i && typeof ms === 'number' && typeof times[0] === 'number')
+      ? `${Math.round((ms / times[0] - 1) * 100)}% longer` : '—';
+  });
+}
+
+async function runAll() {
+  const btns = document.querySelectorAll('button:not(#stop)');
+  btns.forEach(b => b.disabled = true);
+  for (let i = 0; i < 3; i++) {
+    const ms = await play(i);
+    if (ms === null) break;          // stopped
+    times[i] = ms; showResults();
+    await new Promise(r => setTimeout(r, 800));
+  }
+  btns.forEach(b => b.disabled = false);
+}
+
+function showDevice() {
+  const voices = speechSynthesis.getVoices();
+  if (!voices.length) return;
+  const en = voices.filter(v => /^en(-|_|$)/i.test(v.lang));
+  const def = voices.find(v => v.default);
+  document.getElementById('device').innerHTML =
+    `<div><strong>Default voice:</strong> ${def ? def.name + (def.localService ? '' : ' (online)') : 'none reported'}</div>` +
+    `<div><strong>English voices:</strong> ${en.length} — ${en.slice(0, 8).map(v => v.name).join(', ')}${en.length > 8 ? ', …' : ''}</div>` +
+    `<div><strong>Browser:</strong> ${navigator.userAgent}</div>`;
+}
+
+document.getElementById('runAll').onclick = runAll;
+document.getElementById('stop').onclick = stopAll;
+document.querySelectorAll('[data-play]').forEach(b => b.onclick = async () => {
+  const i = Number(b.dataset.play);
+  const ms = await play(i);
+  if (typeof ms === 'number') { times[i] = ms; showResults(); }
+});
+speechSynthesis.onvoiceschanged = showDevice;
+showDevice();
+</script>
+</body>
+</html>
