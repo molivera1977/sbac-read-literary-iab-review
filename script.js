@@ -275,6 +275,43 @@ function getFirstName(name) {
   return parts.length > 1 ? parts[1].trim().split(' ')[0] : name.split(' ')[0];
 }
 
+/* ── READ-ALOUD SPEED ───────────────────────────────
+   One setting for every 🔊 on the site: Normal, Slow,
+   Slower. It multiplies each speaker's own rate, so a
+   paragraph and an answer choice slow down together. The
+   choice is remembered on this device only. */
+const READ_SPEEDS = [
+  { label: 'Normal', factor: 1 },
+  { label: 'Slow',   factor: 0.8 },
+  { label: 'Slower', factor: 0.65 }
+];
+const SPEED_KEY = 'rliab_read_speed_v1';
+let readSpeed = 0;
+try { readSpeed = Math.min(READ_SPEEDS.length - 1, Math.max(0, parseInt(localStorage.getItem(SPEED_KEY), 10) || 0)); } catch (e) { readSpeed = 0; }
+
+function setReadSpeed(i) {
+  readSpeed = i;
+  try { localStorage.setItem(SPEED_KEY, String(i)); } catch (e) { /* the setting just won't be remembered */ }
+  stopActiveSpeech();   // the next tap starts at the new speed
+  renderSpeedBar();
+}
+
+function renderSpeedBar() {
+  document.querySelectorAll('.speed-btn').forEach(b => {
+    const on = Number(b.dataset.speed) === readSpeed;
+    b.classList.toggle('active', on);
+    b.setAttribute('aria-pressed', on ? 'true' : 'false');
+  });
+}
+
+/* Any block of words with a 🔊 just before it: the speaker reads the
+   element named by its data-read selector, inside the same row. */
+function speakNear(btn) {
+  const row = btn.parentElement;
+  const el = row && row.querySelector(btn.dataset.read || '.read-text');
+  if (el) speakSpans(btn, el, 0.9);
+}
+
 let hlTimer = null;
 function stopActiveSpeech() {
   clearTimeout(hlTimer);
@@ -321,7 +358,7 @@ function speakSpans(btn, el, rate) {
 
   let hlIdx = 0;
   const u = new SpeechSynthesisUtterance(spoken(spans.map(s => s.textContent).join(' ')));
-  u.lang = 'en-US'; u.rate = rate || 0.9;
+  u.lang = 'en-US'; u.rate = (rate || 0.9) * READ_SPEEDS[readSpeed].factor;
   u.onboundary = e => {
     if (e.name !== 'word') return;
     spans.forEach(s => s.classList.remove('hl'));
@@ -498,13 +535,16 @@ function storyFigureHTML(fig) {
   if (!fig || !fig.svg) return '';
   return `<figure class="story-figure" role="img" aria-label="${esc(fig.alt || fig.caption || 'Picture')}">
       ${fig.svg}
-      ${fig.caption ? `<figcaption>${esc(fig.caption)}</figcaption>` : ''}
+      ${fig.caption ? `<figcaption><button class="speak-btn para-speak-btn" onclick="speakNear(this)" title="Read the caption aloud">🔊</button><span class="read-text">${esc(fig.caption)}</span></figcaption>` : ''}
     </figure>`;
 }
 
 function storyNoteHTML(passage) {
   if (!passage.note) return '';
-  return `<p class="story-note"><em>${esc(passage.note)}</em></p>`;
+  return `<p class="story-note">
+      <button class="speak-btn para-speak-btn" onclick="speakNear(this)" title="Read this note aloud">🔊</button>
+      <em class="read-text">${esc(passage.note)}</em>
+    </p>`;
 }
 
 function storyFootnotesHTML(passage) {
@@ -883,7 +923,10 @@ const app = {
 
     document.getElementById('passage-body').innerHTML = `
       <div class="passage-title-card">
-        <h2 class="passage-title">${esc(passage.title)}</h2>
+        <div class="passage-title-row">
+          <button class="speak-btn" onclick="speakNear(this)" title="Read the title aloud">🔊</button>
+          <h2 class="passage-title read-text">${esc(passage.title)}</h2>
+        </div>
         <p class="passage-source">${esc(passage.source)}${passage.genre ? ' · ' + esc(passage.genre) : ''}</p>
       </div>
       ${storyNoteHTML(passage)}
@@ -1344,7 +1387,8 @@ const app = {
 
     const hint = document.createElement('div');
     hint.className = 'ht-hint';
-    hint.textContent = `👆 Tap a sentence to choose it. Tap it again to unselect it. Choose ${q.pick}.`;
+    hint.innerHTML = `<button class="speak-btn para-speak-btn" onclick="speakNear(this)" title="Read the directions aloud">🔊</button>
+      <span class="read-text">Tap a sentence to choose it. Tap it again to unselect it. Choose ${q.pick}.</span>`;
     wrap.appendChild(hint);
 
     const makeSent = text => {
@@ -1447,7 +1491,10 @@ const app = {
     wrap.className = 'options-grid cr-item';
     this.crStartSeconds = this.timerSeconds;
     wrap.innerHTML = `
-      <div class="cr-guidance">💡 ${esc(q.guidance)}</div>
+      <div class="cr-guidance">
+        <button class="speak-btn para-speak-btn" onclick="speakNear(this)" title="Read the tip aloud">🔊</button>
+        <span class="read-text">${esc(q.guidance)}</span>
+      </div>
       <textarea class="cr-textarea" id="cr-textarea" spellcheck="false"
                 placeholder="Write your answer here. Use details from the story…"></textarea>
       <div class="word-count-row">Words: <span class="word-count-val" id="cr-wc">0</span><span class="word-count-min">&nbsp;/ ${MIN_WORDS} minimum</span></div>`;
@@ -2130,6 +2177,7 @@ function stopConfetti() {
 
 /* ── BOOT ────────────────────────────────────────────── */
 app.init();
+renderSpeedBar();
 
 /* ── CLOSED-TO-STUDENTS LOCK ────────────────────────── */
 (function applyReviewLock() {

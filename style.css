@@ -1146,3 +1146,25 @@ button.answer-btn.multi-choice.incorrect .ms-box { border-color: #dc3545; backgr
   .ht-list-sent { font-size: 0.93rem; }
   .cr-textarea { min-height: 160px; }
 }
+
+/* ── read-aloud speed bar + speakers on notes, titles, captions ── */
+.speed-bar {
+  display: flex; align-items: center; justify-content: center; flex-wrap: wrap;
+  gap: 6px; margin: -16px 0 20px;
+}
+.speed-label { font-size: 0.8rem; font-weight: bold; color: #64748b; margin-right: 2px; }
+.speed-btn {
+  font-family: inherit; font-size: 0.8rem; font-weight: bold;
+  border: 2px solid #99f6e4; background: #fff; color: #0f766e;
+  border-radius: 999px; padding: 3px 12px; cursor: pointer;
+}
+.speed-btn:hover { background: #f0fdfa; }
+.speed-btn.active { background: var(--primary); border-color: var(--primary); color: #fff; }
+
+.story-note { display: flex; gap: 10px; align-items: flex-start; }
+.story-note .read-text { flex: 1; min-width: 0; }
+.passage-title-row { display: flex; align-items: center; justify-content: center; gap: 10px; }
+.story-figure figcaption { display: flex; align-items: center; justify-content: center; gap: 8px; }
+.story-figure figcaption .para-speak-btn { font-style: normal; }
+.ht-hint, .cr-guidance { display: flex; align-items: center; gap: 10px; }
+.ht-hint .read-text, .cr-guidance .read-text { flex: 1; min-width: 0; }
