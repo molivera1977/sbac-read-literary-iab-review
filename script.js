@@ -278,20 +278,20 @@ function getFirstName(name) {
 /* ── READ-ALOUD SPEED ───────────────────────────────
    One setting for every 🔊 on the site: Normal, Slow,
    Slower, remembered on this device only.
-   Lowering the voice rate alone is not enough: measured
-   10/4 on the Mac default voice (Samantha), rate 0.6 read a
-   sentence only ~19% slower than rate 1, and 0.3 only ~39%.
-   So the slow settings ALSO read in short phrases with a
-   pause after each one — pauses slow the reading on every
-   voice, whatever it does with the rate.
+   The slow settings lower the voice rate AND pause after
+   every sentence, the way a teacher reads slowly. Each
+   sentence is still read whole, so the voice keeps its
+   natural rise and fall. (10/4: breaking sentences into
+   4–6 word bits slowed it more but sounded choppy — Marcos:
+   "very odd". Rate alone barely registers on Mac voices:
+   0.9 → 0.55 measured only ~18–30% slower.)
      factor  multiplies the speaker's own rate
-     chunk   most words per phrase (0 = read it all at once);
-             a phrase also ends at , ; : . ! ?
-     pause   silence after each phrase, in ms */
+     pause   silence after each sentence, in ms (0 = read
+             the whole thing as one, the original way) */
 const READ_SPEEDS = [
-  { label: 'Normal', factor: 1,    chunk: 0, pause: 0   },
-  { label: 'Slow',   factor: 0.75, chunk: 6, pause: 700  },
-  { label: 'Slower', factor: 0.6,  chunk: 4, pause: 1000 }
+  { label: 'Normal', factor: 1,    pause: 0    },
+  { label: 'Slow',   factor: 0.75, pause: 700  },
+  { label: 'Slower', factor: 0.55, pause: 1200 }
 ];
 const SPEED_KEY = 'rliab_read_speed_v1';
 let readSpeed = 0;
@@ -369,16 +369,16 @@ function speakSpans(btn, el, rate) {
   btn.textContent = '⏹';
 
   const speed  = READ_SPEEDS[readSpeed];
-  const chunks = phraseChunks(spans, speed.chunk);
+  const chunks = speed.pause ? sentenceChunks(spans) : [spans];
   const token  = speechToken;
   const finish = () => {
     spans.forEach(s => s.classList.remove('hl'));
     if (activeSpeakBtn === btn) { btn.textContent = '🔊'; activeSpeakBtn = null; }
   };
 
-  // One utterance per phrase, a pause, then the next — the word
+  // One utterance per sentence, a pause, then the next — the word
   // highlight runs inside each phrase exactly as it did before.
-  const sayPhrase = k => {
+  const saySentence = k => {
     if (token !== speechToken) return;
     if (k >= chunks.length) { finish(); return; }
     const part = chunks[k];
@@ -394,7 +394,7 @@ function speakSpans(btn, el, rate) {
     u.onend = () => {
       part.forEach(s => s.classList.remove('hl'));
       if (token !== speechToken) return;
-      chunkTimer = setTimeout(() => sayPhrase(k + 1), k + 1 < chunks.length ? speed.pause : 0);
+      chunkTimer = setTimeout(() => saySentence(k + 1), k + 1 < chunks.length ? speed.pause : 0);
     };
     u.onerror = e => {
       if (token !== speechToken || e.error === 'interrupted' || e.error === 'canceled') return;
@@ -404,18 +404,18 @@ function speakSpans(btn, el, rate) {
     addHighlightFallback(u, part);
     window.speechSynthesis.speak(u);
   };
-  sayPhrase(0);
+  saySentence(0);
 }
 
-/* Split a run of word spans into short phrases: at most `max` words,
-   and a phrase always ends after , ; : . ! ? (closing quotes allowed). */
-function phraseChunks(spans, max) {
-  if (!max) return [spans];
+/* Split a run of word spans into whole sentences: a sentence ends after
+   . ! ? (closing quotes allowed), but never after a title like "Ms." */
+function sentenceChunks(spans) {
   const out = [];
   let cur = [];
   spans.forEach(s => {
     cur.push(s);
-    if (cur.length >= max || /[,;:.!?…]['’”)"]*$/.test(s.textContent)) { out.push(cur); cur = []; }
+    const t = s.textContent;
+    if (/[.!?…]['’”)"]*$/.test(t) && !/^(Mr|Mrs|Ms|Dr|St)\.$/.test(t)) { out.push(cur); cur = []; }
   });
   if (cur.length) out.push(cur);
   return out;
