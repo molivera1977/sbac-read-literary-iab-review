@@ -8,7 +8,7 @@
      P1 (6 items) realistic fiction that teaches a PROCESS,
                   with an embedded picture
      P2 (5 items) sports fiction with a flashback frame
-     P3 (4 items) traditional-style folktale with a test
+     P3 (4 items) traditional-style fable with a test
                   and a moral
    Item mix: 7 MC (incl. 1 summary-gap) · 3 choose-more-than-one
              2 EBSR (Part A + Part B, a point each)
@@ -21,123 +21,110 @@ window.FORM_B = {
   passages: [
 
     /* ── PASSAGE 1 ─────────────────────────────────────
-       Realistic fiction that teaches a process. A girl and
-       her uncle turn a milk jug into a bird feeder, one
-       index card at a time, and a picture shows the parts. */
+       Realistic fiction that teaches a process. Two
+       cousins build a kite from garage leftovers, step by
+       step, and a picture shows how the parts fit. */
     {
       id: "B-P1",
-      title: "A Window for the Birds",
+      title: "Two Sticks and a Bag",
       source: "Original practice passage",
       genre: "Realistic fiction",
       figure: {
-        after: 9,
-        caption: "A milk-jug bird feeder like the one Amira and Uncle Sami built",
-        alt: "A drawing of a plastic milk jug hanging by a string from a maple branch. The string is tied around the neck of the jug, just under the blue cap, and the jug has a handle on one side. A square window is cut in the front. Below the window, a wooden spoon pokes through the jug and sticks out on both sides as a perch. Birdseed fills the bottom of the jug up to just below the window, and drops of water drip out of small drainage holes in the bottom.",
+        after: 8,
+        caption: "A homemade kite like the one Malik and Desmond built",
+        alt: "A drawing of a diamond-shaped kite. A long stick runs from top to bottom, and a short stick crosses it near the top, tied in an X. A frame string runs around the four ends of the sticks, and a plastic sail covers the frame. A bridle string is tied to the top and bottom of the long stick, with a small loop where the flying line is tied. A tail with bows hangs from the bottom.",
         svg: '<svg viewBox="0 0 600 340" xmlns="http://www.w3.org/2000/svg" font-family="Georgia, serif" font-size="14">' +
              '<rect width="600" height="340" rx="12" fill="#fffdf6"/>' +
-             // maple branch
-             '<path d="M150 34 Q300 24 452 36" fill="none" stroke="#6d4c41" stroke-width="12" stroke-linecap="round"/>' +
-             // jug body
-             '<path d="M284 90 L316 90 L316 104 Q368 112 374 142 L374 290 Q374 304 360 304 L240 304 Q226 304 226 290 L226 142 Q232 112 284 104 Z" fill="#f4f8fb" stroke="#607d8b" stroke-width="4"/>' +
-             // handle
-             '<g fill="none" stroke="#607d8b" stroke-width="4"><path d="M330 108 C396 100 404 176 374 184"/><path d="M340 118 C380 114 386 164 374 170"/></g>' +
-             // string, tied around the neck
-             '<g stroke="#8d6e63" stroke-width="2.5" fill="none"><path d="M300 36 L285 94"/><path d="M300 36 L315 94"/><path d="M283 97 L317 97" stroke-width="3"/></g>' +
-             // cap
-             '<rect x="281" y="72" width="38" height="18" rx="4" fill="#1e88e5" stroke="#0d47a1" stroke-width="2"/>' +
-             // birdseed
-             '<path d="M229 238 L371 238 L371 290 Q371 301 360 301 L240 301 Q229 301 229 290 Z" fill="#e2bf74"/>' +
-             '<g fill="#a1783a"><circle cx="242" cy="262" r="2"/><circle cx="258" cy="282" r="2"/><circle cx="276" cy="266" r="2"/><circle cx="292" cy="290" r="2"/><circle cx="310" cy="270" r="2"/><circle cx="326" cy="286" r="2"/><circle cx="344" cy="264" r="2"/><circle cx="358" cy="284" r="2"/><circle cx="300" cy="258" r="2"/></g>' +
-             // window
-             '<rect x="256" y="148" width="88" height="80" rx="6" fill="#5d4037" stroke="#455a64" stroke-width="3"/>' +
-             // perch (wooden spoon)
-             '<rect x="182" y="243" width="236" height="8" rx="4" fill="#a1887f" stroke="#6d4c41" stroke-width="1.5"/>' +
-             '<ellipse cx="430" cy="247" rx="16" ry="10" fill="#a1887f" stroke="#6d4c41" stroke-width="1.5"/>' +
-             // drainage holes + drips
-             '<g fill="#263238"><ellipse cx="270" cy="304" rx="3" ry="2"/><ellipse cx="300" cy="304" rx="3" ry="2"/><ellipse cx="330" cy="304" rx="3" ry="2"/></g>' +
-             '<path d="M270 310 q4 7 0 11 q-4 -4 0 -11 Z M300 314 q4 7 0 11 q-4 -4 0 -11 Z M330 310 q4 7 0 11 q-4 -4 0 -11 Z" fill="#42a5f5"/>' +
+             // sail (plastic bag)
+             '<path d="M300 28 L395 85 L300 250 L205 85 Z" fill="#bbdefb"/>' +
+             // frame string
+             '<path d="M300 28 L395 85 L300 250 L205 85 Z" fill="none" stroke="#455a64" stroke-width="2"/>' +
+             // sticks
+             '<g stroke="#8d6e43" stroke-width="5" stroke-linecap="round"><line x1="300" y1="28" x2="300" y2="250"/><line x1="205" y1="85" x2="395" y2="85"/></g>' +
+             // string tied in an X where the sticks cross
+             '<path d="M292 77 L308 93 M308 77 L292 93" stroke="#37474f" stroke-width="2.5"/>' +
+             // bridle + loop
+             '<path d="M300 40 Q352 110 352 140 Q352 170 300 230" fill="none" stroke="#c62828" stroke-width="2"/>' +
+             '<circle cx="352" cy="140" r="5" fill="none" stroke="#c62828" stroke-width="2"/>' +
+             // flying line
+             '<line x1="356" y1="144" x2="446" y2="336" stroke="#263238" stroke-width="1.5"/>' +
+             // tail with bows
+             '<path d="M300 250 q-16 16 -4 32 q12 16 -6 34" fill="none" stroke="#ef6c00" stroke-width="4"/>' +
+             '<g fill="#ef6c00"><path d="M286 276 L306 288 L306 276 L286 288 Z"/><path d="M280 310 L300 322 L300 310 L280 322 Z"/></g>' +
              // labels — left
-             '<g stroke="#607d8b" stroke-width="1.5"><line x1="176" y1="64" x2="290" y2="64"/><line x1="176" y1="188" x2="262" y2="188"/><line x1="176" y1="280" x2="252" y2="280"/><line x1="176" y1="316" x2="266" y2="306"/></g>' +
-             '<g fill="#263238" text-anchor="end"><text x="170" y="68">String</text><text x="170" y="192">Window</text><text x="170" y="284">Birdseed</text><text x="170" y="320">Drainage holes</text></g>' +
+             '<g stroke="#607d8b" stroke-width="1.5"><line x1="156" y1="32" x2="298" y2="48"/><line x1="156" y1="86" x2="212" y2="85"/><line x1="156" y1="148" x2="242" y2="150"/><line x1="156" y1="208" x2="290" y2="206"/><line x1="156" y1="300" x2="288" y2="300"/></g>' +
+             '<g fill="#263238" text-anchor="end"><text x="150" y="36">Long stick</text><text x="150" y="90">Short stick</text><text x="150" y="152">Frame string</text><text x="150" y="212">Sail (plastic bag)</text><text x="150" y="304">Tail</text></g>' +
              // labels — right
-             '<g stroke="#607d8b" stroke-width="1.5"><line x1="322" y1="81" x2="456" y2="81"/><line x1="394" y1="146" x2="456" y2="146"/><line x1="447" y1="245" x2="456" y2="242"/></g>' +
-             '<g fill="#263238"><text x="462" y="41">Maple branch</text><text x="462" y="86">Cap</text><text x="462" y="151">Handle</text><text x="462" y="238">Perch</text><text x="462" y="254">(wooden spoon)</text></g>' +
+             '<g stroke="#607d8b" stroke-width="1.5"><line x1="446" y1="110" x2="346" y2="110"/><line x1="446" y1="152" x2="359" y2="142"/><line x1="446" y1="262" x2="414" y2="264"/></g>' +
+             '<g fill="#263238"><text x="452" y="114">Bridle</text><text x="452" y="156">Loop</text><text x="452" y="266">Flying line</text></g>' +
              '</svg>'
       },
       paragraphs: [
-        "The first real snow of the year fell on Thursday night. On Friday morning, Amira stood at the kitchen window with her toast and watched three small brown birds hop along the fence. They pecked at the snow, hopped, and pecked again. There was nothing for them to find.",
-        "Uncle Sami, who lived in the apartment over the garage, came in stamping snow off his boots. He looked at the birds, and then at the empty milk jug by the recycling bin. “Those birds need a restaurant,” he said. “When I was your age, my grandfather and I built one out of a jug just like that. Want to make one tomorrow?”",
-        "That evening, Amira took a pencil and a stack of index cards out of the kitchen drawer. On the first card she wrote SUPPLIES. On the next five cards she wrote STEP 1 through STEP 5. Then she asked Uncle Sami to tell her everything he remembered, and she wrote it all down in her neatest printing. When he mixed up two of the steps, she crossed them out and made fresh cards. By bedtime, the cards sat in a tidy stack on the counter, held together with a clothespin so not one of them could get lost.",
-        "On Saturday morning, Amira read the SUPPLIES card out loud while Uncle Sami set everything on the table: the milk jug, washed and dried; a pair of strong scissors; a marker; a long nail; an old wooden spoon; a bag of birdseed; and a ball of string. “You're the boss of this project,” Uncle Sami said. “I'm just the helper with the sharp things.”",
-        "“Step one,” Amira read. “Cut a window.” Uncle Sami did not pick up the scissors until she had read the whole card. Amira drew a big square on the front of the jug, leaving about two inches of plastic below it so the seed would not spill out. The plastic was too tough for her hands, so Uncle Sami did the cutting while Amira held the jug still.",
-        "“Step two. Poke drainage holes.” Uncle Sami turned the jug upside down, and Amira used the nail to poke four tiny holes in the bottom. “Rain and snow will get in,” Uncle Sami explained, “so the water needs a way out. Wet seed turns moldy, and moldy seed can make birds sick.”",
-        "“Step three. Add a perch.” This was Amira's favorite part. Just below the window, she poked a hole in each side of the jug. Then she pushed the handle of the wooden spoon in one hole and out the other, so it stuck out on both sides like a tiny bar. “Now they have somewhere to stand while they eat,” she said.",
-        "“Step four. Fill it with seed.” Amira poured the birdseed in through the window, slowly, until it came up just below the bottom edge. “Not too full,” she said. “Or it will all spill out the first time the wind blows.”",
-        "“Step five. Hang it up.” Uncle Sami tied the string tightly around the neck of the jug, just under the cap, and made a loop at the top. Then they pulled on their boots and carried the feeder out into the snow.",
-        "Amira looked at the fence, where Mrs. Ortiz's orange cat liked to nap. “Not near the fence,” she said. “Too close to Pumpkin.” They chose a low branch of the maple tree instead, right where they could see it from the kitchen window. Uncle Sami tugged hard on the branch two times. It did not bend or crack. “Nice and sturdy,” he said, and he hung the loop over it.",
-        "Back inside, Amira took one more blank card from the drawer. She wrote STEP 6: WAIT and clipped it to the front of the stack. Then she pulled a chair up to the window, rested her chin on her hands, and watched the feeder sway in the cold air.",
-        "“How long will it take?” she asked.",
-        "“Could be an hour,” said Uncle Sami. “Could be a week. First the birds have to find it, and then they have to decide to trust it.”",
-        "Amira did not move from her chair. Out on the fence, a small brown bird landed, tipped its head to one side, and looked toward the maple tree."
+        "On the first windy day of spring, the sky over Carver Park was full of kites, including one shaped like a giant purple octopus. Malik Johnson tipped his head back to watch them, so far back that his cap fell off.",
+        "“Can we get one?” he asked his cousin Desmond, who was fourteen and was staying with Malik's family for spring break. Desmond picked up Malik's cap and handed it back. “Why buy one?” he said. “We can build a kite out of stuff you already have in your garage.”",
+        "That was all Malik needed to hear. He was the kind of kid who wanted to know how everything worked. He had once taken apart an old alarm clock just to see the gears inside, and he had a whole notebook full of drawings of bridges, rockets, and the insides of flashlights. Before they had even left the park, he had the notebook open and his pencil ready. “Okay,” he said. “Step one. Go.”",
+        "Desmond laughed. “Step one is finding the parts.” In the garage, they found two thin wooden sticks, one about three feet long and one a little shorter. They also found a ball of string, a roll of tape, scissors, and a big plastic garbage bag. “Grandpa Ike and I made a kite every spring when I was your age,” Desmond said, “so I could do this with my eyes closed.”",
+        "First, they made the frame. Desmond showed Malik how to lay the shorter stick across the longer one, about a quarter of the way down from the top, so the two sticks made a shape like a lowercase t. “You tie it,” Desmond said, handing him the string. “I'll just tell you where.” Malik wrapped the string around the place where the sticks crossed, first one way and then the other, making an X. He pulled until the string was taut and the sticks did not wobble at all when he tapped them.",
+        "Next came the frame string. Desmond used the tip of the scissors to scratch a tiny notch into each end of both sticks. Malik ran the string through the notch at the top, then across to the notch on the right, down to the bottom, over to the left, and back up to the top again. When he was done, the string made the outline of a diamond around the sticks. “That's the shape of the whole kite,” Desmond said. “Now it just needs a skin.”",
+        "The skin was the sail. They cut the garbage bag open, spread it flat, and laid the frame on top of it. Malik traced around the diamond of string with a marker, leaving a border about two fingers wide. Then Desmond handed Malik the scissors and stepped back. Malik cut slowly along the line, with his tongue poking out of the corner of his mouth. Together they folded the border over the frame string and taped it down all the way around.",
+        "“Now the most important part,” Desmond said. “The bridle.” Malik poked two small holes in the plastic and tied a piece of string from the top of the long stick to a spot near the bottom. Desmond pinched the bridle string a little above the middle and tied a small loop there. “The flying line ties onto this loop,” he explained. “The bridle tips the kite at just the right angle, so the wind pushes it up instead of knocking it down.”",
+        "Last came the tail. Malik knotted strips of leftover plastic end to end, with a bow at every knot, until the tail was longer than he was. They tied it to the bottom of the long stick. “Without a tail, a kite spins around in circles,” Desmond said. “The tail keeps it pointed at the sky.”",
+        "Malik tied the flying line to the loop, and they carried the kite outside. But the afternoon had gone completely still. The leaves on the maple tree hung down without moving, and the flag at the school across the street drooped against its pole.",
+        "Malik sat down on the front steps with the kite across his knees. He opened his notebook and drew the kite, part by part, and labeled every piece. “Weather report says wind tomorrow,” Desmond said, sitting down next to him. Malik turned to a fresh page and wrote in big letters: LAST STEP: WAIT FOR THE WIND."
       ]
     },
 
     /* ── PASSAGE 2 ─────────────────────────────────────
-       Sports fiction with a flashback frame: the last
-       penalty kick, the backstory with the older sister,
-       back to the kick. The sibling relationship carries
-       the written answer. */
+       Sports fiction with a flashback frame: the free
+       throws, the summer with the little sister who
+       counted every shot, back to the last shot. The
+       sibling relationship carries the written answer. */
     {
       id: "B-P2",
-      title: "Pick a Spot",
+      title: "One Hundred Before Dinner",
       source: "Original practice passage",
       genre: "Realistic fiction",
       paragraphs: [
-        "The Riverside Rockets and the Oak Hill Owls had played two halves and two overtimes, and the score was still tied, one to one. Now the championship would be decided by penalty kicks. One at a time, each team sent a player to the white spot to shoot against the other team's goalkeeper.",
-        "The Owls' fifth kicker had just sent the ball sailing over the crossbar. That meant if Lena Haddad scored on the next kick, the Rockets would be champions. If she missed, the shootout would keep going, and nobody knew for how long.",
-        "Lena set the ball on the white spot and stepped back. The Owls' goalkeeper was the tallest girl Lena had ever seen, and she was bouncing on her toes and waving her long arms as if she wanted to fill up the whole goal. Lena reached up and touched the green headband she was wearing. It used to belong to her sister.",
-        "Three summers ago, Noor had hung an old bedsheet between the two clothesline poles in their backyard and called it a goal. Noor was sixteen then and played goalkeeper for the high school team. Every evening after dinner, she pulled on her gardening gloves, stood in front of the bedsheet, and made Lena kick ball after ball at her.",
-        "“Most kickers pick a spot too late,” Noor told her. “They run up, they see the goalie, and they panic. You pick your spot before you start running. Then you trust it.”",
-        "“What if the goalie guesses right?” Lena asked.",
-        "“Then she guesses right,” said Noor. “But you still don't change your mind.”",
-        "Lena missed more kicks than she made that summer, but Noor never once said they should stop. She chased every wild shot into the rosebushes and tossed it back, and she cheered for every goal as loudly as if the whole town were watching.",
-        "Noor had a goal of her own, too. Ever since she was little, she had wanted to be an animal doctor. She had once wrapped a hurt paw on the neighbors' dog with a kitchen towel, and she read thick books about horses and cows the way other kids read comics. Last spring, a college in Colorado with one of the best animal programs in the country said yes to her. Colorado was a thousand miles away.",
-        "The night before she left, Noor got cold feet. Lena found her sitting on the back steps in the warm August dark, staring at the old bedsheet goal. “Maybe I should just go to the college here,” Noor said quietly. “Colorado is so far. And who's going to practice with you?”",
-        "Lena sat down next to her. She was only eight, but she knew exactly what to say. “You pick your spot before you start running,” she told her sister. “Then you trust it.”",
-        "Noor stared at her for a long moment. Then she laughed and wiped her eyes, pulled the green headband off her own head, and put it on Lena's. “Fine,” she said. “But you have to wear this to every game.”",
-        "The referee's whistle blew, and Lena was back on the field.",
-        "She picked her spot before she started running: the low left corner. She did not look at the goalkeeper's waving arms at all. She looked only at that one corner of the net, and she ran, and she kicked.",
-        "The goalkeeper guessed right. She dove to the left, stretching out her long arms, but the ball was too low and too fast. It skidded under her fingertips and into the back of the net.",
-        "The Rockets poured off the bench and piled onto Lena so hard that the green headband got knocked down over one eye. She did not even bother to fix it.",
-        "After the trophy ceremony, Lena borrowed Dad's phone and called Colorado. Noor answered on the first ring, whispering. She was in the library, studying for a test.",
-        "“Low left,” Lena said. “She guessed right, and I didn't change my mind.”",
-        "Noor shrieked so loudly that Lena heard somebody in the library say “Shhh!” Then Noor whispered, “I have a big test on dog bones tomorrow. And guess what? I already picked my spot.”"
+        "Two seconds were left on the clock, and the Hillcrest Hawks were behind the Bay View Bulldogs, 42 to 41. Kenji Watanabe stood at the free-throw line with the ball in his hands. The gym was so quiet that he could hear the scoreboard buzzing. He had been fouled on his way to the basket, and now he had two shots. Make one, and the game would be tied. Make both, and the Hawks would be the league champions.",
+        "Kenji bounced the ball once, twice, three times. His palms were damp, and the rim looked smaller than it ever had before. He glanced up at the bleachers. There in the front row was his little sister, Mika, holding Grandma's old camera up to her eye.",
+        "All summer long, Mika had been the reason Kenji practiced. The court at the end of Larch Street had a bent rim and a net made of chains, and every afternoon before dinner, the two of them walked down there with Kenji's ball. Mika was eight, two years younger than Kenji, and much too short to block a shot. But she chased down every rebound and bounced the ball back to him, and she kept count out loud. “Forty-one. Forty-two. That one doesn't count. It hit the backboard first.”",
+        "“One hundred before dinner,” she said every single day, the way a coach would. Some days it took until the streetlights came on, but Mika never once asked to go home early, not even when the mosquitoes came out.",
+        "Mika had a dream of her own. She wanted to be a sports photographer, the kind who kneels right next to the court and catches the exact second a ball leaves a player's fingers. Their neighbor Mrs. Okafor took pictures for the town newspaper, and every Saturday she taught Mika how to hold the camera steady and when to press the button. Mika was still learning the ropes, and most of her pictures came out blurry. But she carried the camera everywhere.",
+        "One evening, after Kenji's hundredth shot finally rattled through the chains, Mika flopped down on the warm blacktop. “When you play in the championship,” she said, “I'm going to take a picture of your winning shot. It will be my first real sports picture.”",
+        "Kenji laughed. “What if I don't make the winning shot?”",
+        "“You will,” said Mika, as if it were the easiest thing in the world. “You make a hundred every day.”",
+        "“Two shots,” the referee said, and Kenji was back in the gym.",
+        "He bent his knees, the way he had a thousand times on Larch Street, and flicked his wrist. The ball hit the front of the rim, bounced straight up, rolled all the way around, and dropped through. Forty-two to forty-two. The Hawks fans jumped to their feet, and then the referee held up one finger, and they sat back down.",
+        "One more. Kenji took a deep breath. In his head, he could hear Mika counting the way she always did at the very end of practice, slow and loud. Ninety-eight. Ninety-nine.",
+        "He bent his knees. He flicked his wrist. The ball went up in a high, soft arc and fell through the net without touching the rim. The buzzer sounded, the scoreboard flashed 43 to 42, and the Hawks fans came pouring out of the bleachers.",
+        "By the time Kenji's teammates set him back down, Mika was pushing through the crowd with the camera held high over her head. “I got it!” she shouted. She turned the little screen around so he could see. There was the ball, a small orange circle in the air, just leaving his fingertips. It was not even a little bit blurry.",
+        "Kenji looked at the picture for a long time. Then he put his arm around his sister's shoulders. “That was number one hundred,” he said. “You counted every single one. Half of this win is yours.”"
       ]
     },
 
     /* ── PASSAGE 3 ─────────────────────────────────────
-       Folktale. A queen tests three young people with
-       cracked bowls, the honest one wins, and a simile
-       carries the moral. */
+       Fable. An old tortoise tests three animals with a
+       walk up a hill, the humble one wins, and a lantern
+       simile carries the moral. */
     {
       id: "B-P3",
-      title: "The Cracked Bowls",
+      title: "The Slowest Climb",
       source: "Original practice passage",
-      genre: "Folktale",
-      note: "A folktale is an old story that people passed down by telling it out loud. Many folktales end with a lesson, called a moral.",
+      genre: "Fable",
+      note: "A fable is a short story, often with animals as the characters, that teaches a lesson. The lesson is called the moral.",
       paragraphs: [
-        "Long ago, in a land of green hills and slow brown rivers, there lived a queen named Ilsa. She was not the richest ruler in the world, but her people loved her.",
-        "Queen Ilsa lived in a white stone palace at the top of the tallest hill. One spring, when the river flooded and ruined the wheat fields, she did not pretend that all would be well. Instead, she stood in the town square and told the people the truth: there would be less bread that winter, and the palace would eat less too. Around that time, her old advisor, Bram, grew too tired to climb the palace stairs. He asked to spend his last years in his garden, and the queen agreed. So she sent word to every village that she needed a new advisor.",
-        "Many people came to the palace hoping to be chosen. The queen spoke with each of them, and at last she picked three: Darin, the son of a rich merchant; Mira, the finest painter in the village; and Pell, a shepherd boy who had never been inside a palace before.",
-        "The queen set three clay bowls on the table in front of them. Each bowl had a long crack running down its side. “Take these home with you,” she said. “Tomorrow, bring them back to me whole.”",
-        "Darin went straight to the market. He found a potter who sold bowls of the very same size and color, paid for one with a handful of silver coins, and tossed the cracked bowl onto a trash heap.",
-        "Mira worked late into the night by candlelight. She pressed a paste of flour and water into the crack, let it dry hard, and painted over it so carefully that no one could tell where the crack had been.",
-        "Pell had no money for a new bowl and no paints at all. He sat by his fire for hours, trying everything he could think of. At last he mixed sticky pine sap with ashes from the fire, pressed it deep into the crack, and wrapped the bowl tightly in a strip of cloth while it dried. In the morning, the bowl was strong again, but a dark, crooked line still ran right down its side.",
-        "The next day, Darin and Mira set their shining bowls on the queen's table. “Good as new,” said Darin. “Just as you asked,” said Mira. Pell was so anxious that his hands shook as he set his bowl down beside theirs. “I could not make it whole, Your Majesty,” he said. “I filled the crack so it will hold, but you can still see it. I am sorry.”",
-        "The queen said nothing. She lifted a pitcher of water and filled all three bowls to the brim. In a moment, the flour paste in Mira's bowl turned soft, and water began to drip onto the table. Darin's bowl did not leak at all, but when the queen turned it in her hands, there was no crack on it anywhere. “This is not the bowl I gave you,” she said, and Darin's face turned red. Pell's bowl, crooked line and all, held every drop.",
-        "Then the queen turned to the three of them. “Darin hid the truth with silver, and Mira hid it with paint,” she said. “Only Pell told me what really happened. An honest word is like Pell's bowl. It may not look perfect, but it holds what you put in it. A pretty answer that hides the truth is like a painted crack. It looks fine right up until the moment you need it to hold.”",
-        "So Pell became the queen's new advisor. For many years, he told her the truth even when it was hard to hear, and the whole kingdom was better for it.",
-        "And it is said that, in that land, families still keep one cracked bowl on the kitchen shelf. When a child is tempted to hide a mistake, a grandparent takes the bowl down, fills it with water, and tells the story of Pell."
+        "Long ago, the animals of Fern Valley had a guardian who watched over them, and for one hundred years that guardian was Grandmother Tortoise. She knew which paths flooded in the spring and which caves stayed warm in the winter. When a young animal wandered off and got lost, she was always the one who found it. But Grandmother Tortoise had grown very old, and her eyes were not as sharp as they used to be. She knew it was time to choose a new guardian.",
+        "One morning she called the animals together at the bottom of Thimble Hill. “Tomorrow at noon, I will choose the next guardian,” she said. “Whoever wishes to be chosen should meet me right here. We will walk to the top of the hill together, and at the top I will make my choice.”",
+        "The next day, three animals were waiting at the bottom of the hill. There was Bear, who was the strongest animal in the valley. There was Fox, who was the cleverest. And there was Field Mouse, who was small and gray and hardly ever spoke at meetings.",
+        "Grandmother Tortoise took one slow step up the path, and then another. Bear could not stand to go so slowly. “Watch this, everyone!” he shouted, and he charged straight up the steepest side of the hill, knocking rocks loose as he went. Fox gave a little smile and slipped into the bushes, for she knew a secret rabbit trail that was shorter than any path. Only Field Mouse stayed behind.",
+        "The climb took the whole afternoon. Every few steps, Grandmother Tortoise stopped to rest, and each time, Field Mouse sat down beside her and waited as if she had nowhere else to be. Halfway up, the path passed a patch of wild strawberries. Then it grew steep and rocky, and Field Mouse ran ahead to push the loose pebbles out of the old tortoise's way. Even when the sun began to sink toward the trees, Field Mouse did not try to hurry her friend along.",
+        "When at last they reached the top, Bear was stretched out on a flat rock in the sun. “What took you so long?” he called. “I've been up here for hours.” Fox stepped out from behind a bush and brushed off her tail. “I would have been here even sooner,” she said, “but I stopped to take a nap. Nobody else knows about the rabbit trail.”",
+        "Grandmother Tortoise caught her breath. Then she said, “Field Mouse will be the next guardian of Fern Valley.”",
+        "Bear and Fox were perplexed. Bear scratched his head with one huge paw, and Fox tilted her head to one side, as if she were trying to solve a riddle. “But I got here first,” said Bear. “And I found the quickest way,” said Fox.",
+        "“I did not ask you to reach the top of the hill,” said Grandmother Tortoise. “I asked you to walk to the top with me. A guardian is like a lantern on a dark path. A lantern does not run ahead so that everyone will look at it. It stays close beside the traveler, so the traveler can see where to step.”",
+        "Field Mouse looked down at her small gray paws. “But I am the smallest one here,” she said quietly. Grandmother Tortoise smiled. “A small lantern lights the path just as well as a big one,” she said.",
+        "That evening, the four of them walked back down Thimble Hill together. Bear carried Grandmother Tortoise on his broad back, one careful step at a time, and Fox walked beside him and pointed out the loose rocks. Field Mouse walked at the front, looking back every few steps to make sure that no one was left behind.",
+        "And it is said that, to this day, whenever the animals of Fern Valley choose a new guardian, they climb Thimble Hill together, and no one is allowed to walk faster than the slowest animal."
       ]
     }
   ],
@@ -161,177 +148,177 @@ window.FORM_B = {
 
     // Item 1 — characterization from one paragraph
     { id: "B01", p: 0,
-      q: "Read paragraph 3 from the passage. What does paragraph 3 show about Amira?",
+      q: "Read paragraph 3 from the passage. What does paragraph 3 show about Malik?",
       excerpt: [
-        "That evening, Amira took a pencil and a stack of index cards out of the kitchen drawer. On the first card she wrote SUPPLIES. On the next five cards she wrote STEP 1 through STEP 5. Then she asked Uncle Sami to tell her everything he remembered, and she wrote it all down in her neatest printing. When he mixed up two of the steps, she crossed them out and made fresh cards. By bedtime, the cards sat in a tidy stack on the counter, held together with a clothespin so not one of them could get lost."
+        "That was all Malik needed to hear. He was the kind of kid who wanted to know how everything worked. He had once taken apart an old alarm clock just to see the gears inside, and he had a whole notebook full of drawings of bridges, rockets, and the insides of flashlights. Before they had even left the park, he had the notebook open and his pencil ready. “Okay,” he said. “Step one. Go.”"
       ],
       choices: [
-        "She does not believe that her uncle knows how to build a feeder.",
-        "She likes to make a careful plan before she starts something.",
-        "She would rather write about the feeder than build it.",
-        "She is in a hurry to finish the feeder before bedtime."
+        "He is upset that his family will not buy him a kite.",
+        "He likes to find out how things are built and how they work.",
+        "He would rather draw pictures than fly a kite at the park.",
+        "He is worried that building a kite will be too hard for him."
       ],
-      answer: "She likes to make a careful plan before she starts something.",
-      explanation: "Amira writes a card for the supplies and a card for every step, fixes the steps that got mixed up, and clips the cards so none get lost — all before they build anything. That is careful planning. She asks her uncle for help because she trusts what he remembers, and the building waits until Saturday, so she is not rushing." },
+      answer: "He likes to find out how things are built and how they work.",
+      explanation: "The paragraph says he “wanted to know how everything worked,” and then proves it: he took apart a clock to see the gears and drew the insides of flashlights. That is a curious kid who loves figuring out how things are made. He is not upset or worried — he is ready to start before they even leave the park." },
 
     // Item 2 — word meaning in context
     { id: "B02", p: 0,
-      q: "Read these sentences from the passage. “Uncle Sami tugged hard on the branch two times. It did not bend or crack.” Then he calls the branch “nice and sturdy.” What does the word sturdy mean?",
+      q: "Read this sentence from the passage. “He pulled until the string was taut and the sticks did not wobble at all when he tapped them.” What does the word taut mean in this sentence?",
       choices: [
-        "old and dry",
-        "thin and bendy",
-        "strong and steady",
-        "covered with snow"
+        "loose and floppy",
+        "pulled tight",
+        "tied in a bow",
+        "wet and heavy"
       ],
-      answer: "strong and steady",
-      explanation: "The clues come right before the word: Uncle Sami tugs hard, and the branch does not bend or crack. A branch that holds still when you pull on it is strong and steady. Thin and bendy is the opposite, and nothing in the story says the branch is old or snowy." },
+      answer: "pulled tight",
+      explanation: "The clues are “He pulled until” and “the sticks did not wobble at all.” Pulling hard on a string makes it tight, and a tight string holds the sticks still. A loose, floppy string would let them wobble." },
 
     // Item 3 — purpose of the picture
     { id: "B03", p: 0, showFigure: true,
       q: "Look at the picture from the passage. Why does the author include this picture?",
       choices: [
-        "to show what kinds of birds came to eat at the feeder",
-        "to help the reader see where each part of the finished feeder is",
-        "to explain why moldy seed can make birds sick",
-        "to show the steps for cutting plastic safely"
+        "to show the kites Malik saw flying over Carver Park",
+        "to show how high the kite will fly when the wind comes",
+        "to show where each part of the finished kite goes",
+        "to explain why Grandpa Ike liked to build kites"
       ],
-      answer: "to help the reader see where each part of the finished feeder is",
-      explanation: "The picture labels the window, the perch, the birdseed, the drainage holes, the string and the cap on the finished feeder. Seeing them in one place makes the steps in the story easier to understand. There are no birds in the picture, and it does not explain mold or show anyone cutting." },
+      answer: "to show where each part of the finished kite goes",
+      explanation: "The picture labels the long stick, the short stick, the frame string, the sail, the bridle, the loop, the flying line and the tail, so readers can see how the steps in the story fit together. It does not show the park, the sky, or Grandpa Ike." },
 
     // Item 4 — EBSR: conclusion + supporting sentence
     { id: "B04", p: 0, type: "ebsr",
       partA: {
-        q: "Part A — What conclusion can be drawn about Amira from the way she chooses a place to hang the feeder?",
+        q: "Part A — What conclusion can be drawn about Desmond?",
         choices: [
-          "She is afraid of Mrs. Ortiz's orange cat.",
-          "She wants the feeder to hang as high as it can go.",
-          "She wants to keep the birds safe while they eat.",
-          "She wants to hide the feeder where no one can see it."
+          "He has never flown a kite, but he wants to learn.",
+          "He would rather work alone than with Malik.",
+          "He has made kites many times before.",
+          "He is tired of staying at Malik's house for spring break."
         ],
-        answer: "She wants to keep the birds safe while they eat.",
-        explanation: "Amira will not hang the feeder near the fence because the cat naps there — she is thinking about the birds that will come to eat. Nothing shows she is scared of the cat herself. They pick a LOW branch that they can see from the kitchen window, so the other two choices are the opposite of what happens." },
+        answer: "He has made kites many times before.",
+        explanation: "Desmond says he made a kite with Grandpa Ike “every spring,” so he “could do this with my eyes closed.” That tells us he has done it many times. He works with Malik the whole time, and nothing shows he is bored or new to kites." },
       partB: {
         q: "Part B — Which sentence from the passage BEST supports the answer in Part A?",
         longChoices: true,
         choices: [
-          "“Not too full,” she said. “Or it will all spill out the first time the wind blows.”",
-          "“Not near the fence,” she said. “Too close to Pumpkin.”",
-          "Uncle Sami tugged hard on the branch two times.",
-          "Then she pulled a chair up to the window, rested her chin on her hands, and watched the feeder sway in the cold air."
+          "“Can we get one?” he asked his cousin Desmond, who was fourteen and was staying with Malik's family for spring break.",
+          "“Grandpa Ike and I made a kite every spring when I was your age,” Desmond said, “so I could do this with my eyes closed.”",
+          "Malik traced around the diamond of string with a marker, leaving a border about two fingers wide.",
+          "“Weather report says wind tomorrow,” Desmond said, sitting down next to him."
         ],
-        answer: "“Not near the fence,” she said. “Too close to Pumpkin.”",
-        explanation: "Amira says no to the fence because it is too close to the cat. That is the moment she keeps the birds out of danger. The seed line is about not spilling, the tug is Uncle Sami checking the branch, and the chair is about waiting." } },
+        answer: "“Grandpa Ike and I made a kite every spring when I was your age,” Desmond said, “so I could do this with my eyes closed.”",
+        explanation: "“Every spring” means he built kites year after year, and “with my eyes closed” means he knows the steps by heart. The first choice only tells his age and why he is visiting, the third is about Malik, and the weather report says nothing about building kites before." } },
 
     // Item 5 — main idea of re-shown building paragraphs
     { id: "B05", p: 0,
       q: "Read paragraphs 5 and 6 from the passage again. What is the main idea of these paragraphs?",
       excerpt: [
-        "“Step one,” Amira read. “Cut a window.” Uncle Sami did not pick up the scissors until she had read the whole card. Amira drew a big square on the front of the jug, leaving about two inches of plastic below it so the seed would not spill out. The plastic was too tough for her hands, so Uncle Sami did the cutting while Amira held the jug still.",
-        "“Step two. Poke drainage holes.” Uncle Sami turned the jug upside down, and Amira used the nail to poke four tiny holes in the bottom. “Rain and snow will get in,” Uncle Sami explained, “so the water needs a way out. Wet seed turns moldy, and moldy seed can make birds sick.”"
+        "First, they made the frame. Desmond showed Malik how to lay the shorter stick across the longer one, about a quarter of the way down from the top, so the two sticks made a shape like a lowercase t. “You tie it,” Desmond said, handing him the string. “I'll just tell you where.” Malik wrapped the string around the place where the sticks crossed, first one way and then the other, making an X. He pulled until the string was taut and the sticks did not wobble at all when he tapped them.",
+        "Next came the frame string. Desmond used the tip of the scissors to scratch a tiny notch into each end of both sticks. Malik ran the string through the notch at the top, then across to the notch on the right, down to the bottom, over to the left, and back up to the top again. When he was done, the string made the outline of a diamond around the sticks. “That's the shape of the whole kite,” Desmond said. “Now it just needs a skin.”"
       ],
       choices: [
-        "Uncle Sami explains why wet seed is bad for birds.",
-        "Amira learns how to cut plastic with strong scissors.",
-        "Amira and Uncle Sami begin to turn the milk jug into a feeder.",
-        "Amira and Uncle Sami hang the feeder on the maple tree."
+        "Malik cuts the sail out of a plastic garbage bag.",
+        "Malik and Desmond find the parts they need in the garage.",
+        "Desmond explains why a kite needs a tail.",
+        "Malik and Desmond build the frame of the kite."
       ],
-      answer: "Amira and Uncle Sami begin to turn the milk jug into a feeder.",
-      explanation: "Both paragraphs are the first building steps: cutting the window and poking the drainage holes. Wet seed is one small detail in paragraph 6, Uncle Sami does the cutting because the plastic is too tough for Amira, and the feeder is not hung until later." },
+      answer: "Malik and Desmond build the frame of the kite.",
+      explanation: "Paragraph 5 starts with “First, they made the frame,” and paragraph 6 finishes it with the frame string. Both paragraphs are about the sticks and string that hold the kite together. Finding the parts happens before, and the sail and tail come later." },
 
     // Item 6 — hot text: click 2 sentences from a list
     { id: "B06", p: 0, type: "hottext", layout: "list", pick: 2,
-      q: "The passage shows that Uncle Sami lets Amira be IN CHARGE of building the feeder. Click on the TWO sentences from the passage that BEST support this idea.",
+      q: "The passage shows that Desmond wants Malik to do the building HIMSELF while Desmond teaches. Click on the TWO sentences from the passage that BEST support this idea.",
       choices: [
-        "Uncle Sami, who lived in the apartment over the garage, came in stamping snow off his boots.",
-        "On the first card she wrote SUPPLIES.",
-        "“You're the boss of this project,” Uncle Sami said. “I'm just the helper with the sharp things.”",
-        "Uncle Sami did not pick up the scissors until she had read the whole card.",
-        "The plastic was too tough for her hands, so Uncle Sami did the cutting while Amira held the jug still.",
-        "Uncle Sami tugged hard on the branch two times."
+        "Desmond picked up Malik's cap and handed it back.",
+        "“You tie it,” Desmond said, handing him the string.",
+        "When he was done, the string made the outline of a diamond around the sticks.",
+        "Then Desmond handed Malik the scissors and stepped back.",
+        "“Without a tail, a kite spins around in circles,” Desmond said.",
+        "The leaves on the maple tree hung down without moving, and the flag at the school across the street drooped against its pole."
       ],
       answers: [
-        "“You're the boss of this project,” Uncle Sami said. “I'm just the helper with the sharp things.”",
-        "Uncle Sami did not pick up the scissors until she had read the whole card."
+        "“You tie it,” Desmond said, handing him the string.",
+        "Then Desmond handed Malik the scissors and stepped back."
       ],
-      explanation: "Uncle Sami calls Amira the boss and himself the helper, and then he waits for her to read each card before he does anything. Both show him letting her lead. The other sentences show someone doing a job, but not who is in charge." },
+      explanation: "In both sentences Desmond hands Malik the tool and lets him do the job — he even “stepped back” so Malik could cut. Handing back a cap is just being nice, the tail sentence is Desmond explaining, and the other two do not show Desmond at all." },
 
     /* ── PASSAGE 2 · items 7–11 ── */
 
     // Item 7 — summary with a missing key event
     { id: "B07", p: 1,
       q: "Read this summary of the passage. Which KEY event is MISSING from the summary?",
-      excerptLabel: "📝 A summary of “Pick a Spot”",
+      excerptLabel: "📝 A summary of “One Hundred Before Dinner”",
       excerpt: [
-        "The Rockets and the Owls are tied in a championship soccer game, and Lena steps up to take a penalty kick that could win it. She remembers how her older sister, Noor, taught her in the backyard to pick a spot and trust it. She also remembers the night Noor almost stayed home instead of going to college in Colorado. After the game, Lena calls Noor to tell her what happened."
+        "Kenji steps to the free-throw line with two seconds left and his team behind by one point. He sees his little sister Mika in the bleachers with a camera and remembers how she chased his rebounds and counted his shots all summer. His first free throw rolls around the rim and drops in to tie the game. After the game, Mika shows Kenji the picture she took."
       ],
       choices: [
-        "Noor almost decides not to go to college in Colorado.",
-        "Lena kicks the ball into the low left corner and wins the championship.",
-        "Lena touches the green headband before she kicks.",
-        "The Owls' goalkeeper bounces on her toes and waves her arms."
+        "Kenji's first free throw ties the score.",
+        "Mrs. Okafor teaches Mika how to use a camera.",
+        "Kenji makes his second free throw, and the Hawks win.",
+        "Kenji's teammates lift him up after the game."
       ],
-      answer: "Lena kicks the ball into the low left corner and wins the championship.",
-      explanation: "The summary sets up the big kick and then jumps straight to the phone call, so it never tells what happened when Lena kicked — the most important event in the story. Noor almost staying home is already in the summary, and the headband and the goalkeeper's waving arms are small details." },
+      answer: "Kenji makes his second free throw, and the Hawks win.",
+      explanation: "The summary jumps from the first free throw straight to the picture, so it never tells how the game ends — the most important event in the story. The first free throw is already in the summary, and Mrs. Okafor's lessons and the teammates lifting Kenji are small details." },
 
     // Item 8 — evidence for a conclusion
     { id: "B08", p: 1, longChoices: true,
-      q: "Which detail from the passage BEST shows that Noor was PATIENT while she was teaching Lena?",
+      q: "Which detail from the passage BEST shows that Mika is sure Kenji will succeed?",
       choices: [
-        "Noor was sixteen then and played goalkeeper for the high school team.",
-        "Lena missed more kicks than she made that summer, but Noor never once said they should stop.",
-        "Then she laughed and wiped her eyes, pulled the green headband off her own head, and put it on Lena's.",
-        "Noor answered on the first ring, whispering."
+        "But she chased down every rebound and bounced the ball back to him, and she kept count out loud.",
+        "There in the front row was his little sister, Mika, holding Grandma's old camera up to her eye.",
+        "Their neighbor Mrs. Okafor took pictures for the town newspaper, and every Saturday she taught Mika how to hold the camera steady and when to press the button.",
+        "“You will,” said Mika, as if it were the easiest thing in the world."
       ],
-      answer: "Lena missed more kicks than she made that summer, but Noor never once said they should stop.",
-      explanation: "Being patient means you keep going even when things go slowly. Lena missed most of her kicks, and Noor still never gave up on the practices. Her age and team tell who she is, and the headband and the phone call happen long after the teaching." },
+      answer: "“You will,” said Mika, as if it were the easiest thing in the world.",
+      explanation: "Kenji asks what happens if he misses, and Mika answers “You will” as if there were no question about it. That shows she is sure he will make the shot. Chasing rebounds shows she helps him, but not that she is sure he will win, and the other two are about the camera." },
 
     // Item 9 — EBSR: character trait + support
     { id: "B09", p: 1, type: "ebsr",
       partA: {
-        q: "Part A — Which word BEST describes Lena when she takes the last kick?",
+        q: "Part A — Which word BEST describes Kenji at the END of the passage?",
         choices: [
-          "careless",
-          "focused",
+          "jealous",
+          "grateful",
           "boastful",
-          "confused"
+          "disappointed"
         ],
-        answer: "focused",
-        explanation: "Focused means paying attention to one thing and not letting anything distract you. Lena picks her corner first and keeps her eyes on it the whole time, even with the goalkeeper waving her arms. She follows Noor's plan exactly, so she is not careless or confused, and she never brags." },
+        answer: "grateful",
+        explanation: "Grateful means thankful for what someone did for you. Right after he wins, Kenji gives Mika credit for counting every shot. He does not brag, he is not disappointed, and he is happy about her picture, not jealous of it." },
       partB: {
         q: "Part B — Which sentence from the passage BEST supports the answer in Part A?",
         longChoices: true,
         choices: [
-          "Lena reached up and touched the green headband she was wearing.",
-          "She did not look at the goalkeeper's waving arms at all.",
-          "The Rockets poured off the bench and piled onto Lena so hard that the green headband got knocked down over one eye.",
-          "After the trophy ceremony, Lena borrowed Dad's phone and called Colorado."
+          "He had been fouled on his way to the basket, and now he had two shots.",
+          "Kenji bounced the ball once, twice, three times.",
+          "“You counted every single one. Half of this win is yours.”",
+          "The buzzer sounded, the scoreboard flashed 43 to 42, and the Hawks fans came pouring out of the bleachers."
         ],
-        answer: "She did not look at the goalkeeper's waving arms at all.",
-        explanation: "The goalkeeper is trying to distract her, and Lena does not even look — that is what being focused looks like. Touching the headband happens before she starts her kick, and the other two choices happen after the kick is over." } },
+        answer: "“You counted every single one. Half of this win is yours.”",
+        explanation: "Kenji is thanking Mika by sharing the win with her — that is what a grateful person does. The other sentences tell what happens during the game, not how Kenji feels about his sister." } },
 
     // Item 10 — choose TWO: idiom with a literal-reading trap
     { id: "B10", p: 1, type: "ms", pick: 2,
-      q: "Read this sentence from the passage. “The night before she left, Noor got cold feet.” What does the phrase “got cold feet” suggest about Noor? Choose TWO answers.",
+      q: "Read this sentence from the passage. “Mika was still learning the ropes, and most of her pictures came out blurry.” What does the phrase “learning the ropes” suggest about Mika? Choose TWO answers.",
       choices: [
-        "She felt nervous about making such a big change.",
-        "Her feet were cold from sitting outside at night.",
-        "She started to think about not going after all.",
-        "She needed warmer socks for the snow in Colorado.",
-        "She could not wait to leave for Colorado."
+        "She is just starting to learn how to do something new.",
+        "She is learning how to tie knots in a rope.",
+        "She is learning the basic skills a photographer needs.",
+        "She climbs the ropes in gym class to get stronger.",
+        "She already takes pictures for the town newspaper."
       ],
       answers: [
-        "She felt nervous about making such a big change.",
-        "She started to think about not going after all."
+        "She is just starting to learn how to do something new.",
+        "She is learning the basic skills a photographer needs."
       ],
-      explanation: "“Getting cold feet” is an idiom — it is not about real feet. It means you get nervous right before something big and start to think about backing out. That matches what Noor says next: “Maybe I should just go to the college here.” The night was warm, so her feet were not really cold, and she was not eager to leave." },
+      explanation: "“Learning the ropes” is an idiom — it has nothing to do with real ropes. It means you are new at something and still learning how it is done. The sentence before tells what Mika is learning: how to hold the camera steady and when to press the button. Mrs. Okafor is the one who works for the newspaper, not Mika." },
 
     // Item 11 — written response
     { id: "B11", p: 1, type: "cr",
-      q: "What can you infer about the relationship between Lena and her sister Noor? Use details from the passage to support your answer.",
+      q: "What can you infer about the relationship between Kenji and his sister Mika? Use details from the passage to support your answer.",
       guidance: "Tell what kind of relationship they have. Then give at least TWO details from the story that prove it, and explain how each one shows it.",
-      model: "Lena and Noor are very close, and they help each other be brave. Noor spent her summer evenings teaching Lena penalty kicks in the backyard, and she never said they should stop, even when Lena missed most of her kicks. Later, when Noor got cold feet about leaving for college, Lena used Noor's own advice, “pick your spot,” to help her go. Noor gave Lena her green headband, and Lena wore it in the big game and called Noor right after she scored. Each sister helps the other one go after her goal.",
+      model: "Kenji and Mika are very close, and they help each other with their dreams. All summer, Mika went to the court with Kenji every day, chased his rebounds, and counted until he made one hundred shots, even when the mosquitoes came out. She believed in him so much that when he asked what would happen if he missed, she just said, “You will.” Kenji cares about her too. At the end he tells her that “Half of this win is yours,” and he looks at the picture she took for a long time, which shows he is proud of her and her dream of being a sports photographer.",
       checklist: [
-        "I said what their relationship is like — not just that they are sisters.",
+        "I said what their relationship is like — not just that they are brother and sister.",
         "I used at least TWO details from the story.",
         "I explained how each detail shows the relationship."
       ] },
@@ -340,67 +327,66 @@ window.FORM_B = {
 
     // Item 12 — choose TWO synonyms
     { id: "B12", p: 2, type: "ms", pick: 2,
-      q: "Read this sentence from the passage. “Pell was so anxious that his hands shook as he set his bowl down beside theirs.” Which TWO words mean about the same as anxious? Choose TWO answers.",
+      q: "Read this sentence from the passage. “Bear and Fox were perplexed.” Which TWO words mean about the same as perplexed? Choose TWO answers.",
       choices: [
-        "proud",
-        "worried",
+        "pleased",
+        "puzzled",
         "sleepy",
-        "nervous",
-        "cheerful",
-        "greedy"
+        "confused",
+        "hungry",
+        "proud"
       ],
       answers: [
-        "worried",
-        "nervous"
+        "puzzled",
+        "confused"
       ],
-      explanation: "The clue is in the same sentence: Pell's hands shook. He is about to show the queen a bowl he could not make whole, so he is worried and nervous about what she will say. Nothing shows he is proud, sleepy, cheerful or greedy." },
+      explanation: "The next sentence is the clue: Bear scratches his head, and Fox tilts her head “as if she were trying to solve a riddle.” That is how people act when they are puzzled or confused. They are not pleased about the choice, and nothing shows they are sleepy or hungry." },
 
     // Item 13 — summary of a bounded section
     { id: "B13", p: 2,
       q: "Which statement BEST summarizes the LAST THREE paragraphs of the passage?",
       choices: [
-        "Darin's face turns red when the queen finds out that he bought a new bowl.",
-        "Pell becomes the queen's new advisor.",
-        "The queen chooses Pell because he fixed his bowl better than anyone else in the kingdom could.",
-        "The queen explains why honesty matters, Pell becomes her advisor and always tells her the truth, and families still use a cracked bowl to teach the lesson."
+        "Grandmother Tortoise explains that a guardian should be like a lantern that stays close to others.",
+        "Field Mouse learns that being small does not matter, the four animals walk down the hill together, and the valley still climbs at the slowest animal's pace.",
+        "Bear carries Grandmother Tortoise down Thimble Hill on his broad back.",
+        "Bear and Fox are so upset that Field Mouse was chosen that they leave Fern Valley, and from that day on no animal ever climbs Thimble Hill again."
       ],
-      answer: "The queen explains why honesty matters, Pell becomes her advisor and always tells her the truth, and families still use a cracked bowl to teach the lesson.",
-      explanation: "A good summary of a section covers every paragraph in it, in a few words. The last three paragraphs are the queen's lesson, Pell's years as her advisor, and the cracked bowl that families still keep. Pell becoming advisor is only one part, Darin's red face comes before that section, and the queen chose Pell for his honesty, not for his fixing skills." },
+      answer: "Field Mouse learns that being small does not matter, the four animals walk down the hill together, and the valley still climbs at the slowest animal's pace.",
+      explanation: "A good summary of a section covers every paragraph in it. The last three paragraphs are Field Mouse's worry about being small, the walk down the hill together, and the custom that lasts to this day. The lantern explanation comes just before that section, Bear carrying the tortoise is only one detail, and Bear and Fox never leave the valley." },
 
     // Item 14 — choose THREE: what a simile shows
     { id: "B14", p: 2, type: "ms", pick: 3,
-      q: "Read these sentences from the passage. “An honest word is like Pell's bowl. It may not look perfect, but it holds what you put in it. A pretty answer that hides the truth is like a painted crack. It looks fine right up until the moment you need it to hold.” What do these comparisons show about what the queen believes? Choose THREE answers.",
+      q: "Read these sentences from the passage. “A guardian is like a lantern on a dark path. A lantern does not run ahead so that everyone will look at it. It stays close beside the traveler, so the traveler can see where to step.” What does this comparison show about what Grandmother Tortoise believes? Choose THREE answers.",
       choices: [
-        "Telling the truth matters more than looking perfect.",
-        "The queen's advisor must be good at fixing broken bowls.",
-        "People can count on someone who is honest.",
-        "Bowls with paint on them should never be used in the palace.",
-        "Hiding a mistake may look good at first, but it fails when it matters.",
-        "Pell's bowl is the most beautiful bowl in the kingdom."
+        "A good guardian helps others instead of trying to be noticed.",
+        "The guardian should carry a lantern when it gets dark.",
+        "A leader should stay close to the ones who need help.",
+        "The path up Thimble Hill is too dark to climb at night.",
+        "Being first matters less than helping others along the way.",
+        "The guardian should be the brightest animal in the valley."
       ],
       answers: [
-        "Telling the truth matters more than looking perfect.",
-        "People can count on someone who is honest.",
-        "Hiding a mistake may look good at first, but it fails when it matters."
+        "A good guardian helps others instead of trying to be noticed.",
+        "A leader should stay close to the ones who need help.",
+        "Being first matters less than helping others along the way."
       ],
-      explanation: "The queen compares words to bowls to explain why she chose Pell: an honest answer may not look perfect, but you can count on it, while a hidden mistake looks fine only until it is tested. The wrong choices read the comparison as if it were about real bowls and real paint instead of about honesty. Pell's bowl even has a crooked line, so it is not the most beautiful." },
+      explanation: "Grandmother Tortoise compares a guardian to a lantern to explain her choice. Bear and Fox ran ahead to be first and to be admired, but Field Mouse stayed beside her, the way a lantern stays with a traveler. The wrong choices read the comparison as if it were about real lanterns and real darkness, or about being the brightest — the opposite of her lesson." },
 
     // Item 15 — hot text: click 2 sentences inside a re-shown paragraph
     { id: "B15", p: 2, type: "hottext", layout: "para", pick: 2,
-      q: "Read paragraph 2 from the passage. The passage shows that Queen Ilsa is HONEST herself. Click on the TWO sentences in the paragraph that BEST support this idea.",
+      q: "Read paragraph 5 from the passage. The passage shows that Field Mouse is PATIENT. Click on the TWO sentences in the paragraph that BEST support this idea.",
       choices: [
-        "Queen Ilsa lived in a white stone palace at the top of the tallest hill.",
-        "One spring, when the river flooded and ruined the wheat fields, she did not pretend that all would be well.",
-        "Instead, she stood in the town square and told the people the truth: there would be less bread that winter, and the palace would eat less too.",
-        "Around that time, her old advisor, Bram, grew too tired to climb the palace stairs.",
-        "He asked to spend his last years in his garden, and the queen agreed.",
-        "So she sent word to every village that she needed a new advisor."
+        "The climb took the whole afternoon.",
+        "Every few steps, Grandmother Tortoise stopped to rest, and each time, Field Mouse sat down beside her and waited as if she had nowhere else to be.",
+        "Halfway up, the path passed a patch of wild strawberries.",
+        "Then it grew steep and rocky, and Field Mouse ran ahead to push the loose pebbles out of the old tortoise's way.",
+        "Even when the sun began to sink toward the trees, Field Mouse did not try to hurry her friend along."
       ],
       answers: [
-        "One spring, when the river flooded and ruined the wheat fields, she did not pretend that all would be well.",
-        "Instead, she stood in the town square and told the people the truth: there would be less bread that winter, and the palace would eat less too."
+        "Every few steps, Grandmother Tortoise stopped to rest, and each time, Field Mouse sat down beside her and waited as if she had nowhere else to be.",
+        "Even when the sun began to sink toward the trees, Field Mouse did not try to hurry her friend along."
       ],
-      explanation: "Being honest means telling the truth, even when it is hard news. When the flood ruined the wheat, the queen did not pretend things were fine — she told her people the truth about the bread herself. The other sentences tell where she lived and why she needed a new advisor, but they do not show her honesty." }
+      explanation: "Being patient means waiting calmly without trying to rush. Field Mouse sits and waits every time the tortoise rests, and she never hurries her, even as it gets late. Pushing the pebbles away shows she is helpful, not patient, and the other sentences describe the climb and the path." }
 
   ]
 };

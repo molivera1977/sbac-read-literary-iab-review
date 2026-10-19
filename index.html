@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SBAC Practice: Read Literary Texts</title>
-  <link rel="stylesheet" href="style.css?v=rl4-ra4-nav1" />
+  <link rel="stylesheet" href="style.css?v=rl4-ra4-nav1-wu1" />
 </head>
 <body>
 <canvas id="confetti-canvas"></canvas>
@@ -118,7 +118,9 @@
       <div id="form-select-section" class="hidden">
         <div class="step-card">
           <span class="step-label">Step 2 — Choose a Form</span>
+          <p class="order-hint">🌱 Start with the Warm Up. Then go in order: Form A, Form B, Form C. Each one is a little harder.</p>
           <div class="start-grid">
+            <button class="start-btn warmup-btn" id="btn-form-W" onclick="app.attemptStart('W')">🌱 Warm Up<span class="form-btn-sub">3 short stories · 15 questions</span></button>
             <button class="start-btn" id="btn-form-A" onclick="app.attemptStart('A')">📚 Form A<span class="form-btn-sub">3 stories · 15 questions</span></button>
             <button class="start-btn" id="btn-form-B" onclick="app.attemptStart('B')">📚 Form B<span class="form-btn-sub">3 stories · 15 questions</span></button>
             <button class="start-btn" id="btn-form-C" onclick="app.attemptStart('C')">📚 Form C<span class="form-btn-sub">3 stories · 15 questions</span></button>
@@ -128,6 +130,7 @@
                      padding:12px 16px;margin-bottom:12px;font-size:0.88rem;color:#2c3e50;line-height:1.6;">
           📋 <strong>Rules:</strong> You get <strong>2 attempts</strong> per form.
           You must complete <strong>all 3 forms once</strong> before any form unlocks for a second attempt.
+          The <strong>Warm Up</strong>'s second attempt opens right away.
           After 2 attempts a form is locked — your teacher can unlock it if needed.
           Every form has <strong>different stories</strong>, so a second attempt is real practice.
         </div>
@@ -203,7 +206,7 @@
         <button class="speak-btn" onclick="speakDir(this)">🔊</button>
         <h3 style="margin:0;">📖 Step 2 — Pick a Form</h3>
       </div>
-      <p class="dir-text">Choose Form A, Form B, or Form C. Each form has three stories and fifteen questions. The three forms use completely different stories, so a second attempt is real practice and not a memory test.</p>
+      <p class="dir-text">Start with the Warm Up. It has three short stories and the same kinds of questions as the real test. Then do Form A, Form B, and Form C, in that order. Each form is a little harder than the one before. Each form has three stories and fifteen questions. The forms all use different stories, so a second attempt is real practice and not a memory test.</p>
     </div>
 
     <div class="dir-section story-dir">
@@ -238,7 +241,7 @@
         <button class="speak-btn" onclick="speakDir(this)">🔊</button>
         <h3 style="margin:0;">🔁 Step 3 — Attempts</h3>
       </div>
-      <p class="dir-text">You get two attempts for each form. After your first try on all three forms, each form will unlock for one more attempt. After two attempts a form is locked — only your teacher can unlock it.</p>
+      <p class="dir-text">You get two attempts for each form. After your first try on all three forms, each form will unlock for one more attempt. You can take the Warm Up a second time right away. After two attempts a form is locked — only your teacher can unlock it.</p>
     </div>
 
     <div class="dir-section read-dir">
@@ -447,10 +450,11 @@
 </div><!-- /.container -->
 
 <script src="share.js?v=3"></script>
-<script src="data/skills.js?v=rl4-ra4"></script>
-<script src="data/form_a.js?v=rl4-ra4"></script>
-<script src="data/form_b.js?v=rl4-ra4"></script>
-<script src="data/form_c.js?v=rl4-ra4"></script>
-<script src="script.js?v=rl4-ra4-sh2-hl2-nav1-open1"></script>
+<script src="data/skills.js?v=wu1"></script>
+<script src="data/form_w.js?v=wu1"></script>
+<script src="data/form_a.js?v=wu1"></script>
+<script src="data/form_b.js?v=wu1"></script>
+<script src="data/form_c.js?v=wu1"></script>
+<script src="script.js?v=rl4-ra4-sh2-hl2-nav1-open1-wu1"></script>
 </body>
 </html>

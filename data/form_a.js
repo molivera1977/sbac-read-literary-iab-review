@@ -21,128 +21,123 @@ window.FORM_A = {
   passages: [
 
     /* ── PASSAGE 1 ─────────────────────────────────────
-       Realistic fiction that teaches a process. A school
-       idea comes home, the family builds it step by step,
-       and a picture shows how the parts fit together. */
+       Realistic fiction that teaches a process. A girl and
+       her uncle turn a milk jug into a bird feeder, one
+       index card at a time, and a picture shows the parts. */
     {
       id: "A-P1",
-      title: "Mateo's Worm Bin",
+      title: "A Window for the Birds",
       source: "Original practice passage",
       genre: "Realistic fiction",
       figure: {
-        after: 11,
-        caption: "A worm bin like the one Mateo and Abuela built",
-        alt: "A cutaway drawing of a worm bin. A top bin with a lid and a row of air holes holds damp newspaper strips, worms and food scraps. It rests on two wooden blocks inside a second bin, the catch tray, which catches water that drips out of the drainage holes.",
+        after: 9,
+        caption: "A milk-jug bird feeder like the one Amira and Uncle Sami built",
+        alt: "A drawing of a plastic milk jug hanging by a string from a maple branch. The string is tied around the neck of the jug, just under the blue cap, and the jug has a handle on one side. A square window is cut in the front. Below the window, a wooden spoon pokes through the jug and sticks out on both sides as a perch. Birdseed fills the bottom of the jug up to just below the window, and drops of water drip out of small drainage holes in the bottom.",
         svg: '<svg viewBox="0 0 600 340" xmlns="http://www.w3.org/2000/svg" font-family="Georgia, serif" font-size="14">' +
              '<rect width="600" height="340" rx="12" fill="#fffdf6"/>' +
-             // catch tray (second bin)
-             '<path d="M165 196 L435 196 L425 306 L175 306 Z" fill="#e3f2fd" stroke="#455a64" stroke-width="4"/>' +
-             // wooden blocks
-             '<rect x="208" y="262" width="34" height="42" fill="#bc8f5a" stroke="#6d4c2f" stroke-width="2"/>' +
-             '<rect x="358" y="262" width="34" height="42" fill="#bc8f5a" stroke="#6d4c2f" stroke-width="2"/>' +
-             // drips
-             '<path d="M255 268 q4 8 0 12 q-4 -4 0 -12 Z M300 276 q4 8 0 12 q-4 -4 0 -12 Z M345 266 q4 8 0 12 q-4 -4 0 -12 Z" fill="#42a5f5"/>' +
-             // top bin
-             '<path d="M180 64 L420 64 L410 260 L190 260 Z" fill="#eceff1" stroke="#263238" stroke-width="4"/>' +
-             // lid
-             '<rect x="168" y="46" width="264" height="16" rx="5" fill="#37474f"/>' +
-             // air holes
-             '<g fill="#fffdf6" stroke="#263238" stroke-width="1.5"><circle cx="205" cy="80" r="4"/><circle cx="235" cy="80" r="4"/><circle cx="265" cy="80" r="4"/><circle cx="295" cy="80" r="4"/><circle cx="325" cy="80" r="4"/><circle cx="355" cy="80" r="4"/><circle cx="385" cy="80" r="4"/></g>' +
-             // bedding
-             '<path d="M187 118 L413 118 L408 256 L192 256 Z" fill="#d7ccc8"/>' +
-             '<g stroke="#a1887f" stroke-width="2" fill="none"><path d="M196 136 q20 -8 40 0 t40 0 t40 0 t40 0 t40 0"/><path d="M196 170 q20 -8 40 0 t40 0 t40 0 t40 0 t40 0"/><path d="M196 204 q20 -8 40 0 t40 0 t40 0 t40 0 t40 0"/><path d="M198 238 q20 -8 40 0 t40 0 t40 0 t40 0 t36 0"/></g>' +
-             // food scraps (corner)
-             '<g><ellipse cx="372" cy="150" rx="18" ry="8" fill="#ff9800"/><rect x="350" y="160" width="26" height="9" rx="4" fill="#f57c00"/><circle cx="388" cy="168" r="7" fill="#8d6e63"/><ellipse cx="362" cy="178" rx="12" ry="5" fill="#7cb342"/></g>' +
-             // worms
-             '<g stroke="#e57373" stroke-width="5" stroke-linecap="round" fill="none"><path d="M220 150 q10 -10 20 0 t20 0"/><path d="M280 190 q10 10 20 0 t20 0"/><path d="M230 226 q8 -9 16 0 t16 0"/><path d="M320 150 q8 9 16 0"/></g>' +
-             // drainage holes
-             '<g fill="#fffdf6" stroke="#263238" stroke-width="1.5"><circle cx="250" cy="259" r="3.5"/><circle cx="300" cy="259" r="3.5"/><circle cx="350" cy="259" r="3.5"/></g>' +
+             // maple branch
+             '<path d="M150 34 Q300 24 452 36" fill="none" stroke="#6d4c41" stroke-width="12" stroke-linecap="round"/>' +
+             // jug body
+             '<path d="M284 90 L316 90 L316 104 Q368 112 374 142 L374 290 Q374 304 360 304 L240 304 Q226 304 226 290 L226 142 Q232 112 284 104 Z" fill="#f4f8fb" stroke="#607d8b" stroke-width="4"/>' +
+             // handle
+             '<g fill="none" stroke="#607d8b" stroke-width="4"><path d="M330 108 C396 100 404 176 374 184"/><path d="M340 118 C380 114 386 164 374 170"/></g>' +
+             // string, tied around the neck
+             '<g stroke="#8d6e63" stroke-width="2.5" fill="none"><path d="M300 36 L285 94"/><path d="M300 36 L315 94"/><path d="M283 97 L317 97" stroke-width="3"/></g>' +
+             // cap
+             '<rect x="281" y="72" width="38" height="18" rx="4" fill="#1e88e5" stroke="#0d47a1" stroke-width="2"/>' +
+             // birdseed
+             '<path d="M229 238 L371 238 L371 290 Q371 301 360 301 L240 301 Q229 301 229 290 Z" fill="#e2bf74"/>' +
+             '<g fill="#a1783a"><circle cx="242" cy="262" r="2"/><circle cx="258" cy="282" r="2"/><circle cx="276" cy="266" r="2"/><circle cx="292" cy="290" r="2"/><circle cx="310" cy="270" r="2"/><circle cx="326" cy="286" r="2"/><circle cx="344" cy="264" r="2"/><circle cx="358" cy="284" r="2"/><circle cx="300" cy="258" r="2"/></g>' +
+             // window
+             '<rect x="256" y="148" width="88" height="80" rx="6" fill="#5d4037" stroke="#455a64" stroke-width="3"/>' +
+             // perch (wooden spoon)
+             '<rect x="182" y="243" width="236" height="8" rx="4" fill="#a1887f" stroke="#6d4c41" stroke-width="1.5"/>' +
+             '<ellipse cx="430" cy="247" rx="16" ry="10" fill="#a1887f" stroke="#6d4c41" stroke-width="1.5"/>' +
+             // drainage holes + drips
+             '<g fill="#263238"><ellipse cx="270" cy="304" rx="3" ry="2"/><ellipse cx="300" cy="304" rx="3" ry="2"/><ellipse cx="330" cy="304" rx="3" ry="2"/></g>' +
+             '<path d="M270 310 q4 7 0 11 q-4 -4 0 -11 Z M300 314 q4 7 0 11 q-4 -4 0 -11 Z M330 310 q4 7 0 11 q-4 -4 0 -11 Z" fill="#42a5f5"/>' +
              // labels — left
-             '<g fill="#263238" stroke="#607d8b" stroke-width="1.5">' +
-               '<line x1="128" y1="54" x2="168" y2="54"/><line x1="128" y1="86" x2="200" y2="81"/><line x1="128" y1="134" x2="200" y2="138"/><line x1="128" y1="196" x2="280" y2="192"/>' +
-             '</g>' +
-             '<g fill="#263238" text-anchor="end"><text x="122" y="58">Lid</text><text x="122" y="90">Air holes</text><text x="122" y="132">Damp newspaper</text><text x="122" y="148">bedding</text><text x="122" y="200">Worms</text></g>' +
+             '<g stroke="#607d8b" stroke-width="1.5"><line x1="176" y1="64" x2="290" y2="64"/><line x1="176" y1="188" x2="262" y2="188"/><line x1="176" y1="280" x2="252" y2="280"/><line x1="176" y1="316" x2="266" y2="306"/></g>' +
+             '<g fill="#263238" text-anchor="end"><text x="170" y="68">String</text><text x="170" y="192">Window</text><text x="170" y="284">Birdseed</text><text x="170" y="320">Drainage holes</text></g>' +
              // labels — right
-             '<g stroke="#607d8b" stroke-width="1.5"><line x1="394" y1="156" x2="470" y2="150"/><line x1="354" y1="262" x2="470" y2="236"/><line x1="392" y1="282" x2="470" y2="278"/><line x1="428" y1="300" x2="470" y2="318"/></g>' +
-             '<g fill="#263238"><text x="476" y="146">Food scraps</text><text x="476" y="162">(in one corner)</text><text x="476" y="240">Drainage holes</text><text x="476" y="282">Wooden block</text><text x="476" y="322">Catch tray</text></g>' +
+             '<g stroke="#607d8b" stroke-width="1.5"><line x1="322" y1="81" x2="456" y2="81"/><line x1="394" y1="146" x2="456" y2="146"/><line x1="447" y1="245" x2="456" y2="242"/></g>' +
+             '<g fill="#263238"><text x="462" y="41">Maple branch</text><text x="462" y="86">Cap</text><text x="462" y="151">Handle</text><text x="462" y="238">Perch</text><text x="462" y="254">(wooden spoon)</text></g>' +
              '</svg>'
       },
       paragraphs: [
-        "On Tuesday, Ms. Rivera showed Mateo's class a video about where garbage goes. Most of it, it turned out, rides in a truck to a giant hill outside of town and just sits there for years and years. Ms. Rivera said that almost a third of what a family throws away is food scraps: banana peels, apple cores, coffee grounds, the ends of carrots.",
-        "“Those don't belong in the trash at all,” she said. “Worms can eat them and turn them into rich, dark soil. It's called composting, and you can do it in a box at home.”",
-        "Mateo did not hear one more word that afternoon. He drew boxes in the margins of his math worksheet, and then he drew worms in the boxes. When the bell rang, he was the first one out the door, and he ran all six blocks home with his backpack bouncing, practicing what he was going to say.",
-        "“Abuela,” he called, before the door had even closed behind him, “how do you feel about worms?”",
-        "His grandmother looked up from the cutting board, where a pile of carrot peels and squash ends sat waiting for the trash can. “Outside,” she said, “I feel fine about worms. Inside, I feel less fine.”",
-        "Mateo explained everything — the truck, the giant hill, the food scraps, the rich, dark soil. He reminded her about the tomato plants on the balcony, which never grew more than a handful of small, sour tomatoes. “Worm soil could fix them,” he said. “Ms. Rivera says it's like vitamins for plants.”",
-        "Abuela set down her knife. She looked at the carrot peels for a long moment. “When I was a girl in Puebla, my father kept a pile like that behind our house,” she said slowly. “Peels, eggshells, coffee. In our family, we never wasted a single thing.” Then she wiped her hands on a towel. “Saturday. We go to the hardware store together, and you do the reading.”",
-        "On Saturday they bought two dark plastic storage bins with lids, the kind people use to store winter sweaters, and two short blocks of wood. Mateo read from the notes he had copied in class. “The bins have to be dark,” he read, “because worms do not like light.”",
-        "Back at the apartment, Abuela held the first bin steady while Mateo drilled a row of small holes around the top edge. Then they flipped it over, and he drilled more holes in the bottom. “Air goes in through the top,” he explained, “and extra water drips out the bottom.”",
-        "Next, they set the two blocks of wood inside the second bin and rested the drilled bin on top of them, so there was a gap between the two bottoms. “That's the catch tray,” Mateo said. “Whatever drips out lands in there instead of on the floor.”",
-        "Then came the bedding. Mateo tore old newspapers into long strips, and Abuela sprinkled the strips with a spray bottle until they felt like a sponge that had been squeezed out. They fluffed the strips into the top bin and added two handfuls of dirt from the balcony pots.",
-        "The worms came last. They had been mailed from a worm farm, and they arrived in a cloth bag that wiggled when Mateo picked it up. He set them gently on top of the bedding and left the lid off with the kitchen light on. One by one, the worms burrowed down into the damp newspaper until not a single one could be seen.",
-        "“See?” Mateo said. “They really don't like light.”",
-        "Abuela leaned over the bin for a long time without saying anything. Then she went to the cutting board, came back with the carrot peels, and buried them in one corner under the newspaper, just the way Mateo's notes said to.",
-        "“Not too much at first,” Mateo warned. “They have to get used to their new home.”",
-        "“I know, I know,” said Abuela. “Who do you think taught you to read the directions?” But she was smiling when she put on the lid.",
-        "Out on the balcony, the tomato plants waited in their pots, as small and sour as ever. Mateo pressed his face against the glass door. “Two months,” he told them. “Maybe three.” He was almost sure they were listening."
+        "The first real snow of the year fell on Thursday night. On Friday morning, Amira stood at the kitchen window with her toast and watched three small brown birds hop along the fence. They pecked at the snow, hopped, and pecked again. There was nothing for them to find.",
+        "Uncle Sami, who lived in the apartment over the garage, came in stamping snow off his boots. He looked at the birds, and then at the empty milk jug by the recycling bin. “Those birds need a restaurant,” he said. “When I was your age, my grandfather and I built one out of a jug just like that. Want to make one tomorrow?”",
+        "That evening, Amira took a pencil and a stack of index cards out of the kitchen drawer. On the first card she wrote SUPPLIES. On the next five cards she wrote STEP 1 through STEP 5. Then she asked Uncle Sami to tell her everything he remembered, and she wrote it all down in her neatest printing. When he mixed up two of the steps, she crossed them out and made fresh cards. By bedtime, the cards sat in a tidy stack on the counter, held together with a clothespin so not one of them could get lost.",
+        "On Saturday morning, Amira read the SUPPLIES card out loud while Uncle Sami set everything on the table: the milk jug, washed and dried; a pair of strong scissors; a marker; a long nail; an old wooden spoon; a bag of birdseed; and a ball of string. “You're the boss of this project,” Uncle Sami said. “I'm just the helper with the sharp things.”",
+        "“Step one,” Amira read. “Cut a window.” Uncle Sami did not pick up the scissors until she had read the whole card. Amira drew a big square on the front of the jug, leaving about two inches of plastic below it so the seed would not spill out. The plastic was too tough for her hands, so Uncle Sami did the cutting while Amira held the jug still.",
+        "“Step two. Poke drainage holes.” Uncle Sami turned the jug upside down, and Amira used the nail to poke four tiny holes in the bottom. “Rain and snow will get in,” Uncle Sami explained, “so the water needs a way out. Wet seed turns moldy, and moldy seed can make birds sick.”",
+        "“Step three. Add a perch.” This was Amira's favorite part. Just below the window, she poked a hole in each side of the jug. Then she pushed the handle of the wooden spoon in one hole and out the other, so it stuck out on both sides like a tiny bar. “Now they have somewhere to stand while they eat,” she said.",
+        "“Step four. Fill it with seed.” Amira poured the birdseed in through the window, slowly, until it came up just below the bottom edge. “Not too full,” she said. “Or it will all spill out the first time the wind blows.”",
+        "“Step five. Hang it up.” Uncle Sami tied the string tightly around the neck of the jug, just under the cap, and made a loop at the top. Then they pulled on their boots and carried the feeder out into the snow.",
+        "Amira looked at the fence, where Mrs. Ortiz's orange cat liked to nap. “Not near the fence,” she said. “Too close to Pumpkin.” They chose a low branch of the maple tree instead, right where they could see it from the kitchen window. Uncle Sami tugged hard on the branch two times. It did not bend or crack. “Nice and sturdy,” he said, and he hung the loop over it.",
+        "Back inside, Amira took one more blank card from the drawer. She wrote STEP 6: WAIT and clipped it to the front of the stack. Then she pulled a chair up to the window, rested her chin on her hands, and watched the feeder sway in the cold air.",
+        "“How long will it take?” she asked.",
+        "“Could be an hour,” said Uncle Sami. “Could be a week. First the birds have to find it, and then they have to decide to trust it.”",
+        "Amira did not move from her chair. Out on the fence, a small brown bird landed, tipped its head to one side, and looked toward the maple tree."
       ]
     },
 
     /* ── PASSAGE 2 ─────────────────────────────────────
-       Sports fiction with a flashback frame: the race,
-       the backstory with the older brother, back to the
-       finish. The sibling relationship carries the
-       written answer. */
+       Sports fiction with a flashback frame: the last
+       penalty kick, the backstory with the older sister,
+       back to the kick. The sibling relationship carries
+       the written answer. */
     {
       id: "A-P2",
-      title: "Anchor Leg",
+      title: "Pick a Spot",
       source: "Original practice passage",
       genre: "Realistic fiction",
       paragraphs: [
-        "The stadium lights at Harmon Field came on while the boys' relays were still running, and by the time the girls lined up for the city championship, the sky above the bleachers had turned dark purple. Nia Brooks stood in the last exchange zone and shook out her hands, one and then the other, the way she always did.",
-        "She was the anchor. Her teammates Keisha, Rosa, and Danielle would run the first three legs of the relay, one hundred meters each, and then the baton would come to her. Whatever place the Eastside Eagles were in when it reached her hand, that was the place she had to fix.",
-        "Across the track, her mother stood at the fence holding her phone up high, recording everything. Nia knew exactly who the video was for.",
-        "Two summers ago, before he moved to Atlanta, her brother Andre had trained her himself. Every morning at six, he walked her to the empty track behind the middle school and made her practice handoffs until her arms ached. He was nineteen and had never run a race in his life, but he had watched about a thousand of them on TV, and he talked through every practice like a sports announcer.",
-        "“And Brooks takes the baton,” he would say into a hairbrush as she sprinted past him. “She's flying, folks! Nobody has seen speed like this since the invention of the cheetah!”",
-        "“Cheetahs weren't invented,” Nia told him once, out of breath.",
-        "“Don't interrupt the broadcast,” said Andre.",
-        "Being a real announcer was his dream. He called her races, their cousins' basketball games, and once, when nothing else was happening, a pigeon trying to land on a power line. Then last spring a radio station in Atlanta hired him to answer phones and carry coffee. It was not announcing, but Mom said he had finally gotten his foot in the door. Andre said that if he carried enough coffee, someday they would let him near a microphone.",
-        "He couldn't come home for the championship. “Text me the second it's over,” he had said on the phone the night before. “Not after you cool down. Not after you get a snack. The SECOND.”",
-        "The starter's gun cracked, and Nia snapped back to Harmon Field.",
-        "Keisha got out fast. Rosa held their spot around the curve. But on the third leg, Danielle got bumped by a runner from Westside and stumbled, and by the time she came pounding toward Nia's zone, the Eagles were in third place, two long steps behind the leaders.",
-        "Nia started running before Danielle reached her, just the way Andre had taught her. She stretched her hand back without turning her head. “Stick!” Danielle shouted, and the baton slapped into Nia's palm.",
-        "When the baton hits your hand, you don't look back. That was the first rule Andre had ever given her. Looking back is how you lose a step.",
-        "Nia did not look back. She caught the Southside runner halfway down the straightaway. The Westside girl was still ahead. Fifteen meters left. Ten. Nia's legs were burning, but she pushed harder, because somewhere in her head a voice that sounded a lot like a hairbrush was yelling, She's flying, folks! Nia leaned at the line, and the two runners crossed it so close together that nobody in the bleachers knew who had won.",
-        "Then the scoreboard flashed: EASTSIDE — 1.",
-        "Keisha and Rosa and Danielle crashed into Nia all at once, and the four of them fell into a pile on the grass. When Nia finally pulled herself free, the first thing she did was run to the fence. Her mother was already holding out the phone.",
-        "Nia typed with shaking thumbs: WE WON. I DIDN'T LOOK BACK.",
-        "The answer came less than a minute later. It was a voice message, and it was Andre, shouting so loudly that the phone buzzed. “And BROOKS takes it at the line! Ladies and gentlemen, I have never seen anything like it — and I have seen a pigeon land on a power line!”",
-        "Nia laughed so hard she had to sit down. Somewhere in Atlanta, she thought, there was a radio station that had no idea what it was missing."
+        "The Riverside Rockets and the Oak Hill Owls had played two halves and two overtimes, and the score was still tied, one to one. Now the championship would be decided by penalty kicks. One at a time, each team sent a player to the white spot to shoot against the other team's goalkeeper.",
+        "The Owls' fifth kicker had just sent the ball sailing over the crossbar. That meant if Lena Haddad scored on the next kick, the Rockets would be champions. If she missed, the shootout would keep going, and nobody knew for how long.",
+        "Lena set the ball on the white spot and stepped back. The Owls' goalkeeper was the tallest girl Lena had ever seen, and she was bouncing on her toes and waving her long arms as if she wanted to fill up the whole goal. Lena reached up and touched the green headband she was wearing. It used to belong to her sister.",
+        "Three summers ago, Noor had hung an old bedsheet between the two clothesline poles in their backyard and called it a goal. Noor was sixteen then and played goalkeeper for the high school team. Every evening after dinner, she pulled on her gardening gloves, stood in front of the bedsheet, and made Lena kick ball after ball at her.",
+        "“Most kickers pick a spot too late,” Noor told her. “They run up, they see the goalie, and they panic. You pick your spot before you start running. Then you trust it.”",
+        "“What if the goalie guesses right?” Lena asked.",
+        "“Then she guesses right,” said Noor. “But you still don't change your mind.”",
+        "Lena missed more kicks than she made that summer, but Noor never once said they should stop. She chased every wild shot into the rosebushes and tossed it back, and she cheered for every goal as loudly as if the whole town were watching.",
+        "Noor had a goal of her own, too. Ever since she was little, she had wanted to be an animal doctor. She had once wrapped a hurt paw on the neighbors' dog with a kitchen towel, and she read thick books about horses and cows the way other kids read comics. Last spring, a college in Colorado with one of the best animal programs in the country said yes to her. Colorado was a thousand miles away.",
+        "The night before she left, Noor got cold feet. Lena found her sitting on the back steps in the warm August dark, staring at the old bedsheet goal. “Maybe I should just go to the college here,” Noor said quietly. “Colorado is so far. And who's going to practice with you?”",
+        "Lena sat down next to her. She was only eight, but she knew exactly what to say. “You pick your spot before you start running,” she told her sister. “Then you trust it.”",
+        "Noor stared at her for a long moment. Then she laughed and wiped her eyes, pulled the green headband off her own head, and put it on Lena's. “Fine,” she said. “But you have to wear this to every game.”",
+        "The referee's whistle blew, and Lena was back on the field.",
+        "She picked her spot before she started running: the low left corner. She did not look at the goalkeeper's waving arms at all. She looked only at that one corner of the net, and she ran, and she kicked.",
+        "The goalkeeper guessed right. She dove to the left, stretching out her long arms, but the ball was too low and too fast. It skidded under her fingertips and into the back of the net.",
+        "The Rockets poured off the bench and piled onto Lena so hard that the green headband got knocked down over one eye. She did not even bother to fix it.",
+        "After the trophy ceremony, Lena borrowed Dad's phone and called Colorado. Noor answered on the first ring, whispering. She was in the library, studying for a test.",
+        "“Low left,” Lena said. “She guessed right, and I didn't change my mind.”",
+        "Noor shrieked so loudly that Lena heard somebody in the library say “Shhh!” Then Noor whispered, “I have a big test on dog bones tomorrow. And guess what? I already picked my spot.”"
       ]
     },
 
     /* ── PASSAGE 3 ─────────────────────────────────────
-       Folktale. An elder tests three young people, the
-       quiet one wins, and a simile carries the moral. */
+       Folktale. A queen tests three young people with
+       cracked bowls, the honest one wins, and a simile
+       carries the moral. */
     {
       id: "A-P3",
-      title: "The Keeper of the Spring",
+      title: "The Cracked Bowls",
       source: "Original practice passage",
       genre: "Folktale",
-      note: "A folktale is a story that people have told and retold for a very long time. Many folktales teach a lesson.",
+      note: "A folktale is an old story that people passed down by telling it out loud. Many folktales end with a lesson, called a moral.",
       paragraphs: [
-        "Long ago, in a village at the bottom of a mountain, there lived an old woman named Ama who was the keeper of the spring. Every morning for fifty years, she had climbed the mountain path to the place where the water came bubbling out of the rocks. She cleared away the fallen leaves, she checked that the water ran clean, and then she followed the stream all the way back down to the village. Because of Ama, no one in the village had ever gone thirsty.",
-        "But Ama's knees had grown stiff, and the path seemed to get a little steeper every year. She knew the time had come to choose the next keeper. She also knew that this choice mattered more than anything else she had done in fifty years, and she did not want to make it in a hurry. For a whole season, she quietly watched the young people of the village at their work and at their play. At last she chose three of them: Tomas, who was the strongest; Lina, who was the cleverest; and Ren, who was so quiet that most people forgot he was there.",
-        "“Tomorrow at sunrise, each of you will go up to the spring,” Ama told them. “Then come back and tell me what you saw.”",
-        "Tomas ran the whole way up the mountain. He was back before the sun had cleared the trees, and he was hardly out of breath. “The spring is running,” he said proudly. “And I made it to the top faster than anyone in the village ever has.”",
-        "Lina came back an hour later with a notebook full of numbers. “There are one thousand, two hundred and twelve steps to the top,” she said. “The water comes out of the rock at about one full bucket every ten breaths. I measured it three times.”",
-        "Ren did not come back until almost noon. His sleeves were wet to the elbows, and there was mud on both of his knees.",
-        "“The spring is fine,” he said. “But halfway down the mountain, a big branch has fallen across the stream. The water is piling up behind it and spilling out onto the path. If it stays there, the houses at the bottom of the village will run low on water by next week.” He looked down at his muddy knees. “I couldn't move the branch by myself, so I dug a little ditch around it. The water is running again, for now. But it needs more than one person.”",
-        "Ama was quiet for a long time. Then she said, “Ren will be the next keeper of the spring.”",
-        "Tomas and Lina were astonished. They looked at each other, then at Ren, then at Ama, as if one of them must have heard wrong. “But I was the fastest,” said Tomas. “And I was the most careful,” said Lina. “I counted every step.”",
-        "“You were both very good at reaching the spring,” said Ama. “But the spring is not where the people live. A village is like a stream. When one stone blocks it at the top, every house at the bottom goes thirsty. The keeper must care for the whole stream, from the first drop to the last house.”",
-        "The next morning, Tomas used his strong arms to lift the branch out of the water, and Lina used her clever mind to plan a low stone wall so that falling branches would never block the stream again. Ren walked beside them the whole way, watching the water.",
-        "And it is said that, to this day, the keepers of that village do not stop when they reach the spring. Every morning they walk the whole stream, from the top of the mountain to the very last house."
+        "Long ago, in a land of green hills and slow brown rivers, there lived a queen named Ilsa. She was not the richest ruler in the world, but her people loved her.",
+        "Queen Ilsa lived in a white stone palace at the top of the tallest hill. One spring, when the river flooded and ruined the wheat fields, she did not pretend that all would be well. Instead, she stood in the town square and told the people the truth: there would be less bread that winter, and the palace would eat less too. Around that time, her old advisor, Bram, grew too tired to climb the palace stairs. He asked to spend his last years in his garden, and the queen agreed. So she sent word to every village that she needed a new advisor.",
+        "Many people came to the palace hoping to be chosen. The queen spoke with each of them, and at last she picked three: Darin, the son of a rich merchant; Mira, the finest painter in the village; and Pell, a shepherd boy who had never been inside a palace before.",
+        "The queen set three clay bowls on the table in front of them. Each bowl had a long crack running down its side. “Take these home with you,” she said. “Tomorrow, bring them back to me whole.”",
+        "Darin went straight to the market. He found a potter who sold bowls of the very same size and color, paid for one with a handful of silver coins, and tossed the cracked bowl onto a trash heap.",
+        "Mira worked late into the night by candlelight. She pressed a paste of flour and water into the crack, let it dry hard, and painted over it so carefully that no one could tell where the crack had been.",
+        "Pell had no money for a new bowl and no paints at all. He sat by his fire for hours, trying everything he could think of. At last he mixed sticky pine sap with ashes from the fire, pressed it deep into the crack, and wrapped the bowl tightly in a strip of cloth while it dried. In the morning, the bowl was strong again, but a dark, crooked line still ran right down its side.",
+        "The next day, Darin and Mira set their shining bowls on the queen's table. “Good as new,” said Darin. “Just as you asked,” said Mira. Pell was so anxious that his hands shook as he set his bowl down beside theirs. “I could not make it whole, Your Majesty,” he said. “I filled the crack so it will hold, but you can still see it. I am sorry.”",
+        "The queen said nothing. She lifted a pitcher of water and filled all three bowls to the brim. In a moment, the flour paste in Mira's bowl turned soft, and water began to drip onto the table. Darin's bowl did not leak at all, but when the queen turned it in her hands, there was no crack on it anywhere. “This is not the bowl I gave you,” she said, and Darin's face turned red. Pell's bowl, crooked line and all, held every drop.",
+        "Then the queen turned to the three of them. “Darin hid the truth with silver, and Mira hid it with paint,” she said. “Only Pell told me what really happened. An honest word is like Pell's bowl. It may not look perfect, but it holds what you put in it. A pretty answer that hides the truth is like a painted crack. It looks fine right up until the moment you need it to hold.”",
+        "So Pell became the queen's new advisor. For many years, he told her the truth even when it was hard to hear, and the whole kingdom was better for it.",
+        "And it is said that, in that land, families still keep one cracked bowl on the kitchen shelf. When a child is tempted to hide a mistake, a grandparent takes the bowl down, fills it with water, and tells the story of Pell."
       ]
     }
   ],
@@ -166,177 +161,177 @@ window.FORM_A = {
 
     // Item 1 — characterization from one paragraph
     { id: "A01", p: 0,
-      q: "Read paragraph 3 from the passage. What does paragraph 3 show about Mateo?",
+      q: "Read paragraph 3 from the passage. What does paragraph 3 show about Amira?",
       excerpt: [
-        "Mateo did not hear one more word that afternoon. He drew boxes in the margins of his math worksheet, and then he drew worms in the boxes. When the bell rang, he was the first one out the door, and he ran all six blocks home with his backpack bouncing, practicing what he was going to say."
+        "That evening, Amira took a pencil and a stack of index cards out of the kitchen drawer. On the first card she wrote SUPPLIES. On the next five cards she wrote STEP 1 through STEP 5. Then she asked Uncle Sami to tell her everything he remembered, and she wrote it all down in her neatest printing. When he mixed up two of the steps, she crossed them out and made fresh cards. By bedtime, the cards sat in a tidy stack on the counter, held together with a clothespin so not one of them could get lost."
       ],
       choices: [
-        "He is eager to try out the idea he learned in class.",
-        "He is worried that he did not finish his math worksheet.",
-        "He would rather draw pictures than do his schoolwork.",
-        "He is in a hurry because he is late getting home."
+        "She does not believe that her uncle knows how to build a feeder.",
+        "She likes to make a careful plan before she starts something.",
+        "She would rather write about the feeder than build it.",
+        "She is in a hurry to finish the feeder before bedtime."
       ],
-      answer: "He is eager to try out the idea he learned in class.",
-      explanation: "Everything in the paragraph comes from the worm idea: he stops listening, he draws worms in boxes, he runs home first, and he practices what he will say. That is what being eager looks like. Nothing says he is late, and the drawing is about the idea, not about skipping work." },
+      answer: "She likes to make a careful plan before she starts something.",
+      explanation: "Amira writes a card for the supplies and a card for every step, fixes the steps that got mixed up, and clips the cards so none get lost — all before they build anything. That is careful planning. She asks her uncle for help because she trusts what he remembers, and the building waits until Saturday, so she is not rushing." },
 
     // Item 2 — word meaning in context
     { id: "A02", p: 0,
-      q: "Read this sentence from the passage. “One by one, the worms burrowed down into the damp newspaper until not a single one could be seen.” What does the word burrowed mean in this sentence?",
+      q: "Read these sentences from the passage. “Uncle Sami tugged hard on the branch two times. It did not bend or crack.” Then he calls the branch “nice and sturdy.” What does the word sturdy mean?",
       choices: [
-        "dug their way in",
-        "went to sleep",
-        "climbed out",
-        "rolled into balls"
+        "old and dry",
+        "thin and bendy",
+        "strong and steady",
+        "covered with snow"
       ],
-      answer: "dug their way in",
-      explanation: "The clues are “down into the damp newspaper” and “not a single one could be seen.” The worms went down into the bedding and disappeared, so burrowed means dug their way in. Climbing out would leave them in plain sight." },
+      answer: "strong and steady",
+      explanation: "The clues come right before the word: Uncle Sami tugs hard, and the branch does not bend or crack. A branch that holds still when you pull on it is strong and steady. Thin and bendy is the opposite, and nothing in the story says the branch is old or snowy." },
 
     // Item 3 — purpose of the picture
     { id: "A03", p: 0, showFigure: true,
       q: "Look at the picture from the passage. Why does the author include this picture?",
       choices: [
-        "to show how the parts of the worm bin fit together",
-        "to show how many worms Mateo ordered from the farm",
-        "to explain why worms do not like light",
-        "to show what the tomato plants will look like with worm soil"
+        "to show what kinds of birds came to eat at the feeder",
+        "to help the reader see where each part of the finished feeder is",
+        "to explain why moldy seed can make birds sick",
+        "to show the steps for cutting plastic safely"
       ],
-      answer: "to show how the parts of the worm bin fit together",
-      explanation: "The picture labels the lid, the air holes, the bedding, the drainage holes, the wooden blocks and the catch tray, and shows one bin sitting inside the other. Those parts are hard to picture from words alone. It does not count worms, show tomatoes, or explain anything about light." },
+      answer: "to help the reader see where each part of the finished feeder is",
+      explanation: "The picture labels the window, the perch, the birdseed, the drainage holes, the string and the cap on the finished feeder. Seeing them in one place makes the steps in the story easier to understand. There are no birds in the picture, and it does not explain mold or show anyone cutting." },
 
     // Item 4 — EBSR: conclusion + supporting sentence
     { id: "A04", p: 0, type: "ebsr",
       partA: {
-        q: "Part A — What conclusion can be drawn about why Abuela agrees to build the worm bin?",
+        q: "Part A — What conclusion can be drawn about Amira from the way she chooses a place to hang the feeder?",
         choices: [
-          "It reminds her of the way her own family made sure nothing went to waste.",
-          "She wants Mateo to earn a good grade from Ms. Rivera.",
-          "She is tired of carrying the trash down to the street.",
-          "She has always wanted to keep worms as pets."
+          "She is afraid of Mrs. Ortiz's orange cat.",
+          "She wants the feeder to hang as high as it can go.",
+          "She wants to keep the birds safe while they eat.",
+          "She wants to hide the feeder where no one can see it."
         ],
-        answer: "It reminds her of the way her own family made sure nothing went to waste.",
-        explanation: "Abuela starts out unsure (“Inside, I feel less fine”). She changes her mind right after she remembers her father's pile in Puebla. The story never mentions a grade, the trash, or wanting pets." },
+        answer: "She wants to keep the birds safe while they eat.",
+        explanation: "Amira will not hang the feeder near the fence because the cat naps there — she is thinking about the birds that will come to eat. Nothing shows she is scared of the cat herself. They pick a LOW branch that they can see from the kitchen window, so the other two choices are the opposite of what happens." },
       partB: {
         q: "Part B — Which sentence from the passage BEST supports the answer in Part A?",
         longChoices: true,
         choices: [
-          "“In our family, we never wasted a single thing.”",
-          "“Outside,” she said, “I feel fine about worms. Inside, I feel less fine.”",
-          "“Not too much at first,” Mateo warned.",
-          "On Saturday they bought two dark plastic storage bins with lids, the kind people use to store winter sweaters, and two short blocks of wood."
+          "“Not too full,” she said. “Or it will all spill out the first time the wind blows.”",
+          "“Not near the fence,” she said. “Too close to Pumpkin.”",
+          "Uncle Sami tugged hard on the branch two times.",
+          "Then she pulled a chair up to the window, rested her chin on her hands, and watched the feeder sway in the cold air."
         ],
-        answer: "“In our family, we never wasted a single thing.”",
-        explanation: "Abuela says this just before she agrees to go to the hardware store, so it shows why she says yes. The “less fine” line shows how she felt before she changed her mind, and the other two choices happen after she has already agreed." } },
+        answer: "“Not near the fence,” she said. “Too close to Pumpkin.”",
+        explanation: "Amira says no to the fence because it is too close to the cat. That is the moment she keeps the birds out of danger. The seed line is about not spilling, the tug is Uncle Sami checking the branch, and the chair is about waiting." } },
 
     // Item 5 — main idea of re-shown building paragraphs
     { id: "A05", p: 0,
-      q: "Read paragraphs 9 and 10 from the passage again. What is the main idea of these paragraphs?",
+      q: "Read paragraphs 5 and 6 from the passage again. What is the main idea of these paragraphs?",
       excerpt: [
-        "Back at the apartment, Abuela held the first bin steady while Mateo drilled a row of small holes around the top edge. Then they flipped it over, and he drilled more holes in the bottom. “Air goes in through the top,” he explained, “and extra water drips out the bottom.”",
-        "Next, they set the two blocks of wood inside the second bin and rested the drilled bin on top of them, so there was a gap between the two bottoms. “That's the catch tray,” Mateo said. “Whatever drips out lands in there instead of on the floor.”"
+        "“Step one,” Amira read. “Cut a window.” Uncle Sami did not pick up the scissors until she had read the whole card. Amira drew a big square on the front of the jug, leaving about two inches of plastic below it so the seed would not spill out. The plastic was too tough for her hands, so Uncle Sami did the cutting while Amira held the jug still.",
+        "“Step two. Poke drainage holes.” Uncle Sami turned the jug upside down, and Amira used the nail to poke four tiny holes in the bottom. “Rain and snow will get in,” Uncle Sami explained, “so the water needs a way out. Wet seed turns moldy, and moldy seed can make birds sick.”"
       ],
       choices: [
-        "Mateo and Abuela begin to build the worm bin.",
-        "Mateo explains why worms need air.",
-        "Abuela learns how to use a drill.",
-        "The worms arrive from the worm farm."
+        "Uncle Sami explains why wet seed is bad for birds.",
+        "Amira learns how to cut plastic with strong scissors.",
+        "Amira and Uncle Sami begin to turn the milk jug into a feeder.",
+        "Amira and Uncle Sami hang the feeder on the maple tree."
       ],
-      answer: "Mateo and Abuela begin to build the worm bin.",
-      explanation: "Both paragraphs are about the first building steps: drilling the holes and setting one bin inside the other. Air is one small detail inside paragraph 9, Abuela never uses the drill, and the worms do not arrive until later." },
+      answer: "Amira and Uncle Sami begin to turn the milk jug into a feeder.",
+      explanation: "Both paragraphs are the first building steps: cutting the window and poking the drainage holes. Wet seed is one small detail in paragraph 6, Uncle Sami does the cutting because the plastic is too tough for Amira, and the feeder is not hung until later." },
 
     // Item 6 — hot text: click 2 sentences from a list
     { id: "A06", p: 0, type: "hottext", layout: "list", pick: 2,
-      q: "The passage shows that Mateo and Abuela work TOGETHER. Click on the TWO sentences from the passage that BEST support this idea.",
+      q: "The passage shows that Uncle Sami lets Amira be IN CHARGE of building the feeder. Click on the TWO sentences from the passage that BEST support this idea.",
       choices: [
-        "Mateo did not hear one more word that afternoon.",
-        "He reminded her about the tomato plants on the balcony, which never grew more than a handful of small, sour tomatoes.",
-        "“Saturday. We go to the hardware store together, and you do the reading.”",
-        "Back at the apartment, Abuela held the first bin steady while Mateo drilled a row of small holes around the top edge.",
-        "He set them gently on top of the bedding and left the lid off with the kitchen light on.",
-        "Out on the balcony, the tomato plants waited in their pots, as small and sour as ever."
+        "Uncle Sami, who lived in the apartment over the garage, came in stamping snow off his boots.",
+        "On the first card she wrote SUPPLIES.",
+        "“You're the boss of this project,” Uncle Sami said. “I'm just the helper with the sharp things.”",
+        "Uncle Sami did not pick up the scissors until she had read the whole card.",
+        "The plastic was too tough for her hands, so Uncle Sami did the cutting while Amira held the jug still.",
+        "Uncle Sami tugged hard on the branch two times."
       ],
       answers: [
-        "“Saturday. We go to the hardware store together, and you do the reading.”",
-        "Back at the apartment, Abuela held the first bin steady while Mateo drilled a row of small holes around the top edge."
+        "“You're the boss of this project,” Uncle Sami said. “I'm just the helper with the sharp things.”",
+        "Uncle Sami did not pick up the scissors until she had read the whole card."
       ],
-      explanation: "In the first sentence Abuela plans the trip so they go together and each has a job — he does the reading. In the second, both of them work on the same bin at the same moment. The other sentences show only one person, or no one, doing something." },
+      explanation: "Uncle Sami calls Amira the boss and himself the helper, and then he waits for her to read each card before he does anything. Both show him letting her lead. The other sentences show someone doing a job, but not who is in charge." },
 
     /* ── PASSAGE 2 · items 7–11 ── */
 
     // Item 7 — summary with a missing key event
     { id: "A07", p: 1,
       q: "Read this summary of the passage. Which KEY event is MISSING from the summary?",
-      excerptLabel: "📝 A summary of “Anchor Leg”",
+      excerptLabel: "📝 A summary of “Pick a Spot”",
       excerpt: [
-        "Nia is the anchor runner for the Eastside Eagles at the city relay championship. While she waits for the baton, she remembers how her brother Andre trained her on the school track and called her practices like a sports announcer. On the third leg of the race, Danielle stumbles, and Nia gets the baton in third place. After the race, Nia texts Andre, and he answers with a funny voice message."
+        "The Rockets and the Owls are tied in a championship soccer game, and Lena steps up to take a penalty kick that could win it. She remembers how her older sister, Noor, taught her in the backyard to pick a spot and trust it. She also remembers the night Noor almost stayed home instead of going to college in Colorado. After the game, Lena calls Noor to tell her what happened."
       ],
       choices: [
-        "Nia passes the other runners and wins the race at the finish line.",
-        "Nia's mother records the race on her phone.",
-        "Danielle gets bumped and falls behind.",
-        "Nia's teammates pile on top of her on the grass."
+        "Noor almost decides not to go to college in Colorado.",
+        "Lena kicks the ball into the low left corner and wins the championship.",
+        "Lena touches the green headband before she kicks.",
+        "The Owls' goalkeeper bounces on her toes and waves her arms."
       ],
-      answer: "Nia passes the other runners and wins the race at the finish line.",
-      explanation: "A summary has to include the events the story depends on. The summary jumps from Nia getting the baton in third place straight to the text message, so it never says she won — the biggest event of all. Danielle's stumble is already in the summary, and the phone video and the pile on the grass are small details." },
+      answer: "Lena kicks the ball into the low left corner and wins the championship.",
+      explanation: "The summary sets up the big kick and then jumps straight to the phone call, so it never tells what happened when Lena kicked — the most important event in the story. Noor almost staying home is already in the summary, and the headband and the goalkeeper's waving arms are small details." },
 
     // Item 8 — evidence for a conclusion
     { id: "A08", p: 1, longChoices: true,
-      q: "Which detail from the passage BEST shows that Andre cares a lot about how Nia's race turns out?",
+      q: "Which detail from the passage BEST shows that Noor was PATIENT while she was teaching Lena?",
       choices: [
-        "“Text me the second it's over,” he had said on the phone the night before. “Not after you cool down. Not after you get a snack. The SECOND.”",
-        "Then last spring a radio station in Atlanta hired him to answer phones and carry coffee.",
-        "Andre said that if he carried enough coffee, someday they would let him near a microphone.",
-        "“Don't interrupt the broadcast,” said Andre."
+        "Noor was sixteen then and played goalkeeper for the high school team.",
+        "Lena missed more kicks than she made that summer, but Noor never once said they should stop.",
+        "Then she laughed and wiped her eyes, pulled the green headband off her own head, and put it on Lena's.",
+        "Noor answered on the first ring, whispering."
       ],
-      answer: "“Text me the second it's over,” he had said on the phone the night before. “Not after you cool down. Not after you get a snack. The SECOND.”",
-      explanation: "Andre cannot be there, so he makes Nia promise to tell him the very second the race ends — he even says it three ways. That is someone who cares a lot about how it turns out. The other choices are about his own life or his jokes, not about this race." },
+      answer: "Lena missed more kicks than she made that summer, but Noor never once said they should stop.",
+      explanation: "Being patient means you keep going even when things go slowly. Lena missed most of her kicks, and Noor still never gave up on the practices. Her age and team tell who she is, and the headband and the phone call happen long after the teaching." },
 
     // Item 9 — EBSR: character trait + support
     { id: "A09", p: 1, type: "ebsr",
       partA: {
-        q: "Part A — Which word BEST describes Nia during the race?",
+        q: "Part A — Which word BEST describes Lena when she takes the last kick?",
         choices: [
-          "determined",
-          "unsure",
+          "careless",
+          "focused",
           "boastful",
-          "careless"
+          "confused"
         ],
-        answer: "determined",
-        explanation: "Determined means you keep pushing toward a goal even when it is hard. Nia starts in third place, her legs are burning, and she pushes harder anyway. She never brags and she follows Andre's rules exactly, so boastful and careless do not fit." },
+        answer: "focused",
+        explanation: "Focused means paying attention to one thing and not letting anything distract you. Lena picks her corner first and keeps her eyes on it the whole time, even with the goalkeeper waving her arms. She follows Noor's plan exactly, so she is not careless or confused, and she never brags." },
       partB: {
         q: "Part B — Which sentence from the passage BEST supports the answer in Part A?",
         longChoices: true,
         choices: [
-          "Nia's legs were burning, but she pushed harder, because somewhere in her head a voice that sounded a lot like a hairbrush was yelling, She's flying, folks!",
-          "Nia Brooks stood in the last exchange zone and shook out her hands, one and then the other, the way she always did.",
-          "Across the track, her mother stood at the fence holding her phone up high, recording everything.",
-          "Nia laughed so hard she had to sit down."
+          "Lena reached up and touched the green headband she was wearing.",
+          "She did not look at the goalkeeper's waving arms at all.",
+          "The Rockets poured off the bench and piled onto Lena so hard that the green headband got knocked down over one eye.",
+          "After the trophy ceremony, Lena borrowed Dad's phone and called Colorado."
         ],
-        answer: "Nia's legs were burning, but she pushed harder, because somewhere in her head a voice that sounded a lot like a hairbrush was yelling, She's flying, folks!",
-        explanation: "“Her legs were burning, but she pushed harder” is determination in action — it is hard, and she keeps going. Shaking out her hands is a habit before the race, and the other two happen off the track." } },
+        answer: "She did not look at the goalkeeper's waving arms at all.",
+        explanation: "The goalkeeper is trying to distract her, and Lena does not even look — that is what being focused looks like. Touching the headband happens before she starts her kick, and the other two choices happen after the kick is over." } },
 
     // Item 10 — choose TWO: idiom with a literal-reading trap
     { id: "A10", p: 1, type: "ms", pick: 2,
-      q: "Read this sentence from the passage. “It was not announcing, but Mom said he had finally gotten his foot in the door.” What does the phrase “gotten his foot in the door” suggest about Andre? Choose TWO answers.",
+      q: "Read this sentence from the passage. “The night before she left, Noor got cold feet.” What does the phrase “got cold feet” suggest about Noor? Choose TWO answers.",
       choices: [
-        "He has a first chance to work at a place where he wants to be.",
-        "His job could lead to the work he really wants someday.",
-        "He hurt his foot on a door at the radio station.",
-        "He stands by the front door so he can answer the phones.",
-        "He is already announcing games on the radio."
+        "She felt nervous about making such a big change.",
+        "Her feet were cold from sitting outside at night.",
+        "She started to think about not going after all.",
+        "She needed warmer socks for the snow in Colorado.",
+        "She could not wait to leave for Colorado."
       ],
       answers: [
-        "He has a first chance to work at a place where he wants to be.",
-        "His job could lead to the work he really wants someday."
+        "She felt nervous about making such a big change.",
+        "She started to think about not going after all."
       ],
-      explanation: "“Getting your foot in the door” is an idiom — it does not mean a real foot or a real door. It means you got a small first chance somewhere that can lead to something bigger. That matches the next sentence: if he carries enough coffee, someday they might let him near a microphone. He is not announcing yet." },
+      explanation: "“Getting cold feet” is an idiom — it is not about real feet. It means you get nervous right before something big and start to think about backing out. That matches what Noor says next: “Maybe I should just go to the college here.” The night was warm, so her feet were not really cold, and she was not eager to leave." },
 
     // Item 11 — written response
     { id: "A11", p: 1, type: "cr",
-      q: "What can you infer about the relationship between Nia and her brother Andre? Use details from the passage to support your answer.",
+      q: "What can you infer about the relationship between Lena and her sister Noor? Use details from the passage to support your answer.",
       guidance: "Tell what kind of relationship they have. Then give at least TWO details from the story that prove it, and explain how each one shows it.",
-      model: "Nia and Andre are very close, and they cheer each other on. Andre woke up early every morning to train Nia on the track, and he made practice fun by calling it like a sports announcer. Even though he lives in Atlanta now, he made her promise to text him “the SECOND” the race was over, and he answered with a funny announcer message. During the race, Nia heard his voice in her head telling her she was flying, which shows how much his support means to her.",
+      model: "Lena and Noor are very close, and they help each other be brave. Noor spent her summer evenings teaching Lena penalty kicks in the backyard, and she never said they should stop, even when Lena missed most of her kicks. Later, when Noor got cold feet about leaving for college, Lena used Noor's own advice, “pick your spot,” to help her go. Noor gave Lena her green headband, and Lena wore it in the big game and called Noor right after she scored. Each sister helps the other one go after her goal.",
       checklist: [
-        "I said what their relationship is like — not just that they are brother and sister.",
+        "I said what their relationship is like — not just that they are sisters.",
         "I used at least TWO details from the story.",
         "I explained how each detail shows the relationship."
       ] },
@@ -345,66 +340,67 @@ window.FORM_A = {
 
     // Item 12 — choose TWO synonyms
     { id: "A12", p: 2, type: "ms", pick: 2,
-      q: "Read this sentence from the passage. “Tomas and Lina were astonished.” Which TWO words mean about the same as astonished? Choose TWO answers.",
+      q: "Read this sentence from the passage. “Pell was so anxious that his hands shook as he set his bowl down beside theirs.” Which TWO words mean about the same as anxious? Choose TWO answers.",
       choices: [
-        "amazed",
-        "surprised",
-        "angry",
-        "tired",
         "proud",
-        "bored"
+        "worried",
+        "sleepy",
+        "nervous",
+        "cheerful",
+        "greedy"
       ],
       answers: [
-        "amazed",
-        "surprised"
+        "worried",
+        "nervous"
       ],
-      explanation: "The next sentence is the clue: they look at each other “as if one of them must have heard wrong.” That is how people act when something amazes or surprises them. They are not tired or bored, and nothing shows anger or pride." },
+      explanation: "The clue is in the same sentence: Pell's hands shook. He is about to show the queen a bowl he could not make whole, so he is worried and nervous about what she will say. Nothing shows he is proud, sleepy, cheerful or greedy." },
 
     // Item 13 — summary of a bounded section
     { id: "A13", p: 2,
       q: "Which statement BEST summarizes the LAST THREE paragraphs of the passage?",
       choices: [
-        "Ama explains that the keeper must care for the whole village, the three young people fix the stream together, and the keepers still walk the whole stream today.",
-        "Tomas and Lina are upset because they were not chosen to be the keeper of the spring.",
-        "Tomas lifts a heavy branch out of the stream with his strong arms.",
-        "Ren becomes the keeper because he was the last one to come back down the mountain."
+        "Darin's face turns red when the queen finds out that he bought a new bowl.",
+        "Pell becomes the queen's new advisor.",
+        "The queen chooses Pell because he fixed his bowl better than anyone else in the kingdom could.",
+        "The queen explains why honesty matters, Pell becomes her advisor and always tells her the truth, and families still use a cracked bowl to teach the lesson."
       ],
-      answer: "Ama explains that the keeper must care for the whole village, the three young people fix the stream together, and the keepers still walk the whole stream today.",
-      explanation: "A good summary of a section covers every paragraph in it, in a few words. The last three paragraphs are Ama's explanation, the three of them fixing the stream, and the tradition that lasts. Tomas lifting the branch is only one detail, Tomas and Lina's surprise comes before that section, and Ren was not chosen for being last." },
+      answer: "The queen explains why honesty matters, Pell becomes her advisor and always tells her the truth, and families still use a cracked bowl to teach the lesson.",
+      explanation: "A good summary of a section covers every paragraph in it, in a few words. The last three paragraphs are the queen's lesson, Pell's years as her advisor, and the cracked bowl that families still keep. Pell becoming advisor is only one part, Darin's red face comes before that section, and the queen chose Pell for his honesty, not for his fixing skills." },
 
     // Item 14 — choose THREE: what a simile shows
     { id: "A14", p: 2, type: "ms", pick: 3,
-      q: "Read these sentences from the passage. “A village is like a stream. When one stone blocks it at the top, every house at the bottom goes thirsty.” What does this comparison show about what Ama believes? Choose THREE answers.",
+      q: "Read these sentences from the passage. “An honest word is like Pell's bowl. It may not look perfect, but it holds what you put in it. A pretty answer that hides the truth is like a painted crack. It looks fine right up until the moment you need it to hold.” What do these comparisons show about what the queen believes? Choose THREE answers.",
       choices: [
-        "Everyone in the village is connected to everyone else.",
-        "A small problem in one place can hurt people far away.",
-        "A keeper has to watch out for the whole village, not just one part of it.",
-        "The houses in the village should be moved closer to the spring.",
-        "The keeper should carry stones up to the top of the mountain.",
-        "Only the people at the bottom of the village need water."
+        "Telling the truth matters more than looking perfect.",
+        "The queen's advisor must be good at fixing broken bowls.",
+        "People can count on someone who is honest.",
+        "Bowls with paint on them should never be used in the palace.",
+        "Hiding a mistake may look good at first, but it fails when it matters.",
+        "Pell's bowl is the most beautiful bowl in the kingdom."
       ],
       answers: [
-        "Everyone in the village is connected to everyone else.",
-        "A small problem in one place can hurt people far away.",
-        "A keeper has to watch out for the whole village, not just one part of it."
+        "Telling the truth matters more than looking perfect.",
+        "People can count on someone who is honest.",
+        "Hiding a mistake may look good at first, but it fails when it matters."
       ],
-      explanation: "Ama compares the village to a stream to explain why she chose Ren: what happens in one spot reaches every house, so the keeper has to care about all of it. The wrong choices read the comparison as if it were about real stones and real houses instead of about how a village works." },
+      explanation: "The queen compares words to bowls to explain why she chose Pell: an honest answer may not look perfect, but you can count on it, while a hidden mistake looks fine only until it is tested. The wrong choices read the comparison as if it were about real bowls and real paint instead of about honesty. Pell's bowl even has a crooked line, so it is not the most beautiful." },
 
     // Item 15 — hot text: click 2 sentences inside a re-shown paragraph
     { id: "A15", p: 2, type: "hottext", layout: "para", pick: 2,
-      q: "Read paragraph 2 from the passage. The passage shows that Ama is CAREFUL about choosing the next keeper. Click on the TWO sentences in the paragraph that BEST support this idea.",
+      q: "Read paragraph 2 from the passage. The passage shows that Queen Ilsa is HONEST herself. Click on the TWO sentences in the paragraph that BEST support this idea.",
       choices: [
-        "But Ama's knees had grown stiff, and the path seemed to get a little steeper every year.",
-        "She knew the time had come to choose the next keeper.",
-        "She also knew that this choice mattered more than anything else she had done in fifty years, and she did not want to make it in a hurry.",
-        "For a whole season, she quietly watched the young people of the village at their work and at their play.",
-        "At last she chose three of them: Tomas, who was the strongest; Lina, who was the cleverest; and Ren, who was so quiet that most people forgot he was there."
+        "Queen Ilsa lived in a white stone palace at the top of the tallest hill.",
+        "One spring, when the river flooded and ruined the wheat fields, she did not pretend that all would be well.",
+        "Instead, she stood in the town square and told the people the truth: there would be less bread that winter, and the palace would eat less too.",
+        "Around that time, her old advisor, Bram, grew too tired to climb the palace stairs.",
+        "He asked to spend his last years in his garden, and the queen agreed.",
+        "So she sent word to every village that she needed a new advisor."
       ],
       answers: [
-        "She also knew that this choice mattered more than anything else she had done in fifty years, and she did not want to make it in a hurry.",
-        "For a whole season, she quietly watched the young people of the village at their work and at their play."
+        "One spring, when the river flooded and ruined the wheat fields, she did not pretend that all would be well.",
+        "Instead, she stood in the town square and told the people the truth: there would be less bread that winter, and the palace would eat less too."
       ],
-      explanation: "Being careful about a choice means taking your time and paying close attention. Ama refuses to hurry, and she spends a whole season watching before she picks anyone. The other sentences explain why a choice is needed or name who she chose, but they do not show HOW carefully she chose." }
+      explanation: "Being honest means telling the truth, even when it is hard news. When the flood ruined the wheat, the queen did not pretend things were fine — she told her people the truth about the bread herself. The other sentences tell where she lived and why she needed a new advisor, but they do not show her honesty." }
 
   ]
 };

@@ -2,7 +2,7 @@
    SKILL TAGS — what each scored element is testing.
    The three forms are built slot for slot from the same
    blueprint, so item N tests the same skill on every form
-   and Form A → B → C compares skill by skill.
+   and Warm Up → Form A → B → C compares skill by skill.
    EBSR items carry one skill PER PART: [Part A, Part B].
    Names shared with the Inferences (Literary) FIAB review
    are spelled the same, so the two reviews compare too.
@@ -28,7 +28,7 @@
     '15': "Evidence selection"
   };
   const skills = {};
-  ['A', 'B', 'C'].forEach(form =>
+  ['W', 'A', 'B', 'C'].forEach(form =>
     Object.entries(SLOTS).forEach(([n, s]) => { skills[form + n] = s; }));
   window.SKILLS = skills;
 })();

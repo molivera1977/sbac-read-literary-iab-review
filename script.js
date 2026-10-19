@@ -27,6 +27,7 @@ const REVIEW_OPEN   = true;   // false = students locked out; only Teacher Acces
 const SHARE_MODE    = !!window.SHARE_MODE;   // set by share.js — a visitor's link, never a student's
 const INSTRUCT_SECS = 20;
 const PASSAGE_SECS  = 75;     // story screen lock — these IAB stories run 600–750 words
+const WARMUP_PASSAGE_SECS = 35;  // the Warm Up stories run ~250–360 words
 const READ_SECS     = 15;     // same as the Inferences FIAB: these choices are whole sentences
 const NEXT_SECS     = 8;
 const STORAGE_KEY   = 'rliab_session_v1';
@@ -65,7 +66,7 @@ function submitScorePartial() {
       game:      gameKey(),
       sessionId: SESSION_ID + '-' + (app.currentForm || 'x') + '-A' + (app.currentAttemptNum || 1),
       name:      app.studentName || 'Unknown',
-      form:      'Form ' + (app.currentForm || '?'),
+      form:      formLabel(app.currentForm),
       score:     app.score,
       total:     pts,
       percent:   pct,
@@ -94,7 +95,7 @@ function submitScoreFinal() {
       game:      gameKey(),
       sessionId: SESSION_ID + '-' + (app.currentForm || 'x') + '-A' + (app.currentAttemptNum || 1),
       name:      app.studentName || 'Unknown',
-      form:      'Form ' + (app.currentForm || '?'),
+      form:      formLabel(app.currentForm),
       attempt:   app.currentAttemptNum || 1,
       score:     app.score,
       total:     pts,
@@ -117,6 +118,10 @@ function submitScoreFinal() {
    written tab per form ("rliaba_written") — the written tab name
    must end in _written for the Apps Script dashboard read. */
 function gameKey()    { return 'rliab' + (app.currentForm || '?').toLowerCase() + '-review'; }
+/* Form W is the Warm Up — the lower rung, same format with short easy stories.
+   It saves as rliabw-review / rliabw_written like any other form. */
+function formLabel(form) { return form === 'W' ? 'Warm Up' : 'Form ' + (form || '?'); }
+function passageSecs()   { return app.currentForm === 'W' ? WARMUP_PASSAGE_SECS : PASSAGE_SECS; }
 function writtenKey() { return 'rliab' + (app.currentForm || '?').toLowerCase() + '_written'; }
 function writtenSessionId() {
   return SESSION_ID + '-' + (app.currentForm || 'x') + '-A' + (app.currentAttemptNum || 1) + '-written';
@@ -510,7 +515,7 @@ function lockControl(el, locked) {
 /* ── ATTEMPT TRACKING ───────────────────────────────── */
 function getFormAttempts(name) {
   const scores = JSON.parse(localStorage.getItem(SCORES_KEY) || '[]');
-  const counts = { A: 0, B: 0, C: 0 };
+  const counts = { W: 0, A: 0, B: 0, C: 0 };
   scores.filter(s => s.name === name && s.done).forEach(s => {
     if (counts[s.form] !== undefined) counts[s.form]++;
   });
@@ -526,19 +531,21 @@ function applyFormLocks(name) {
   const attempts = getFormAttempts(name);
   const allDone1 = allFormsCompletedOnce(name);
 
-  ['A', 'B', 'C'].forEach(form => {
+  ['W', 'A', 'B', 'C'].forEach(form => {
     const btn = document.getElementById(`btn-form-${form}`);
     if (!btn) return;
     const done = attempts[form];
     const sub  = btn.querySelector('.form-btn-sub');
+    // The Warm Up's second try opens right away — it does not wait on the forms.
+    const retryOpen = form === 'W' || allDone1;
 
     if (done === 0) {
       btn.classList.remove('locked');
-      sub.textContent = '3 stories · 15 questions';
-    } else if (done === 1 && !allDone1) {
+      sub.textContent = form === 'W' ? '3 short stories · 15 questions' : '3 stories · 15 questions';
+    } else if (done === 1 && !retryOpen) {
       btn.classList.add('locked');
       sub.textContent = '✅ Done · finish other forms to retry';
-    } else if (done === 1 && allDone1) {
+    } else if (done === 1 && retryOpen) {
       btn.classList.remove('locked');
       sub.textContent = '🔁 Attempt 2 available';
     } else {
@@ -938,7 +945,7 @@ const app = {
     if (!this.studentName) return;
     const attempts = getFormAttempts(this.studentName);
     const done     = attempts[form];
-    const allDone1 = allFormsCompletedOnce(this.studentName);
+    const allDone1 = form === 'W' || allFormsCompletedOnce(this.studentName);   // the Warm Up never waits on the forms
     const name1    = getFirstName(this.studentName);
 
     if (done === 0) {
@@ -949,8 +956,8 @@ const app = {
       this.startSession(form);
     } else if (done >= 2 && !unlockedForms.has(form)) {
       this.showPinModal(
-        `🔓 Unlock Form ${form}`,
-        `${name1} has already used both attempts for Form ${form}. Enter Teacher PIN to allow an extra retry.`,
+        `🔓 Unlock ${formLabel(form)}`,
+        `${name1} has already used both attempts for ${formLabel(form)}. Enter Teacher PIN to allow an extra retry.`,
         () => { unlockedForms.add(form); this.startSession(form); }
       );
     } else {
@@ -969,8 +976,8 @@ const app = {
   },
 
   _showReviewPicker() {
-    const form = prompt('Choose a form to review:\n1 — Form A\n2 — Form B\n3 — Form C\n\nEnter 1, 2, or 3:');
-    const map = { '1': 'A', '2': 'B', '3': 'C' };
+    const form = prompt('Choose a form to review:\n1 — Warm Up\n2 — Form A\n3 — Form B\n4 — Form C\n\nEnter 1, 2, 3, or 4:');
+    const map = { '1': 'W', '2': 'A', '3': 'B', '4': 'C' };
     if (!map[form]) { alert('Invalid choice.'); reviewMode = false; return; }
     const mode = prompt('Choose review mode:\n1 — Manual (tap Next each question)\n2 — Auto-run (fully automatic)\n\nEnter 1 or 2:');
     if (mode !== '1' && mode !== '2') { alert('Invalid choice.'); reviewMode = false; return; }
@@ -1145,15 +1152,16 @@ const app = {
     bar.classList.remove('hidden');
     btn.disabled = true; btn.style.opacity = '0.45'; btn.style.cursor = 'not-allowed';
     btn.textContent = '⏳ Read the story first…';
-    count.textContent = PASSAGE_SECS;
+    const lockSecs = passageSecs();
+    count.textContent = lockSecs;
     fill.style.transition = 'none';
     fill.style.width = '100%';
     requestAnimationFrame(() => requestAnimationFrame(() => {
-      fill.style.transition = `width ${PASSAGE_SECS}s linear`;
+      fill.style.transition = `width ${lockSecs}s linear`;
       fill.style.width = '0%';
     }));
 
-    let remaining = PASSAGE_SECS;
+    let remaining = lockSecs;
     this.passageInterval = setInterval(() => {
       remaining--;
       count.textContent = remaining;
@@ -1185,7 +1193,7 @@ const app = {
       if (this.studentName && data.studentName === this.studentName) {
         rc.classList.remove('hidden');
         document.getElementById('resume-detail').textContent =
-          `Form ${data.currentForm} — Q${data.currentIndex + 1} of ${data.currentBank.length}`;
+          `${formLabel(data.currentForm)} — Q${data.currentIndex + 1} of ${data.currentBank.length}`;
         if (formSelect) formSelect.classList.add('hidden');
       } else {
         rc.classList.add('hidden');
@@ -1992,8 +2000,8 @@ const app = {
     if (reviewNextBtn) reviewNextBtn.classList.toggle('hidden', !reviewMode);
 
     document.getElementById('final-score-sub').textContent = SHARE_MODE
-      ? `Form ${this.currentForm} · Guest view — this score was not saved`
-      : `Form ${this.currentForm} · Attempt ${attemptNum} · ${this.studentName}`;
+      ? `${formLabel(this.currentForm)} · Guest view — this score was not saved`
+      : `${formLabel(this.currentForm)} · Attempt ${attemptNum} · ${this.studentName}`;
     document.getElementById('final-msg').textContent = msg;
 
     const pctEl = document.getElementById('final-percent');
@@ -2068,14 +2076,14 @@ const app = {
     }
     noEl.style.display = 'none';
 
-    const forms = ['A', 'B', 'C'];
+    const forms = ['W', 'A', 'B', 'C'];
 
     const summaryCards = forms.map(form => {
       const best = all.filter(s => s.form === form && s.done)
         .reduce((b, r) => (!b || r.pct > b.pct) ? r : b, null);
       if (!best) {
         return `<div class="sb-summary-card">
-          <div class="sb-summary-label">Form ${form}</div>
+          <div class="sb-summary-label">${formLabel(form)}</div>
           <div class="sb-summary-grade" style="color:#ccc;">—</div>
           <div class="sb-summary-score" style="color:#aaa;">Not yet completed</div>
         </div>`;
@@ -2083,7 +2091,7 @@ const app = {
       const grade = letterGrade(best.pct);
       const gc = best.pct>=90?'#27ae60':best.pct>=80?'#2980b9':best.pct>=70?'#f39c12':best.pct>=60?'#e67e22':'#e74c3c';
       return `<div class="sb-summary-card">
-        <div class="sb-summary-label">Form ${form}</div>
+        <div class="sb-summary-label">${formLabel(form)}</div>
         <div class="sb-summary-grade" style="color:${gc};">${grade}</div>
         <div class="sb-summary-score">${best.score}/${best.total} · ${best.pct}%</div>
         <div class="sb-summary-attempt">Best of ${all.filter(s=>s.form===form&&s.done).length} attempt(s)</div>
@@ -2182,7 +2190,7 @@ const app = {
   printResults() {
     const all = JSON.parse(localStorage.getItem(SCORES_KEY) || '[]');
     if (!all.length) { alert('No scores to print yet!'); return; }
-    const rows = ['A','B','C'].flatMap(form =>
+    const rows = ['W','A','B','C'].flatMap(form =>
       all.filter(s => s.form === form).map(r => {
         const cc  = r.pct >= 80 ? 'good' : r.pct >= 60 ? 'ok' : 'bad';
         const att = r.attempt || 1;
@@ -2191,7 +2199,7 @@ const app = {
           : 'background:#f39c12;color:#5a3000;padding:2px 7px;border-radius:4px;font-size:0.8em;';
         return `<tr>
           <td>${r.name||'—'}</td>
-          <td>Form ${r.form}</td>
+          <td>${formLabel(r.form)}</td>
           <td><span style="${attStyle}">Attempt ${att}</span></td>
           <td>${r.score}/${r.total}</td>
           <td class="${cc}">${r.pct}%</td>

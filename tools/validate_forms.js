@@ -2,7 +2,7 @@
 /* ═══════════════════════════════════════════════════════
    Validates data/form_X.js against the Read Literary IAB
    blueprint shape and the engine's matching rules.
-     node tools/validate_forms.js            (all forms)
+     node tools/validate_forms.js            (Warm Up + all forms)
      node tools/validate_forms.js B          (one form)
    Exit code 1 on any ERROR. WARN lines need a human look.
 ═══════════════════════════════════════════════════════ */
@@ -31,6 +31,8 @@ const TEMPLATE = [
 ];
 
 const WORDS = { 0: [500, 760], 1: [550, 820], 2: [450, 720] };
+// The Warm Up (form W) keeps the format slot for slot but its stories are short.
+const WORDS_WARMUP = { 0: [250, 360], 1: [250, 360], 2: [250, 380] };
 
 let errors = 0, warns = 0;
 const err  = (f, m) => { errors++; console.log(`  ERROR [${f}] ${m}`); };
@@ -81,7 +83,7 @@ function validate(letter) {
   if (!Array.isArray(F.passages) || F.passages.length !== 3) err(letter, 'needs exactly 3 passages');
   (F.passages || []).forEach((p, i) => {
     const words = p.paragraphs.reduce((t, x) => t + wc(x), 0);
-    const [lo, hi] = WORDS[i];
+    const [lo, hi] = (letter === 'W' ? WORDS_WARMUP : WORDS)[i];
     console.log(`  P${i + 1} “${p.title}” — ${p.paragraphs.length} paragraphs, ${words} words`);
     if (words < lo || words > hi) warn(`P${i + 1}`, `word count ${words} outside ${lo}–${hi}`);
     p.paragraphs.forEach((x, j) => { if (/"/.test(x)) warn(`P${i + 1}`, `straight double quote in paragraph ${j + 1}`); });
@@ -175,6 +177,6 @@ function validate(letter) {
 }
 
 const only = process.argv[2];
-(only ? [only.toUpperCase()] : ['A', 'B', 'C']).forEach(validate);
+(only ? [only.toUpperCase()] : ['W', 'A', 'B', 'C']).forEach(validate);
 console.log(`\n${errors} error(s), ${warns} warning(s)`);
 process.exit(errors ? 1 : 0);
