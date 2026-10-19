@@ -157,7 +157,7 @@ window.FORM_W = {
         "He wants Aunt Rosa to do all the work."
       ],
       answer: "He is curious and wants to learn how plants grow.",
-      explanation: "Paragraph 3 is full of Leo's questions. He asks how a seed turns into a plant, how long it takes, and if seeds need sun. Asking a lot of questions shows he is curious. He wants to learn. Paragraph 3 does not say he thinks the garden is silly, that he is upset, or that he wants Aunt Rosa to do the work." },
+      explanation: "Paragraph 3 is full of Leo's questions. He asks how a seed turns into a plant. He asks how long the seed will take to grow. He asks if seeds need sun. Asking a lot of questions shows Leo is curious. He wants to learn. Paragraph 3 does not say Leo thinks the garden is silly. Paragraph 3 does not say he is upset. Paragraph 3 does not say he wants Aunt Rosa to do the work." },
 
     // Item 2 — word meaning in context
     { id: "W02", p: 0,
@@ -181,7 +181,7 @@ window.FORM_W = {
         "to explain why seeds need sun"
       ],
       answer: "to show how the parts of the egg carton garden fit together",
-      explanation: "The picture labels the cups, the dirt, the seeds, the drain holes, the lid and the water drops, all in one place. That helps you see how the parts fit together. It does not show big tomato plants, Leo's sign, or anything about sun." },
+      explanation: "The picture labels the cups, the dirt and the seeds. The picture labels the drain holes, the lid and the water drops. All the parts are in one place. So the picture helps you see how the parts fit together. The picture does not show big tomato plants. The picture does not show Leo's sign. The picture shows nothing about sun." },
 
     // Item 4 — EBSR: conclusion + supporting sentence
     { id: "W04", p: 0, type: "ebsr",
@@ -194,7 +194,7 @@ window.FORM_W = {
           "She wants to plant the garden by herself."
         ],
         answer: "She likes helping Leo learn new things.",
-        explanation: "In paragraph 3, Leo asks a lot of questions. In paragraph 4, Aunt Rosa laughs and says, “Those are great questions. Let's find out together.” She is happy to help him learn. She calls them great questions, so she does not think he asks too many. The story does not say she dislikes tomatoes, and Leo does most of the planting." },
+        explanation: "In paragraph 3, Leo asks a lot of questions. In paragraph 4, Aunt Rosa laughs. “Those are great questions,” she says. Then she says, “Let's find out together.” She is happy to help Leo learn. She calls his questions great. So she does not think Leo asks too many. The story does not say Aunt Rosa does not like tomatoes. Leo does most of the planting." },
       partB: {
         q: "Part B — Which sentence from the passage BEST supports the answer in Part A?",
         longChoices: true,
@@ -205,7 +205,7 @@ window.FORM_W = {
           "Every morning, Leo ran to the window to check."
         ],
         answer: "“Those are great questions,” she said. “Let's find out together.”",
-        explanation: "This is how Aunt Rosa answers Leo's questions. She says they are great questions and that they will find out together. That shows she likes helping him learn. Setting the lid under the carton is a job, not an answer to his questions. The other sentences tell about the weather and Leo checking the seeds." } },
+        explanation: "The right sentence shows how Aunt Rosa answers Leo's questions. She says the questions are great. She says they will find out together. So she likes to help Leo learn. Setting the lid under the carton is a job. The job is not an answer to his questions. One wrong sentence tells about the weather. One wrong sentence tells how Leo checks the seeds." } },
 
     // Item 5 — main idea of re-shown paragraphs
     { id: "W05", p: 0,
@@ -221,7 +221,7 @@ window.FORM_W = {
         "Leo and Aunt Rosa see the first green sprouts."
       ],
       answer: "Leo and Aunt Rosa get the egg carton ready for the seeds.",
-      explanation: "Paragraphs 5 and 6 tell the first jobs: cutting off the lid, poking holes, and filling the cups with dirt. All of that gets the carton ready for the seeds. The mud is one small detail. Aunt Rosa does the cutting, not Leo, and the sprouts come later, in paragraph 10." },
+      explanation: "Paragraphs 5 and 6 tell the first jobs. The first job is cutting off the lid. The next job is poking holes. The third job is filling the cups with dirt. All of these jobs get the carton ready for the seeds. The mud is one small detail. Aunt Rosa does the cutting, not Leo. The sprouts come later, in paragraph 10." },
 
     // Item 6 — hot text: click 2 sentences from a list
     { id: "W06", p: 0, type: "hottext", layout: "list", pick: 2,
@@ -238,7 +238,7 @@ window.FORM_W = {
         "Leo put exactly two seeds in each cup, not one more.",
         "He covered them with a thin layer of dirt, just like the seed pack said."
       ],
-      explanation: "Paragraph 7 shows Leo being careful. He puts exactly two seeds in each cup, not one more. Then he covers them with a thin layer of dirt, just like the seed pack said. The other sentences tell about the bag, the dirt, the windowsill and the sprouts. They do not show him being careful." },
+      explanation: "Paragraph 7 shows Leo is careful. He puts exactly two seeds in each cup, not one more. He covers the seeds with a thin layer of dirt. He does just what the seed pack said. The wrong choices tell about the bag and the dirt. The wrong choices tell about the windowsill and the sprouts too. The wrong choices do not show Leo being careful." },
 
     /* ── PASSAGE 2 · items 7–11 ── */
 
@@ -256,7 +256,7 @@ window.FORM_W = {
         "The referee hands Maya the ball."
       ],
       answer: "Maya makes the free throw, and the Tigers win the game.",
-      explanation: "The summary tells about the free throw and then jumps to the hug. It never says what happened when Maya shot. That is the most important event: she makes it, and the Tigers win (paragraph 8). Theo's teaching is already in the summary. The dog and the referee are small details." },
+      explanation: "The summary jumps from the free throw to the hug. The summary does not tell what happened when Maya shot. The key event is left out. Maya makes the shot. The Tigers win (paragraph 8). Theo's teaching is in the summary. The dog is a small detail. The referee is a small detail too." },
 
     // Item 8 — evidence for a conclusion
     { id: "W08", p: 1, longChoices: true,
@@ -268,7 +268,7 @@ window.FORM_W = {
         "After the game, Maya ran to the stands and gave Theo a big hug."
       ],
       answer: "Theo ran after the ball every single time, and he never got mad.",
-      explanation: "Being patient means you keep going and do not get upset when things go slowly. In paragraph 4, Maya misses almost every shot. Theo still chases the ball every time and never gets mad. The other details tell where Theo sat, how he cheered, and the hug after the game." },
+      explanation: "Being patient means you keep going. You do not get upset when things are slow. In paragraph 4, Maya misses almost every shot. Theo still chases the ball each time. He never gets mad. One wrong detail tells where Theo sat. One wrong detail tells how he cheered. One wrong detail is the hug after the game." },
 
     // Item 9 — EBSR: character trait + support
     { id: "W09", p: 1, type: "ebsr",
@@ -281,7 +281,7 @@ window.FORM_W = {
           "careless"
         ],
         answer: "calm",
-        explanation: "Calm means quiet and steady, not upset. Right before the shot, Maya takes a deep breath, and her hands stop shaking (paragraph 6). Her hands were shaking when she walked to the line (paragraph 2), so this is a change. Nothing shows she is bored or angry, and she is not careless: she does every step Theo taught her." },
+        explanation: "Calm means quiet and steady, not upset. Right before the shot, Maya takes a deep breath. Then her hands stop shaking (paragraph 6). Her hands were shaking when she walked to the line (paragraph 2). So Maya's hands show a change. Nothing shows Maya is bored or angry. Maya is not careless. She does every step Theo taught her." },
       partB: {
         q: "Part B — Which sentence from the passage BEST supports the answer in Part A?",
         longChoices: true,
@@ -292,7 +292,7 @@ window.FORM_W = {
           "The Tigers had won!"
         ],
         answer: "She took a deep breath, and her hands stopped shaking.",
-        explanation: "Her hands stop shaking after a deep breath. That shows she is calm when she shoots. The butterflies come earlier, when she was still nervous. The thumbs-up is from Theo, and the win comes after the shot." } },
+        explanation: "Maya takes a deep breath. Then her hands stop shaking. Her hands show Maya is calm when she shoots. The butterflies come earlier, when Maya was still nervous. The thumbs-up is from Theo. The win comes after the shot." } },
 
     // Item 10 — choose TWO: idiom with a literal-reading trap
     { id: "W10", p: 1, type: "ms", pick: 2,
@@ -308,7 +308,7 @@ window.FORM_W = {
         "She felt nervous.",
         "She was worried she might miss."
       ],
-      explanation: "“Butterflies in her stomach” is an idiom. It is not about real butterflies. It means your stomach feels jumpy because you are nervous or worried. Maya is about to take the shot that could win the game, so she is nervous and worried she might miss. She is not hungry, and she is not sure the shot will go in." },
+      explanation: "The phrase “had butterflies in her stomach” is an idiom. The idiom does not mean real butterflies. The idiom means your stomach feels jumpy. You feel jumpy because you are nervous or worried. Maya is about to take the shot. The shot could win the game. So she is nervous. She is worried she might miss. Maya is not hungry. She is not sure the shot will go in." },
 
     // Item 11 — written response
     { id: "W11", p: 1, type: "cr",
@@ -338,7 +338,7 @@ window.FORM_W = {
         "happy",
         "pleased"
       ],
-      explanation: "The clues are in paragraph 9. Pip's soup is the best Grandmother Wren has ever tasted, and she laughs out loud. So delighted means very happy and pleased. Nothing shows she is angry, sleepy, scared or hungry." },
+      explanation: "The clues are in paragraph 9. Pip's soup is the best soup Grandmother Wren has ever tasted. She laughs out loud. So delighted means very happy and pleased. No clue shows she is angry or sleepy. No clue shows she is scared or hungry." },
 
     // Item 13 — summary of a bounded section
     { id: "W13", p: 2,
@@ -350,7 +350,7 @@ window.FORM_W = {
         "Grandmother Wren loves Pip's soup. She picks him as her helper because sharing makes enough for all. Pip shares soup every winter after that."
       ],
       answer: "Grandmother Wren loves Pip's soup. She picks him as her helper because sharing makes enough for all. Pip shares soup every winter after that.",
-      explanation: "A good summary of a section covers every paragraph in it, in a few words. The last three paragraphs are Grandmother Wren tasting the soups, her choosing Pip and telling the lesson, and Pip cooking every winter. Pip becoming her helper is only one part. Pip giving his carrot away happens before that section. Grandmother Wren chose Pip for sharing, not for being fast. Lin was the fast one." },
+      explanation: "A good summary of a section covers each paragraph. A good summary uses a few words. Look at the last three paragraphs. Grandmother Wren tastes the soups. She picks Pip and tells the lesson. Then Pip cooks each winter. Pip becoming her helper is just one part. Pip gives his carrot away before the section. Grandmother Wren chose Pip for sharing. She did not pick him for being fast. Lin was the fast one." },
 
     // Item 14 — choose THREE: what a comparison shows
     { id: "W14", p: 2, type: "ms", pick: 3,
@@ -368,7 +368,7 @@ window.FORM_W = {
         "People can do more together than alone.",
         "Everyone has a little something they can give."
       ],
-      explanation: "Grandmother Wren compares the soup to the village. One person alone does not have much, but when everyone adds a little, there is enough for all. So she believes sharing helps everyone, people can do more together, and everyone can give a little. The wrong choices read the comparison as if it were only about real soup and pots. Bo was the strong one, not Pip." },
+      explanation: "Grandmother Wren compares the soup to the village. She says one person alone does not have much. But what if everyone adds a little? Then there is enough for all. So she believes sharing helps all. She thinks people can do more together. She thinks everyone can give a little. The wrong choices act like the words are just about real soup and pots. Bo was the strong one, not Pip." },
 
     // Item 15 — hot text: click 2 sentences inside a re-shown paragraph
     { id: "W15", p: 2, type: "hottext", layout: "para", pick: 2,
@@ -384,7 +384,7 @@ window.FORM_W = {
         "Pip gave the old man his carrot to eat.",
         "Then he sat with him until the old man's hands were warm."
       ],
-      explanation: "Being kind means helping someone and caring how they feel. Pip gives the old man his carrot, and then he sits with him until his hands are warm. The old man giving beans is kind too, but that is the old man, not Pip. The other sentences only tell where Pip was going and what he saw." }
+      explanation: "Being kind means helping someone. Being kind means caring how someone feels. Pip gives the old man his carrot. Then Pip sits with the old man until the old man's hands are warm. The old man gives Pip beans. The old man is kind too. But the beans come from the old man, not Pip. The other sentences only tell where Pip was going and what he saw." }
 
   ]
 };

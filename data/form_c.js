@@ -177,7 +177,7 @@ window.FORM_C = {
         "He is in a hurry because he is late getting home."
       ],
       answer: "He is eager to try out the idea he learned in class.",
-      explanation: "Everything in the paragraph comes from the worm idea: he stops listening, he draws worms in boxes, he runs home first, and he practices what he will say. That is what being eager looks like. Nothing says he is late, and the drawing is about the idea, not about skipping work." },
+      explanation: "All of paragraph 3 comes from the worm idea. Mateo stops listening. He draws worms in boxes. He runs home first. He practices what he will say. Those acts show he is eager. Nothing says he is late. He draws because of the worm idea. His drawing is not about skipping work." },
 
     // Item 2 — word meaning in context
     { id: "C02", p: 0,
@@ -189,7 +189,7 @@ window.FORM_C = {
         "rolled into balls"
       ],
       answer: "dug their way in",
-      explanation: "The clues are “down into the damp newspaper” and “not a single one could be seen.” The worms went down into the bedding and disappeared, so burrowed means dug their way in. Climbing out would leave them in plain sight." },
+      explanation: "Look at two clues. The first clue is “down into the damp newspaper”. The second clue is “not a single one could be seen.” The worms went down into the bedding. Then the worms were gone from sight. So burrowed means dug their way in. Climbing out would leave the worms in plain sight." },
 
     // Item 3 — purpose of the picture
     { id: "C03", p: 0, showFigure: true,
@@ -201,7 +201,7 @@ window.FORM_C = {
         "to show what the tomato plants will look like with worm soil"
       ],
       answer: "to show how the parts of the worm bin fit together",
-      explanation: "The picture labels the lid, the air holes, the bedding, the drainage holes, the wooden blocks and the catch tray, and shows one bin sitting inside the other. Those parts are hard to picture from words alone. It does not count worms, show tomatoes, or explain anything about light." },
+      explanation: "The labels show the lid and the air holes. The labels show the bedding and the drainage holes. The labels show the wooden blocks and the catch tray. The picture shows one bin sitting inside the other bin. These parts are hard to picture from words alone. The picture does not count worms. The picture does not show tomatoes. The picture says nothing about light." },
 
     // Item 4 — EBSR: conclusion + supporting sentence
     { id: "C04", p: 0, type: "ebsr",
@@ -214,7 +214,7 @@ window.FORM_C = {
           "She has always wanted to keep worms as pets."
         ],
         answer: "It reminds her of the way her own family made sure nothing went to waste.",
-        explanation: "Abuela starts out unsure (“Inside, I feel less fine”). She changes her mind right after she remembers her father's pile in Puebla. The story never mentions a grade, the trash, or wanting pets." },
+        explanation: "At first, Abuela is unsure. She says, “Inside, I feel less fine.” She remembers her father's pile in Puebla. Right after, she changes her mind. The story never names a grade. She never says she is tired of the trash. She never says she wants pets." },
       partB: {
         q: "Part B — Which sentence from the passage BEST supports the answer in Part A?",
         longChoices: true,
@@ -225,7 +225,7 @@ window.FORM_C = {
           "On Saturday they bought two dark plastic storage bins with lids, the kind people use to store winter sweaters, and two short blocks of wood."
         ],
         answer: "“In our family, we never wasted a single thing.”",
-        explanation: "Abuela says this just before she agrees to go to the hardware store, so it shows why she says yes. The “less fine” line shows how she felt before she changed her mind, and the other two choices happen after she has already agreed." } },
+        explanation: "Abuela says, “we never wasted a single thing.” Just after, she agrees to go to the hardware store. So her words show why she says yes. The “less fine” line shows how she felt at first. She had not changed her mind yet. The other two choices happen after she says yes." } },
 
     // Item 5 — main idea of re-shown building paragraphs
     { id: "C05", p: 0,
@@ -241,7 +241,7 @@ window.FORM_C = {
         "The worms arrive from the worm farm."
       ],
       answer: "Mateo and Abuela begin to build the worm bin.",
-      explanation: "Both paragraphs are about the first building steps: drilling the holes and setting one bin inside the other. Air is one small detail inside paragraph 9, Abuela never uses the drill, and the worms do not arrive until later." },
+      explanation: "Paragraphs 9 and 10 are about the first building steps. Step one is to drill the holes. Step two is to set one bin in the other bin. Air is just a small detail in paragraph 9. Abuela never uses the drill. The worms do not come until later." },
 
     // Item 6 — hot text: click 2 sentences from a list
     { id: "C06", p: 0, type: "hottext", layout: "list", pick: 2,
@@ -258,7 +258,7 @@ window.FORM_C = {
         "“Saturday. We go to the hardware store together, and you do the reading.”",
         "Back at the apartment, Abuela held the first bin steady while Mateo drilled a row of small holes around the top edge."
       ],
-      explanation: "In the first sentence Abuela plans the trip so they go together and each has a job — he does the reading. In the second, both of them work on the same bin at the same moment. The other sentences show only one person, or no one, doing something." },
+      explanation: "In the first sentence, Abuela plans the trip. She and Mateo will go together. Each person has a job. Mateo does the reading. In the second sentence, both of them work on the same bin. They work at the same time. The other sentences show just one person doing something. Some sentences show no one at all." },
 
     /* ── PASSAGE 2 · items 7–11 ── */
 
@@ -276,7 +276,7 @@ window.FORM_C = {
         "Nia's teammates pile on top of her on the grass."
       ],
       answer: "Nia passes the other runners and wins the race at the finish line.",
-      explanation: "A summary has to include the events the story depends on. The summary jumps from Nia getting the baton in third place straight to the text message, so it never says she won — the biggest event of all. Danielle's stumble is already in the summary, and the phone video and the pile on the grass are small details." },
+      explanation: "A summary has to tell the events the story needs. Nia gets the baton in third place. Then the summary jumps straight to the text. The summary never says Nia won. Her win is the biggest event of all. Danielle's stumble is in the summary. The phone video is a small detail. The pile on the grass is a small detail too." },
 
     // Item 8 — evidence for a conclusion
     { id: "C08", p: 1, longChoices: true,
@@ -288,7 +288,7 @@ window.FORM_C = {
         "“Don't interrupt the broadcast,” said Andre."
       ],
       answer: "“Text me the second it's over,” he had said on the phone the night before. “Not after you cool down. Not after you get a snack. The SECOND.”",
-      explanation: "Andre cannot be there, so he makes Nia promise to tell him the very second the race ends — he even says it three ways. That is someone who cares a lot about how it turns out. The other choices are about his own life or his jokes, not about this race." },
+      explanation: "Andre cannot be at the race. So he makes Nia promise. She will tell him the very second the race ends. Andre even says the same thing three ways. His words show he cares a lot. He cares about how the race turns out. The other choices are about his own life or his jokes. The other choices are not about this race." },
 
     // Item 9 — EBSR: character trait + support
     { id: "C09", p: 1, type: "ebsr",
@@ -301,7 +301,7 @@ window.FORM_C = {
           "careless"
         ],
         answer: "determined",
-        explanation: "Determined means you keep pushing toward a goal even when it is hard. Nia starts in third place, her legs are burning, and she pushes harder anyway. She never brags and she follows Andre's rules exactly, so boastful and careless do not fit." },
+        explanation: "Determined means you keep pushing toward a goal. You keep pushing even when the goal is hard. Nia starts in third place. Her legs are burning. Nia pushes harder anyway. Nia never brags. She follows Andre's rules exactly. So boastful does not fit Nia. Careless does not fit Nia either." },
       partB: {
         q: "Part B — Which sentence from the passage BEST supports the answer in Part A?",
         longChoices: true,
@@ -312,7 +312,7 @@ window.FORM_C = {
           "Nia laughed so hard she had to sit down."
         ],
         answer: "Nia's legs were burning, but she pushed harder, because somewhere in her head a voice that sounded a lot like a hairbrush was yelling, She's flying, folks!",
-        explanation: "“Her legs were burning, but she pushed harder” is determination in action — it is hard, and she keeps going. Shaking out her hands is a habit before the race, and the other two happen off the track." } },
+        explanation: "Nia's “legs were burning, but she pushed harder”. Those words show Nia is determined as she runs. The race is hard, and she keeps going. Shaking out her hands is a habit before the race. The other two choices happen off the track." } },
 
     // Item 10 — choose TWO: idiom with a literal-reading trap
     { id: "C10", p: 1, type: "ms", pick: 2,
@@ -328,7 +328,7 @@ window.FORM_C = {
         "He has a first chance to work at a place where he wants to be.",
         "His job could lead to the work he really wants someday."
       ],
-      explanation: "“Getting your foot in the door” is an idiom — it does not mean a real foot or a real door. It means you got a small first chance somewhere that can lead to something bigger. That matches the next sentence: if he carries enough coffee, someday they might let him near a microphone. He is not announcing yet." },
+      explanation: "The phrase “gotten his foot in the door” is an idiom. The phrase does not mean a real foot. The phrase does not mean a real door. The phrase means you got a small first chance at a place. The small chance can lead to something bigger. The next sentence fits the phrase. If Andre carries enough coffee, the station might let him near a microphone someday. He is not announcing yet." },
 
     // Item 11 — written response
     { id: "C11", p: 1, type: "cr",
@@ -358,7 +358,7 @@ window.FORM_C = {
         "amazed",
         "surprised"
       ],
-      explanation: "The next sentence is the clue: they look at each other “as if one of them must have heard wrong.” That is how people act when something amazes or surprises them. They are not tired or bored, and nothing shows anger or pride." },
+      explanation: "The next sentence is the clue. Tomas and Lina look at each other. They look “as if one of them must have heard wrong.” People act this way when something amazes them. People act this way when something surprises them. Tomas and Lina are not tired or bored. Nothing shows anger or pride." },
 
     // Item 13 — summary of a bounded section
     { id: "C13", p: 2,
@@ -370,7 +370,7 @@ window.FORM_C = {
         "Ren becomes the keeper because he was the last one to come back down the mountain."
       ],
       answer: "Ama explains that the keeper must care for the whole village, the three young people fix the stream together, and the keepers still walk the whole stream today.",
-      explanation: "A good summary of a section covers every paragraph in it, in a few words. The last three paragraphs are Ama's explanation, the three of them fixing the stream, and the tradition that lasts. Tomas lifting the branch is only one detail, Tomas and Lina's surprise comes before that section, and Ren was not chosen for being last." },
+      explanation: "A good summary covers each paragraph in a part. A good summary uses just a few words. Here the part is the last three paragraphs. First, Ama explains. Next, the three of them fix the stream. Last, the tradition goes on to this day. Tomas lifting the branch is just one detail. Tomas and Lina get surprised before the last part. Ren was not picked for being last." },
 
     // Item 14 — choose THREE: what a simile shows
     { id: "C14", p: 2, type: "ms", pick: 3,
@@ -388,7 +388,7 @@ window.FORM_C = {
         "A small problem in one place can hurt people far away.",
         "A keeper has to watch out for the whole village, not just one part of it."
       ],
-      explanation: "Ama compares the village to a stream to explain why she chose Ren: what happens in one spot reaches every house, so the keeper has to care about all of it. The wrong choices read the comparison as if it were about real stones and real houses instead of about how a village works." },
+      explanation: "Ama compares the village to a stream. Her comparison tells why she chose Ren. What happens in one spot reaches each house. So the keeper must care for the whole village. The wrong choices read the stones and houses as real. But her words are about how a village works." },
 
     // Item 15 — hot text: click 2 sentences inside a re-shown paragraph
     { id: "C15", p: 2, type: "hottext", layout: "para", pick: 2,
@@ -404,7 +404,7 @@ window.FORM_C = {
         "She also knew that this choice mattered more than anything else she had done in fifty years, and she did not want to make it in a hurry.",
         "For a whole season, she quietly watched the young people of the village at their work and at their play."
       ],
-      explanation: "Being careful about a choice means taking your time and paying close attention. Ama refuses to hurry, and she spends a whole season watching before she picks anyone. The other sentences explain why a choice is needed or name who she chose, but they do not show HOW carefully she chose." }
+      explanation: "To be careful with a choice, you take your time. You also pay close attention. Ama will not hurry. She spends a whole season watching. Then she picks. The other sentences tell why Ama must choose, or who she chose. But those sentences do not show HOW carefully she chose." }
 
   ]
 };

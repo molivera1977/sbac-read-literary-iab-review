@@ -159,7 +159,7 @@ window.FORM_B = {
         "He is worried that building a kite will be too hard for him."
       ],
       answer: "He likes to find out how things are built and how they work.",
-      explanation: "The paragraph says he “wanted to know how everything worked,” and then proves it: he took apart a clock to see the gears and drew the insides of flashlights. That is a curious kid who loves figuring out how things are made. He is not upset or worried — he is ready to start before they even leave the park." },
+      explanation: "Paragraph 3 says Malik “wanted to know how everything worked.” Then the paragraph gives proof. Malik took apart a clock to see the gears. He drew the insides of flashlights. Malik is a curious kid. He loves to find out how things are made. Malik is not upset. He is not worried. He is ready to start while he and Desmond are still at the park." },
 
     // Item 2 — word meaning in context
     { id: "B02", p: 0,
@@ -171,7 +171,7 @@ window.FORM_B = {
         "wet and heavy"
       ],
       answer: "pulled tight",
-      explanation: "The clues are “He pulled until” and “the sticks did not wobble at all.” Pulling hard on a string makes it tight, and a tight string holds the sticks still. A loose, floppy string would let them wobble." },
+      explanation: "There are two clues. The first clue is “He pulled until.” The second clue is “the sticks did not wobble at all.” Pulling hard on a string makes the string tight. A tight string holds the sticks still. A loose, floppy string would let the sticks wobble." },
 
     // Item 3 — purpose of the picture
     { id: "B03", p: 0, showFigure: true,
@@ -183,7 +183,7 @@ window.FORM_B = {
         "to explain why Grandpa Ike liked to build kites"
       ],
       answer: "to show where each part of the finished kite goes",
-      explanation: "The picture labels the long stick, the short stick, the frame string, the sail, the bridle, the loop, the flying line and the tail, so readers can see how the steps in the story fit together. It does not show the park, the sky, or Grandpa Ike." },
+      explanation: "The picture has labels. The labels name the long stick and the short stick. The labels name the frame string, the sail, and the bridle. The labels name the loop, the flying line, and the tail. The labels help readers see how the steps in the story fit together. The picture does not show the park or the sky. The picture does not show Grandpa Ike." },
 
     // Item 4 — EBSR: conclusion + supporting sentence
     { id: "B04", p: 0, type: "ebsr",
@@ -196,7 +196,7 @@ window.FORM_B = {
           "He is tired of staying at Malik's house for spring break."
         ],
         answer: "He has made kites many times before.",
-        explanation: "Desmond says he made a kite with Grandpa Ike “every spring,” so he “could do this with my eyes closed.” That tells us he has done it many times. He works with Malik the whole time, and nothing shows he is bored or new to kites." },
+        explanation: "Desmond says he made a kite with Grandpa Ike “every spring.” So he “could do this with my eyes closed.” The words tell us Desmond has made kites many times. He works with Malik the whole time. Nothing shows Desmond is bored. Nothing shows he is new to kites." },
       partB: {
         q: "Part B — Which sentence from the passage BEST supports the answer in Part A?",
         longChoices: true,
@@ -207,7 +207,7 @@ window.FORM_B = {
           "“Weather report says wind tomorrow,” Desmond said, sitting down next to him."
         ],
         answer: "“Grandpa Ike and I made a kite every spring when I was your age,” Desmond said, “so I could do this with my eyes closed.”",
-        explanation: "“Every spring” means he built kites year after year, and “with my eyes closed” means he knows the steps by heart. The first choice only tells his age and why he is visiting, the third is about Malik, and the weather report says nothing about building kites before." } },
+        explanation: "The words “every spring” mean Desmond made kites year after year. The words “with my eyes closed” mean he knows the steps by heart. One choice tells about spring break. That choice only tells his age and why he is there. The choice with the marker is about Malik. The weather report does not tell if he made kites before." } },
 
     // Item 5 — main idea of re-shown building paragraphs
     { id: "B05", p: 0,
@@ -223,7 +223,7 @@ window.FORM_B = {
         "Malik and Desmond build the frame of the kite."
       ],
       answer: "Malik and Desmond build the frame of the kite.",
-      explanation: "Paragraph 5 starts with “First, they made the frame,” and paragraph 6 finishes it with the frame string. Both paragraphs are about the sticks and string that hold the kite together. Finding the parts happens before, and the sail and tail come later." },
+      explanation: "Paragraph 5 starts with “First, they made the frame.” Paragraph 6 adds the frame string to finish the frame. Paragraphs 5 and 6 are about the sticks and string. The sticks and string hold the kite together. Finding the parts comes first. The sail and tail come later." },
 
     // Item 6 — hot text: click 2 sentences from a list
     { id: "B06", p: 0, type: "hottext", layout: "list", pick: 2,
@@ -240,7 +240,7 @@ window.FORM_B = {
         "“You tie it,” Desmond said, handing him the string.",
         "Then Desmond handed Malik the scissors and stepped back."
       ],
-      explanation: "In both sentences Desmond hands Malik the tool and lets him do the job — he even “stepped back” so Malik could cut. Handing back a cap is just being nice, the tail sentence is Desmond explaining, and the other two do not show Desmond at all." },
+      explanation: "In the two right answers, Desmond hands Malik a tool. Then he lets Malik do the job. He even “stepped back” so Malik could cut. Handing back a cap is just a nice thing to do. In the tail sentence, Desmond explains. The two other sentences do not show Desmond at all." },
 
     /* ── PASSAGE 2 · items 7–11 ── */
 
@@ -258,7 +258,7 @@ window.FORM_B = {
         "Kenji's teammates lift him up after the game."
       ],
       answer: "Kenji makes his second free throw, and the Hawks win.",
-      explanation: "The summary jumps from the first free throw straight to the picture, so it never tells how the game ends — the most important event in the story. The first free throw is already in the summary, and Mrs. Okafor's lessons and the teammates lifting Kenji are small details." },
+      explanation: "The summary has the first free throw. Then the summary jumps straight to the picture. So the summary skips the end of the game. The end is the most important event in the story. Mrs. Okafor's lessons are small details. The team lifts Kenji up. The lift is a small detail too." },
 
     // Item 8 — evidence for a conclusion
     { id: "B08", p: 1, longChoices: true,
@@ -270,7 +270,7 @@ window.FORM_B = {
         "“You will,” said Mika, as if it were the easiest thing in the world."
       ],
       answer: "“You will,” said Mika, as if it were the easiest thing in the world.",
-      explanation: "Kenji asks what happens if he misses, and Mika answers “You will” as if there were no question about it. That shows she is sure he will make the shot. Chasing rebounds shows she helps him, but not that she is sure he will win, and the other two are about the camera." },
+      explanation: "Kenji asks what happens if he misses. Mika says “You will.” She says the words as if there were no question at all. Mika's answer shows she is sure he will make the shot. Chasing rebounds shows Mika helps Kenji. But chasing rebounds does not show she is sure he will win. The other two choices are about the camera." },
 
     // Item 9 — EBSR: character trait + support
     { id: "B09", p: 1, type: "ebsr",
@@ -283,7 +283,7 @@ window.FORM_B = {
           "disappointed"
         ],
         answer: "grateful",
-        explanation: "Grateful means thankful for what someone did for you. Right after he wins, Kenji gives Mika credit for counting every shot. He does not brag, he is not disappointed, and he is happy about her picture, not jealous of it." },
+        explanation: "Grateful means thankful for what someone did for you. Kenji wins the game. Right then, he gives Mika credit for counting each shot. Kenji does not brag. He is not disappointed. He is glad about Mika's picture. He is not jealous of the picture." },
       partB: {
         q: "Part B — Which sentence from the passage BEST supports the answer in Part A?",
         longChoices: true,
@@ -294,7 +294,7 @@ window.FORM_B = {
           "The buzzer sounded, the scoreboard flashed 43 to 42, and the Hawks fans came pouring out of the bleachers."
         ],
         answer: "“You counted every single one. Half of this win is yours.”",
-        explanation: "Kenji is thanking Mika by sharing the win with her — that is what a grateful person does. The other sentences tell what happens during the game, not how Kenji feels about his sister." } },
+        explanation: "Kenji thanks Mika. He shares the win with her. Sharing the win is what a grateful person does. The other choices tell what goes on in the game. The other choices do not tell how Kenji feels about his sister." } },
 
     // Item 10 — choose TWO: idiom with a literal-reading trap
     { id: "B10", p: 1, type: "ms", pick: 2,
@@ -310,7 +310,7 @@ window.FORM_B = {
         "She is just starting to learn how to do something new.",
         "She is learning the basic skills a photographer needs."
       ],
-      explanation: "“Learning the ropes” is an idiom — it has nothing to do with real ropes. It means you are new at something and still learning how it is done. The sentence before tells what Mika is learning: how to hold the camera steady and when to press the button. Mrs. Okafor is the one who works for the newspaper, not Mika." },
+      explanation: "The words “learning the ropes” are an idiom. The idiom is not about real ropes. The idiom means you are new at something. You are still learning how the job is done. The sentence before tells what Mika learns. She learns how to hold the camera steady. She learns when to press the button. Mrs. Okafor works for the newspaper. Mika does not." },
 
     // Item 11 — written response
     { id: "B11", p: 1, type: "cr",
@@ -340,7 +340,7 @@ window.FORM_B = {
         "puzzled",
         "confused"
       ],
-      explanation: "The next sentence is the clue: Bear scratches his head, and Fox tilts her head “as if she were trying to solve a riddle.” That is how people act when they are puzzled or confused. They are not pleased about the choice, and nothing shows they are sleepy or hungry." },
+      explanation: "The next sentence is the clue. Bear scratches his head. Fox tilts her head “as if she were trying to solve a riddle.” People act like Bear and Fox when they are puzzled or confused. Bear and Fox are not pleased about the choice. Nothing shows Bear and Fox are sleepy or hungry." },
 
     // Item 13 — summary of a bounded section
     { id: "B13", p: 2,
@@ -352,7 +352,7 @@ window.FORM_B = {
         "Bear and Fox are so upset that Field Mouse was chosen that they leave Fern Valley, and from that day on no animal ever climbs Thimble Hill again."
       ],
       answer: "Field Mouse learns that being small does not matter, the four animals walk down the hill together, and the valley still climbs at the slowest animal's pace.",
-      explanation: "A good summary of a section covers every paragraph in it. The last three paragraphs are Field Mouse's worry about being small, the walk down the hill together, and the custom that lasts to this day. The lantern explanation comes just before that section, Bear carrying the tortoise is only one detail, and Bear and Fox never leave the valley." },
+      explanation: "A good summary of a section covers each paragraph. The last three paragraphs tell three things. First, Field Mouse is worried she is small. Next, all four walk down the hill together. Last, a custom still lasts today. The lantern part comes just before the section. Bear carries the tortoise. But the ride is just one detail. Bear and Fox do not leave the valley." },
 
     // Item 14 — choose THREE: what a simile shows
     { id: "B14", p: 2, type: "ms", pick: 3,
@@ -370,7 +370,7 @@ window.FORM_B = {
         "A leader should stay close to the ones who need help.",
         "Being first matters less than helping others along the way."
       ],
-      explanation: "Grandmother Tortoise compares a guardian to a lantern to explain her choice. Bear and Fox ran ahead to be first and to be admired, but Field Mouse stayed beside her, the way a lantern stays with a traveler. The wrong choices read the comparison as if it were about real lanterns and real darkness, or about being the brightest — the opposite of her lesson." },
+      explanation: "Grandmother Tortoise says a guardian is like a lantern. The comparison tells why she picked Field Mouse. Bear and Fox ran ahead. They wanted to be first. They wanted to be admired. But Field Mouse stayed by the tortoise. A lantern stays by a traveler the same way. Some wrong choices act like the lantern and the dark are real. One wrong choice says to be the brightest. Her lesson says the opposite." },
 
     // Item 15 — hot text: click 2 sentences inside a re-shown paragraph
     { id: "B15", p: 2, type: "hottext", layout: "para", pick: 2,
@@ -386,7 +386,7 @@ window.FORM_B = {
         "Every few steps, Grandmother Tortoise stopped to rest, and each time, Field Mouse sat down beside her and waited as if she had nowhere else to be.",
         "Even when the sun began to sink toward the trees, Field Mouse did not try to hurry her friend along."
       ],
-      explanation: "Being patient means waiting calmly without trying to rush. Field Mouse sits and waits every time the tortoise rests, and she never hurries her, even as it gets late. Pushing the pebbles away shows she is helpful, not patient, and the other sentences describe the climb and the path." }
+      explanation: "Patient means you wait and stay calm. A patient person does not try to rush. Field Mouse sits and waits each time the tortoise rests. She never rushes the tortoise, even late in the day. Pushing the pebbles away shows Field Mouse is helpful. But helpful is not the same as patient. The other choices tell about the climb and the path." }
 
   ]
 };

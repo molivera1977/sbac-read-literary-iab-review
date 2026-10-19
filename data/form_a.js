@@ -172,7 +172,7 @@ window.FORM_A = {
         "She is in a hurry to finish the feeder before bedtime."
       ],
       answer: "She likes to make a careful plan before she starts something.",
-      explanation: "Amira writes a card for the supplies and a card for every step, fixes the steps that got mixed up, and clips the cards so none get lost — all before they build anything. That is careful planning. She asks her uncle for help because she trusts what he remembers, and the building waits until Saturday, so she is not rushing." },
+      explanation: "Amira writes a card for the supplies. She writes a card for every step. She fixes the mixed-up steps. She clips the cards so no card gets lost. Amira makes all the cards before any building starts. Amira is making a careful plan. She trusts what her uncle remembers. So she asks her uncle for help. The building waits until Saturday. So Amira is not rushing." },
 
     // Item 2 — word meaning in context
     { id: "A02", p: 0,
@@ -184,7 +184,7 @@ window.FORM_A = {
         "covered with snow"
       ],
       answer: "strong and steady",
-      explanation: "The clues come right before the word: Uncle Sami tugs hard, and the branch does not bend or crack. A branch that holds still when you pull on it is strong and steady. Thin and bendy is the opposite, and nothing in the story says the branch is old or snowy." },
+      explanation: "The clues come right before the word sturdy. Uncle Sami tugs hard on the branch. The branch does not bend or crack. You pull on the branch, and the branch holds still. So the branch is strong and steady. Thin and bendy is the opposite. Nothing in the story says the branch is old or snowy." },
 
     // Item 3 — purpose of the picture
     { id: "A03", p: 0, showFigure: true,
@@ -196,7 +196,7 @@ window.FORM_A = {
         "to show the steps for cutting plastic safely"
       ],
       answer: "to help the reader see where each part of the finished feeder is",
-      explanation: "The picture labels the window, the perch, the birdseed, the drainage holes, the string and the cap on the finished feeder. Seeing them in one place makes the steps in the story easier to understand. There are no birds in the picture, and it does not explain mold or show anyone cutting." },
+      explanation: "The picture shows the finished feeder. Labels name the window, the perch and the birdseed. Labels also name the drainage holes, the string and the cap. You can see all the parts together. Then the steps in the story make more sense. The picture has no birds. The picture does not explain mold. The picture does not show anyone cutting." },
 
     // Item 4 — EBSR: conclusion + supporting sentence
     { id: "A04", p: 0, type: "ebsr",
@@ -209,7 +209,7 @@ window.FORM_A = {
           "She wants to hide the feeder where no one can see it."
         ],
         answer: "She wants to keep the birds safe while they eat.",
-        explanation: "Amira will not hang the feeder near the fence because the cat naps there — she is thinking about the birds that will come to eat. Nothing shows she is scared of the cat herself. They pick a LOW branch that they can see from the kitchen window, so the other two choices are the opposite of what happens." },
+        explanation: "Amira will not hang the feeder near the fence. The cat naps by the fence. Amira is thinking about the birds. The birds will come to eat. Nothing shows she is scared of the cat herself. Amira and Uncle Sami pick a LOW branch. They can see the branch from the kitchen window. So the other two choices are the opposite of what happens." },
       partB: {
         q: "Part B — Which sentence from the passage BEST supports the answer in Part A?",
         longChoices: true,
@@ -220,7 +220,7 @@ window.FORM_A = {
           "Then she pulled a chair up to the window, rested her chin on her hands, and watched the feeder sway in the cold air."
         ],
         answer: "“Not near the fence,” she said. “Too close to Pumpkin.”",
-        explanation: "Amira says no to the fence because it is too close to the cat. That is the moment she keeps the birds out of danger. The seed line is about not spilling, the tug is Uncle Sami checking the branch, and the chair is about waiting." } },
+        explanation: "Amira says no to the fence. The fence is too close to the cat. Here is the moment Amira keeps the birds out of danger. The seed line is about not spilling. The tug line is Uncle Sami checking the branch. The chair line is about waiting." } },
 
     // Item 5 — main idea of re-shown building paragraphs
     { id: "A05", p: 0,
@@ -236,7 +236,7 @@ window.FORM_A = {
         "Amira and Uncle Sami hang the feeder on the maple tree."
       ],
       answer: "Amira and Uncle Sami begin to turn the milk jug into a feeder.",
-      explanation: "Both paragraphs are the first building steps: cutting the window and poking the drainage holes. Wet seed is one small detail in paragraph 6, Uncle Sami does the cutting because the plastic is too tough for Amira, and the feeder is not hung until later." },
+      explanation: "Paragraphs 5 and 6 tell the first building steps. The first step is cutting the window. The next step is poking the drainage holes. Wet seed is just a small detail in paragraph 6. The plastic is too tough for Amira. So Uncle Sami does the cutting. They hang the feeder up later." },
 
     // Item 6 — hot text: click 2 sentences from a list
     { id: "A06", p: 0, type: "hottext", layout: "list", pick: 2,
@@ -253,7 +253,7 @@ window.FORM_A = {
         "“You're the boss of this project,” Uncle Sami said. “I'm just the helper with the sharp things.”",
         "Uncle Sami did not pick up the scissors until she had read the whole card."
       ],
-      explanation: "Uncle Sami calls Amira the boss and himself the helper, and then he waits for her to read each card before he does anything. Both show him letting her lead. The other sentences show someone doing a job, but not who is in charge." },
+      explanation: "Uncle Sami says Amira is the boss. He says he is the helper. Then he waits for her to read each card. He does nothing before she reads. The two sentences show him letting her lead. The other sentences show someone doing a job. But the other sentences do not show who is in charge." },
 
     /* ── PASSAGE 2 · items 7–11 ── */
 
@@ -271,7 +271,7 @@ window.FORM_A = {
         "The Owls' goalkeeper bounces on her toes and waves her arms."
       ],
       answer: "Lena kicks the ball into the low left corner and wins the championship.",
-      explanation: "The summary sets up the big kick and then jumps straight to the phone call, so it never tells what happened when Lena kicked — the most important event in the story. Noor almost staying home is already in the summary, and the headband and the goalkeeper's waving arms are small details." },
+      explanation: "The summary sets up the big kick. Then the summary jumps straight to the phone call. But what happened when Lena kicked the ball? The summary does not tell. The kick is the most important event in the story. The summary does tell how Noor almost stays home. The headband is a small detail. The goalkeeper waves her arms. The waving arms are a small detail too." },
 
     // Item 8 — evidence for a conclusion
     { id: "A08", p: 1, longChoices: true,
@@ -283,7 +283,7 @@ window.FORM_A = {
         "Noor answered on the first ring, whispering."
       ],
       answer: "Lena missed more kicks than she made that summer, but Noor never once said they should stop.",
-      explanation: "Being patient means you keep going even when things go slowly. Lena missed most of her kicks, and Noor still never gave up on the practices. Her age and team tell who she is, and the headband and the phone call happen long after the teaching." },
+      explanation: "Being patient means you keep going, even when things go slowly. Lena missed most of her kicks. Noor still never gave up on the practices. Noor's age and team tell who she is. The headband and the phone call come long after the teaching." },
 
     // Item 9 — EBSR: character trait + support
     { id: "A09", p: 1, type: "ebsr",
@@ -296,7 +296,7 @@ window.FORM_A = {
           "confused"
         ],
         answer: "focused",
-        explanation: "Focused means paying attention to one thing and not letting anything distract you. Lena picks her corner first and keeps her eyes on it the whole time, even with the goalkeeper waving her arms. She follows Noor's plan exactly, so she is not careless or confused, and she never brags." },
+        explanation: "Focused means you pay attention to a single thing. You let nothing distract you. Lena picks her corner first. The goalkeeper waves her arms. But Lena keeps her eyes on the corner the whole time. Lena does just what Noor's plan says. So Lena is not careless or confused. And Lena never brags." },
       partB: {
         q: "Part B — Which sentence from the passage BEST supports the answer in Part A?",
         longChoices: true,
@@ -307,7 +307,7 @@ window.FORM_A = {
           "After the trophy ceremony, Lena borrowed Dad's phone and called Colorado."
         ],
         answer: "She did not look at the goalkeeper's waving arms at all.",
-        explanation: "The goalkeeper is trying to distract her, and Lena does not even look — that is what being focused looks like. Touching the headband happens before she starts her kick, and the other two choices happen after the kick is over." } },
+        explanation: "The goalkeeper tries to distract Lena. But Lena does not look at all. Not looking is what being focused looks like. Lena touches the headband first. Then she starts her kick. The other two choices come after the kick is done." } },
 
     // Item 10 — choose TWO: idiom with a literal-reading trap
     { id: "A10", p: 1, type: "ms", pick: 2,
@@ -323,7 +323,7 @@ window.FORM_A = {
         "She felt nervous about making such a big change.",
         "She started to think about not going after all."
       ],
-      explanation: "“Getting cold feet” is an idiom — it is not about real feet. It means you get nervous right before something big and start to think about backing out. That matches what Noor says next: “Maybe I should just go to the college here.” The night was warm, so her feet were not really cold, and she was not eager to leave." },
+      explanation: "The phrase “got cold feet” is an idiom. The idiom is not about real feet. The idiom means you get nervous right before something big. Then you start to think about backing out. Noor's next words match the meaning. “Maybe I should just go to the college here,” Noor says. The night was warm, so her feet were not really cold. And Noor was not eager to leave." },
 
     // Item 11 — written response
     { id: "A11", p: 1, type: "cr",
@@ -353,7 +353,7 @@ window.FORM_A = {
         "worried",
         "nervous"
       ],
-      explanation: "The clue is in the same sentence: Pell's hands shook. He is about to show the queen a bowl he could not make whole, so he is worried and nervous about what she will say. Nothing shows he is proud, sleepy, cheerful or greedy." },
+      explanation: "The clue is in the same sentence. Pell's hands shook. Pell is about to show the queen his bowl. He could not make the bowl whole. So he is worried and nervous about what she will say. Nothing shows he is proud, sleepy, cheerful or greedy." },
 
     // Item 13 — summary of a bounded section
     { id: "A13", p: 2,
@@ -365,7 +365,7 @@ window.FORM_A = {
         "The queen explains why honesty matters, Pell becomes her advisor and always tells her the truth, and families still use a cracked bowl to teach the lesson."
       ],
       answer: "The queen explains why honesty matters, Pell becomes her advisor and always tells her the truth, and families still use a cracked bowl to teach the lesson.",
-      explanation: "A good summary of a section covers every paragraph in it, in a few words. The last three paragraphs are the queen's lesson, Pell's years as her advisor, and the cracked bowl that families still keep. Pell becoming advisor is only one part, Darin's red face comes before that section, and the queen chose Pell for his honesty, not for his fixing skills." },
+      explanation: "A good summary of a section covers each paragraph. A good summary uses a few words. The last three paragraphs tell three things. First comes the queen's lesson. Next come Pell's years as her advisor. Last comes the cracked bowl families still keep. Pell gets the advisor job. But the job is only part of the section. Darin's red face comes before the section. The queen chose Pell because he was honest. She did not choose Pell for his fixing skills." },
 
     // Item 14 — choose THREE: what a simile shows
     { id: "A14", p: 2, type: "ms", pick: 3,
@@ -383,7 +383,7 @@ window.FORM_A = {
         "People can count on someone who is honest.",
         "Hiding a mistake may look good at first, but it fails when it matters."
       ],
-      explanation: "The queen compares words to bowls to explain why she chose Pell: an honest answer may not look perfect, but you can count on it, while a hidden mistake looks fine only until it is tested. The wrong choices read the comparison as if it were about real bowls and real paint instead of about honesty. Pell's bowl even has a crooked line, so it is not the most beautiful." },
+      explanation: "The queen compares words to bowls. She wants to explain why she chose Pell. An honest answer may not look perfect. But you can count on an honest answer. A hidden mistake looks fine until you test the mistake. The wrong choices treat the bowls and paint as real. But the queen's comparison is about honesty. Pell's bowl even has a crooked line. So Pell's bowl is not the most beautiful." },
 
     // Item 15 — hot text: click 2 sentences inside a re-shown paragraph
     { id: "A15", p: 2, type: "hottext", layout: "para", pick: 2,
@@ -400,7 +400,7 @@ window.FORM_A = {
         "One spring, when the river flooded and ruined the wheat fields, she did not pretend that all would be well.",
         "Instead, she stood in the town square and told the people the truth: there would be less bread that winter, and the palace would eat less too."
       ],
-      explanation: "Being honest means telling the truth, even when it is hard news. When the flood ruined the wheat, the queen did not pretend things were fine — she told her people the truth about the bread herself. The other sentences tell where she lived and why she needed a new advisor, but they do not show her honesty." }
+      explanation: "Being honest means you tell the truth. You tell the truth even when the news is hard. The flood ruined the wheat. The queen did not pretend things were fine. She told her people the truth about the bread. She told them herself. The other sentences tell where she lived. The other sentences tell why she needed a new advisor. But the other sentences do not show she is honest." }
 
   ]
 };
