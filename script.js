@@ -122,6 +122,37 @@ function gameKey()    { return 'rliab' + (app.currentForm || '?').toLowerCase() 
    It saves as rliabw-review / rliabw_written like any other form. */
 function formLabel(form) { return form === 'W' ? 'Warm Up' : 'Form ' + (form || '?'); }
 function passageSecs()   { return app.currentForm === 'W' ? WARMUP_PASSAGE_SECS : PASSAGE_SECS; }
+
+/* The big form label pinned to the top of the story, question and results screens.
+   It sits under the Guest view strip when there is one, and the story panel that sticks
+   beside the questions is pushed down below it so neither covers the other. */
+const FORM_BANNER_SCREENS = ['passage-screen', 'quiz-screen', 'end-screen'];
+let formBannerStyle = null;
+function updateFormBanner(screenId) {
+  const fb = document.getElementById('form-banner');
+  if (!fb) return;
+  const on = FORM_BANNER_SCREENS.includes(screenId) && !!app.currentForm;
+  fb.classList.toggle('hidden', !on);
+  document.body.classList.toggle('form-on', on);
+  if (!on) return;
+  fb.dataset.form = app.currentForm;
+  fb.textContent = app.currentForm === 'W' ? '🌱 WARM UP' : '📚 FORM ' + app.currentForm;
+  placeFormBanner();
+}
+function placeFormBanner() {
+  const fb = document.getElementById('form-banner');
+  if (!fb || fb.classList.contains('hidden')) return;
+  const strip = document.querySelector('.share-banner');
+  const top = strip ? strip.offsetHeight : 0;
+  fb.style.top = top + 'px';
+  if (!formBannerStyle) { formBannerStyle = document.createElement('style'); document.head.appendChild(formBannerStyle); }
+  // The panel also gets shorter by the same amount, or at the bottom of the page the end of
+  // the question column pushes it back up under the label.
+  const used = top + fb.offsetHeight;
+  formBannerStyle.textContent = `body.form-on .story-panel { top: ${used + 14}px !important; }\n` +
+    `body.form-on .story-scroll { max-height: calc(100vh - ${150 + used}px) !important; }`;
+}
+window.addEventListener('resize', placeFormBanner);
 function writtenKey() { return 'rliab' + (app.currentForm || '?').toLowerCase() + '_written'; }
 function writtenSessionId() {
   return SESSION_ID + '-' + (app.currentForm || 'x') + '-A' + (app.currentAttemptNum || 1) + '-written';
@@ -804,6 +835,7 @@ const app = {
     ['start-screen','readaloud-screen','directions-screen','passage-screen','quiz-screen','end-screen','scoreboard-screen']
       .forEach(s => document.getElementById(s).classList.add('hidden'));
     document.getElementById(id).classList.remove('hidden');
+    updateFormBanner(id);
     window.scrollTo(0, 0);   // every new screen starts at the top
     if (id !== 'quiz-screen') document.body.classList.remove('story-active');
     window.speechSynthesis.cancel();

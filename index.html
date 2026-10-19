@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SBAC Practice: Read Literary Texts</title>
-  <link rel="stylesheet" href="style.css?v=rl4-ra4-nav1-wu1" />
+  <link rel="stylesheet" href="style.css?v=rl4-ra4-nav1-wu1-fb1" />
 </head>
 <body>
 <canvas id="confetti-canvas"></canvas>
@@ -13,6 +13,9 @@
      START SCREEN
 ══════════════════════════════════════════ -->
 <div class="container">
+  <!-- Which form this student is on — pinned to the top of every story, question and results screen
+       so Mr. O can read it from across the room (Marcos 10/19). Filled in by updateFormBanner(). -->
+  <div id="form-banner" class="form-banner hidden"></div>
   <h1>📚 SBAC Practice: Read Literary Texts</h1>
   <p class="welcome-sub">Smarter Balanced IAB Practice · Literary Text · RL.4.1–4.4 · RL.4.7</p>
 
@@ -455,6 +458,6 @@
 <script src="data/form_a.js?v=wu2"></script>
 <script src="data/form_b.js?v=wu2"></script>
 <script src="data/form_c.js?v=wu2"></script>
-<script src="script.js?v=rl4-ra4-sh2-hl2-nav1-open1-wu1"></script>
+<script src="script.js?v=rl4-ra4-sh2-hl2-nav1-open1-wu1-fb1"></script>
 </body>
 </html>

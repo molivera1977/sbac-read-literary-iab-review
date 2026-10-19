@@ -225,6 +225,20 @@ h1 {
 .warmup-btn:hover { box-shadow: 0 8px 0 #7c2d12; }
 .order-hint { margin: 4px 0 12px; text-align: center; font-weight: bold; color: #2c3e50; }
 
+/* Which form the student is on, pinned to the top of the screen during a form (Marcos 10/19:
+   "look at the top of each student's test and know which form they are on"). One color per form;
+   white on each is 5.2:1 or better. */
+.form-banner {
+  position: sticky; top: 0; z-index: 30;
+  margin: 0 0 14px; padding: 8px 16px; border-radius: 12px;
+  text-align: center; color: #fff; font-size: 1.6rem; font-weight: bold; letter-spacing: 0.08em;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.18);
+}
+.form-banner[data-form="W"] { background: #c2410c; }
+.form-banner[data-form="A"] { background: #1d4ed8; }
+.form-banner[data-form="B"] { background: #7e22ce; }
+.form-banner[data-form="C"] { background: #047857; }
+
 .score-btn {
   background: var(--secondary);
   color: #5a3000;
