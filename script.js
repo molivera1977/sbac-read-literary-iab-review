@@ -355,7 +355,7 @@ function renderSpeedBar() {
 function speakNear(btn) {
   const row = btn.parentElement;
   const el = row && row.querySelector(btn.dataset.read || '.read-text');
-  if (el) speakSpans(btn, el, 0.9);
+  if (el) speakSpans(btn, el, READ_RATE);
 }
 
 let hlTimer = null;
@@ -448,7 +448,7 @@ function speakSpans(btn, el, rate) {
     const part = chunks[k];
     let hlIdx = 0;
     const u = new SpeechSynthesisUtterance(spoken(part.map(s => s.textContent).join(' ')));
-    u.lang = 'en-US'; u.rate = (rate || 0.9) * speed.factor;
+    u.lang = 'en-US'; u.rate = (rate || READ_RATE) * speed.factor;
     u.onboundary = e => {
       if (e.name !== 'word') return;
       part.forEach(s => s.classList.remove('hl'));
@@ -589,14 +589,14 @@ function applyFormLocks(name) {
 /* ── SPEAK DIRECTIONS ───────────────────────────────── */
 function speakDir(btn) {
   const p = btn.closest('.dir-section').querySelector('.dir-text');
-  speakSpans(btn, p, 0.92);
+  speakSpans(btn, p, READ_RATE);
 }
 
 /* ── SPEAK A STORY PARAGRAPH ────────────────────────── */
 function speakParagraph(btn) {
   const host = btn.closest('.story-para') || btn.closest('.excerpt-para');
   if (!host) return;
-  speakSpans(btn, host.querySelector('.para-text'), 0.9);
+  speakSpans(btn, host.querySelector('.para-text'), READ_RATE);
 }
 
 /* ── READ-ALOUD INTRO SPEAKS ITSELF ─────────────────
@@ -606,6 +606,7 @@ function speakParagraph(btn) {
    as words, and each word lights up as it is read. Leaving the screen
    (app.show) cancels the speech. */
 const INTRO_SAY = { '🔊': 'the speaker button', '⏹': 'the stop button', '—': ',' };
+const READ_RATE = 0.82;    // every read-aloud a student taps (Marcos 10/26: "I like the 0.82. It's clear and easy to listen to.")
 const INTRO_RATE = 0.82;   // Marcos 10/6: 0.92 ran ahead of the highlight
 let introToken = 0, introTimer = null;
 let introMsPerChar = null, introMsPerWord = null;   // learned from this device's voice
@@ -1536,7 +1537,7 @@ const app = {
       speakBtn.title = 'Read this choice aloud';
       speakBtn.onclick = e => {
         e.stopPropagation();
-        speakSpans(speakBtn, btn.querySelector('.choice-text'), 0.9);
+        speakSpans(speakBtn, btn.querySelector('.choice-text'), READ_RATE);
       };
 
       // Speaker sits to the LEFT of the text it reads
@@ -1574,7 +1575,7 @@ const app = {
       qSpeak.className = 'speak-btn';
       qSpeak.textContent = '🔊';
       qSpeak.title = `Read Part ${part} aloud`;
-      qSpeak.onclick = () => speakSpans(qSpeak, qText, 0.92);
+      qSpeak.onclick = () => speakSpans(qSpeak, qText, READ_RATE);
       qRow.appendChild(qSpeak);
       qRow.appendChild(qText);
       block.appendChild(qRow);
@@ -1658,7 +1659,7 @@ const app = {
         if (i) para.appendChild(document.createTextNode(' '));
         para.appendChild(makeSent(t));
       });
-      speak.onclick = () => speakSpans(speak, para, 0.9);
+      speak.onclick = () => speakSpans(speak, para, READ_RATE);
       delegate(para);
       row.appendChild(speak);
       row.appendChild(para);
@@ -1677,7 +1678,7 @@ const app = {
         speak.className = 'choice-speak-btn';
         speak.textContent = '🔊';
         speak.title = 'Read this sentence aloud';
-        speak.onclick = e => { e.stopPropagation(); speakSpans(speak, sp.querySelector('.choice-text'), 0.9); };
+        speak.onclick = e => { e.stopPropagation(); speakSpans(speak, sp.querySelector('.choice-text'), READ_RATE); };
         row.appendChild(speak);
         row.appendChild(sp);
         list.appendChild(row);
@@ -1920,7 +1921,7 @@ const app = {
     fb.innerHTML = '';
     fb.appendChild(fbSpeakBtn);
     fb.appendChild(fbBody);
-    fbSpeakBtn.onclick = () => speakSpans(fbSpeakBtn, fbBody, 0.9);
+    fbSpeakBtn.onclick = () => speakSpans(fbSpeakBtn, fbBody, READ_RATE);
 
     document.getElementById('confirm-btn').classList.add('hidden');
     document.getElementById('score-text').textContent = `${getFirstName(this.studentName)} · ${this.score}`;
@@ -1965,7 +1966,7 @@ const app = {
     fb.innerHTML = '';
     fb.appendChild(fbSpeakBtn);
     fb.appendChild(fbBody);
-    fbSpeakBtn.onclick = () => speakSpans(fbSpeakBtn, fbBody, 0.9);
+    fbSpeakBtn.onclick = () => speakSpans(fbSpeakBtn, fbBody, READ_RATE);
 
     document.getElementById('confirm-btn').classList.add('hidden');
     this.saveProgress();
@@ -2087,7 +2088,7 @@ const app = {
   /* ── SPEAK QUESTION ── */
   speakQuestion() {
     const qBtn = document.getElementById('speak-q-btn');
-    speakSpans(qBtn, document.getElementById('question-text'), 0.92);
+    speakSpans(qBtn, document.getElementById('question-text'), READ_RATE);
   },
 
   /* ── SCORES ── */
