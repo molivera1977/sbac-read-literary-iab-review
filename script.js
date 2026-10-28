@@ -25,7 +25,7 @@
 /* ── CONFIG ─────────────────────────────────────────── */
 const REVIEW_OPEN   = true;   // false = students locked out; only Teacher Access works. Set true to open.
 const SHARE_MODE    = !!window.SHARE_MODE;   // set by share.js — a visitor's link, never a student's
-const INSTRUCT_SECS = 20;
+const INSTRUCT_SECS = 15;
 const PASSAGE_SECS  = 75;     // story screen lock — these IAB stories run 600–750 words
 const WARMUP_PASSAGE_SECS = 35;  // the Warm Up stories run ~250–360 words
 const READ_SECS     = 15;     // same as the Inferences FIAB: these choices are whole sentences
@@ -1345,7 +1345,7 @@ const app = {
     if (el) el.textContent = `${m}:${s}`;
   },
 
-  /* ── INSTRUCTIONS LOCK (20s) ── */
+  /* ── INSTRUCTIONS LOCK (15s) ── */
   startInstructionsTimer() {
     if (this.instructInterval) { clearInterval(this.instructInterval); this.instructInterval = null; }
     const btn   = document.getElementById('ready-btn');
