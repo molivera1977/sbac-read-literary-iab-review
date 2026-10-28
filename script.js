@@ -446,14 +446,12 @@ function speakSpans(btn, el, rate) {
     if (token !== speechToken) return;
     if (k >= chunks.length) { finish(); return; }
     const part = chunks[k];
-    let hlIdx = 0;
-    const u = new SpeechSynthesisUtterance(spoken(part.map(s => s.textContent).join(' ')));
+    const u = new SpeechSynthesisUtterance(sayWords(part));
     u.lang = 'en-US'; u.rate = (rate || READ_RATE) * speed.factor;
     u.onboundary = e => {
       if (e.name !== 'word') return;
       part.forEach(s => s.classList.remove('hl'));
-      if (part[hlIdx]) part[hlIdx].classList.add('hl');
-      hlIdx++;
+      lightAt(part, u.text, e.charIndex);
     };
     u.onend = () => {
       part.forEach(s => s.classList.remove('hl'));
@@ -702,6 +700,37 @@ function speakReadAloudIntro() {
   sayPiece(0);
 }
 
+/* Light the word the voice is on. The voice says where it is in the text (charIndex); it does NOT signal every
+   word — Samantha in Chrome gave no signal for "example:" after "For" (measured in Marcos's Chrome 10/28) — so
+   moving one word per signal fell further behind with each skipped word ("the highlighting can't keep up").
+   A text made by sayWords has its own list of where each word starts; any other spoken text has one token per
+   span, joined by single spaces. Gives back the lit span. */
+function lightAt(spans, text, charIndex) {
+  const said = SAID_AT.get(spans);
+  let j = 0, start = 0;
+  if (said && said.text === text) said.starts.forEach((st, k) => { if (st <= charIndex) j = k; });
+  else String(text).split(' ').forEach((tok, k) => { if (start <= charIndex) j = k; start += tok.length + 1; });
+  spans.forEach(sp => sp && sp.classList.remove('hl'));
+  if (spans[j]) spans[j].classList.add('hl');
+  return spans[j];
+}
+/* What the voice is told for these spans. The words change on the way to the voice (quote marks are dropped,
+   an en dash is said as a pause: "1–2" is said "1, 2"), so lightAt cannot count tokens in it: each word starts
+   where the rest of the text, said from that word on, starts. That list is kept for lightAt. raw = the text as
+   written; words = each span's word, as raw has it. */
+const SAID_AT = new WeakMap();
+function sayWords(spans, raw = spans.map(sp => sp.textContent).join(' '), words = spans.map(sp => sp.textContent)) {
+  const text = spoken(raw);
+  let from = 0;
+  const starts = words.map(w => {
+    const at = raw.indexOf(w, from);
+    if (at < 0) return NaN;   // not in raw as written: never lit, the rest still line up
+    from = at + w.length;
+    return text.length - spoken(' ' + raw.slice(at)).length;
+  });
+  SAID_AT.set(spans, { text, starts });
+  return text;
+}
 function wrapWords(html) {
   const tmp = document.createElement('div');
   tmp.innerHTML = html;
