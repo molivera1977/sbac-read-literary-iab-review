@@ -25,6 +25,15 @@
 /* ── CONFIG ─────────────────────────────────────────── */
 const REVIEW_OPEN   = true;   // false = students locked out; only Teacher Access works. Set true to open.
 const SHARE_MODE    = !!window.SHARE_MODE;   // set by share.js — a visitor's link, never a student's
+/* The Teacher screen (see promptTeacherReview): the PIN holds in this tab; a Try-it link is ?share=…&teach=<form> */
+const TEACHER_KEY      = 'rliab_teacher';        // sessionStorage: '1' = the Teacher PIN was given in this tab
+const TEACHER_PICK_KEY = 'rliab_teacher_pick';   // sessionStorage: the last form picked
+const TEACH_FORMS      = ['W', 'A', 'B', 'C'];
+const TEACH = (() => {
+  const f = new URLSearchParams(location.search).get('teach') || '';
+  return SHARE_MODE && TEACH_FORMS.includes(f) ? f : null;
+})();
+function teacherUnlocked() { try { return sessionStorage.getItem(TEACHER_KEY) === '1'; } catch (e) { return false; } }
 const INSTRUCT_SECS = 15;
 const PASSAGE_SECS  = 75;     // story screen lock — these IAB stories run 600–750 words
 const WARMUP_PASSAGE_SECS = 35;  // the Warm Up stories run ~250–360 words
@@ -881,7 +890,7 @@ const app = {
 
   /* ── screens ── */
   show(id) {
-    ['start-screen','readaloud-screen','directions-screen','passage-screen','quiz-screen','end-screen','scoreboard-screen']
+    ['start-screen','readaloud-screen','directions-screen','passage-screen','quiz-screen','end-screen','scoreboard-screen','teacher-screen','key-screen']
       .forEach(s => document.getElementById(s).classList.add('hidden'));
     document.getElementById(id).classList.remove('hidden');
     updateFormBanner(id);
@@ -1046,24 +1055,194 @@ const app = {
     }
   },
 
-  /* ── TEACHER REVIEW MODE ── */
+  /* ── TEACHER SCREEN (Marcos 11/8: "update the sbac reviews" — the Teacher screen of 10/28) ──
+     Teacher Access → the Teacher PIN in the page → pick a form → 👀 Try it as a student or ✅ Answer key.
+     The PIN holds in this tab until ✕ Exit teacher. Nothing on the Teacher screen is saved or sent, and a
+     student's saved place on this computer is never touched (the old Teacher Access erased it). No Slide Mode:
+     a review has no lesson to put on the board, only scored questions (Marcos 10/30: Slide Mode is the teaching only). */
   promptTeacherReview() {
-    const pin = prompt('Enter Teacher PIN to access Review Mode:');
-    if (pin !== '9377') { if (pin !== null) alert('Incorrect PIN.'); return; }
-    this.studentName = 'Mr. O (Teacher)';
-    reviewMode = true;
-    localStorage.removeItem(STORAGE_KEY);
-    this._showReviewPicker();
+    if (teacherUnlocked()) { this.openTeacher(); return; }
+    this.showPinModal('🧑‍🏫 Teacher', 'Enter the Teacher PIN.', () => {
+      try { sessionStorage.setItem(TEACHER_KEY, '1'); } catch (e) {}
+      this.openTeacher();
+    });
   },
 
-  _showReviewPicker() {
-    const form = prompt('Choose a form to review:\n1 — Warm Up\n2 — Form A\n3 — Form B\n4 — Form C\n\nEnter 1, 2, 3, or 4:');
-    const map = { '1': 'W', '2': 'A', '3': 'B', '4': 'C' };
-    if (!map[form]) { alert('Invalid choice.'); reviewMode = false; return; }
-    const mode = prompt('Choose review mode:\n1 — Manual (tap Next each question)\n2 — Auto-run (fully automatic)\n\nEnter 1 or 2:');
-    if (mode !== '1' && mode !== '2') { alert('Invalid choice.'); reviewMode = false; return; }
-    reviewAutoRun = (mode === '2');
-    this.startSession(map[form]);
+  _teacherPick() {
+    let p = null;
+    try { p = sessionStorage.getItem(TEACHER_PICK_KEY); } catch (e) {}
+    return TEACH_FORMS.includes(p) ? p : TEACH_FORMS[0];
+  },
+
+  openTeacher() {
+    stopActiveSpeech();
+    this._renderTeacher(this._teacherPick());
+    this.show('teacher-screen');
+  },
+
+  teacherPick(form) { this._renderTeacher(form); },
+
+  _renderTeacher(form) {
+    try { sessionStorage.setItem(TEACHER_PICK_KEY, form); } catch (e) {}
+    document.getElementById('t-forms').innerHTML = TEACH_FORMS.map(f =>
+      `<button type="button" class="t-pick${f === form ? ' on' : ''}" aria-pressed="${f === form}" data-id="${f}" onclick="app.teacherPick('${f}')">${formLabel(f)}</button>`).join('');
+    const data = window['FORM_' + form];
+    document.getElementById('t-picked').textContent = `${formLabel(form)} · ${data.passages.length} stories · ${data.items.length} questions`;
+  },
+
+  /* 👀 Try it as a student: the guest view (share.js — nothing reaches the sheet, its own storage), started on this form */
+  teacherTry() {
+    location.href = `${location.pathname}${window.SHARE_LINK}&teach=${this._teacherPick()}`;
+  },
+
+  /* ✅ Answer key: each story's title, then its questions in the form's own order (a student gets them mixed inside
+     the story), the right answer marked ✅ — Part A and Part B, every one of a choose-two, the sentences to click —
+     and why */
+  teacherKey() {
+    const form = this._teacherPick();
+    const data = window['FORM_' + form];
+    const n = data.items.length;
+    let k = 0;
+    document.getElementById('key-title').textContent = `✅ Answer key · ${formLabel(form)}`;
+    document.getElementById('key-body').innerHTML =
+      `<div class="key-print-head"><h1>SBAC Practice: Read Literary Texts Answer Key — ${formLabel(form)}</h1>` +
+      `<p>${data.passages.length} stories · ${n} questions · the right answer is marked ✅</p></div>` +
+      data.passages.map((P, p) => `<h2 class="key-story">📖 Story ${p + 1} of ${data.passages.length}: ${esc(P.title)}</h2>` +
+        data.items.filter(q => q.p === p).map(q =>
+          `<div class="key-q"><p class="key-where">${q.id} · Question ${++k} of ${n}</p>${this._keyItemHTML(q)}</div>`).join('')).join('');
+    this.show('key-screen');
+  },
+
+  _keyItemHTML(q) {
+    const why = t => t ? `<div class="key-why"><strong>Why:</strong> ${esc(t)}</div>` : '';
+    const list = (choices, right) => `<ul class="key-choices">${choices.map(c =>
+      `<li class="${right.includes(c) ? 'key-right' : ''}">${esc(c)}${right.includes(c) ? ' ✅' : ''}</li>`).join('')}</ul>`;
+    if (q.type === 'ebsr') {
+      return `<p class="key-ask">${esc(q.partA.q)}</p>${list(q.partA.choices, [q.partA.answer])}${why(q.partA.explanation)}` +
+        `<p class="key-ask">${esc(q.partB.q)}</p>${list(q.partB.choices, [q.partB.answer])}${why(q.partB.explanation)}`;
+    }
+    if (q.type === 'cr') {   // the written answer: the teacher grades it — the tip the student sees, a strong answer, the checklist
+      return `<p class="key-ask">${esc(q.q)}</p><p class="key-note">${esc(q.guidance)}</p>` +
+        `<div class="key-why"><strong>A strong answer:</strong> ${esc(q.model)}</div>` +
+        (q.checklist ? `<ul class="key-check">${q.checklist.map(c => `<li>☐ ${esc(c)}</li>`).join('')}</ul>` : '');
+    }
+    const excerpt = q.excerpt ? `<blockquote class="key-excerpt">${q.excerpt.map(t => `<p>${esc(t)}</p>`).join('')}</blockquote>` : '';
+    return `<p class="key-ask">${esc(q.q)}</p>${excerpt}${list(q.choices, q.answers || [q.answer])}${why(q.explanation)}`;
+  },
+
+  printKey() {
+    document.body.classList.add('key-printing');
+    window.print();
+    document.body.classList.remove('key-printing');
+  },
+
+  backToTeacher() {
+    if (TEACH) { location.href = `${location.pathname}#teacher`; return; }
+    this.openTeacher();
+  },
+
+  exitTeacher() {
+    try { sessionStorage.removeItem(TEACHER_KEY); } catch (e) {}
+    if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+    this.exitReviewMode();
+  },
+
+  /* A Try-it link: signed in as the guest (the guest's form menu behind it), one tap to start (the tap also lets
+     the device speak) */
+  _teachReady() {
+    if (!TEACH) return;
+    this._shareSignIn();
+    document.getElementById('teach-bar').classList.remove('hidden');
+    document.body.classList.add('teach-on');
+    document.getElementById('welcome-panel').classList.add('hidden');
+    document.getElementById('student-login-panel').classList.add('hidden');
+    document.getElementById('teach-what').textContent = `${formLabel(TEACH)} · SBAC Practice: Read Literary Texts`;
+    document.getElementById('teach-ready').classList.remove('hidden');
+  },
+
+  teachStart() {
+    document.getElementById('teach-ready').classList.add('hidden');
+    this.startSession(TEACH);
+  },
+
+  /* ⏩ Skip the wait: opens what a student is waiting on right now — the story screen's lock, the read lock on the
+     answers, the 8 s pause before Next, the score screen's lock. Stopping the voice also lets next-waits.js go. */
+  teacherSkipWait() {
+    stopActiveSpeech();
+    if (this.passageInterval) {
+      clearInterval(this.passageInterval);
+      this.passageInterval = null;
+      document.getElementById('passage-lock-bar').classList.add('hidden');
+      const btn = document.getElementById('passage-btn');
+      btn.disabled = false; btn.style.opacity = '1'; btn.style.cursor = 'pointer';
+      btn.textContent = "✅ I've read the story — start the questions";
+    }
+    if (this.readInterval) {
+      clearInterval(this.readInterval);
+      this.readInterval = null;
+      document.getElementById('reading-timer-bar').classList.add('hidden');
+      answerControls().forEach(b => lockControl(b, false));
+      if (!this.questionLocked) document.getElementById('confirm-btn').classList.remove('hidden');
+    }
+    if (this.nextInterval) {
+      clearInterval(this.nextInterval);
+      this.nextInterval = null;
+      document.getElementById('next-timer-bar').classList.add('hidden');
+      document.getElementById('next-btn').classList.remove('hidden');
+    }
+    if (this._scoreUnlock) this._scoreUnlock();
+  },
+
+  /* Go anywhere in the run (Marcos 10/28: "teacher mode should be able to go anywhere" · arrows beside the menu):
+     each story's own screen, then its questions in the order this run asks them (with the ids of the answer key).
+     A question skipped is not scored; the end screen counts only what was answered. */
+  _teachList() {
+    const bank = this.currentBank || [];
+    const out = [];
+    bank.forEach((q, i) => {
+      if (!i || bank[i - 1].p !== q.p) out.push({ kind: 'story', p: q.p, label: `📖 Story ${q.p + 1}: ${this.currentPassages[q.p].title}` });
+      out.push({ kind: 'q', i, label: `❓ Question ${i + 1} of ${bank.length} · ${q.id}` });
+    });
+    return out;
+  },
+
+  _teachAt() {
+    const onStory = !document.getElementById('passage-screen').classList.contains('hidden');
+    return this._teachList().findIndex(it => onStory
+      ? it.kind === 'story' && it.p === this.pendingPassage
+      : it.kind === 'q' && it.i === this.currentIndex);
+  },
+
+  _teachSync() {
+    const list = this._teachList();
+    const jump = document.getElementById('teach-jump');
+    document.getElementById('teach-bar').classList.add('started');
+    if (jump.options.length !== list.length) jump.innerHTML = list.map((it, k) => `<option value="${k}">${esc(it.label)}</option>`).join('');
+    const at = this._teachAt();
+    jump.value = String(at);
+    document.getElementById('teach-prev').disabled = at <= 0;
+    document.getElementById('teach-next').disabled = at < 0 || at >= list.length - 1;
+  },
+
+  teachGo(k) {
+    const it = this._teachList()[k];
+    if (!it) return;
+    stopActiveSpeech();
+    ['passageInterval', 'readInterval', 'nextInterval'].forEach(t => { if (this[t]) { clearInterval(this[t]); this[t] = null; } });
+    if (it.kind === 'story') {
+      this.currentIndex = this.currentBank.findIndex(q => q.p === it.p);
+      this.shownPassage = -1;                       // → the story's own screen
+    } else {
+      this.currentIndex = it.i;
+      this.shownPassage = this.currentBank[it.i].p;  // → the question, its story in the side panel
+    }
+    this._enterQuestion();
+  },
+
+  teachStep(d) {
+    let at = this._teachAt();
+    if (at < 0 && this.currentIndex >= (this.currentBank || []).length) at = this._teachList().length;   // the end screen: ◀ = the last question
+    if (at >= 0) this.teachGo(at + d);
   },
 
   exitReviewMode() {
@@ -1193,6 +1372,7 @@ const app = {
     const passage = this.currentPassages[pIdx];
     this.pendingPassage = pIdx;
     this.show('passage-screen');
+    if (TEACH) this._teachSync();
 
     const count = this.currentBank.filter(it => it.p === pIdx).length;
     document.getElementById('passage-progress').textContent =
@@ -1493,6 +1673,7 @@ const app = {
     document.getElementById('progress-text').textContent = `Question ${this.currentIndex + 1} of ${total}`;
     document.getElementById('score-text').textContent    = `${getFirstName(this.studentName)} · ${this.score}`;
     document.getElementById('progress-fill').style.width = `${(this.currentIndex / total) * 100}%`;
+    if (TEACH) this._teachSync();   // the teacher's ◀ menu ▶ on a Try-it run
 
     this._renderStreak();
 
@@ -2077,9 +2258,6 @@ const app = {
 
     this.show('end-screen');
 
-    const reviewNextBtn = document.getElementById('review-next-btn');
-    if (reviewNextBtn) reviewNextBtn.classList.toggle('hidden', !reviewMode);
-
     document.getElementById('final-score-sub').textContent = SHARE_MODE
       ? `${formLabel(this.currentForm)} · Guest view — this score was not saved`
       : `${formLabel(this.currentForm)} · Attempt ${attemptNum} · ${this.studentName}`;
@@ -2235,12 +2413,15 @@ const app = {
       remaining--;
       count.textContent = remaining;
       fill.style.width = (remaining / secs * 100) + '%';
-      if (remaining <= 0) {
-        clearInterval(iv);
-        bar.classList.add('hidden');
-        buttons.forEach(b => { b.disabled = false; b.style.opacity = '1'; });
-      }
+      if (remaining <= 0) unlock();
     }, 1000);
+    const unlock = () => {   // the lock's end — and ⏩ Skip the wait on a Try-it run
+      clearInterval(iv);
+      if (this._scoreUnlock === unlock) this._scoreUnlock = null;
+      bar.classList.add('hidden');
+      buttons.forEach(b => { b.disabled = false; b.style.opacity = '1'; });
+    };
+    this._scoreUnlock = unlock;
   },
 
   clearScores() {
@@ -2476,6 +2657,8 @@ function stopConfetti() {
 
 /* ── BOOT ────────────────────────────────────────────── */
 app.init();
+if (TEACH) app._teachReady();                                              // a Try-it link from the Teacher screen
+else if (location.hash === '#teacher' && teacherUnlocked()) app.openTeacher();   // ← Teacher screen from a Try-it run
 renderSpeedBar();
 
 /* ── CLOSED-TO-STUDENTS LOCK ────────────────────────── */
