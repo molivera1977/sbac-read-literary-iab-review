@@ -286,6 +286,9 @@ function spoken(raw) {
     .replace(/[“”‘’"]/g, '')
     .replace(/…/g, ', ')
     .replace(/\s*[—–]\s*/g, ', ')
+    // "Part A — Being confident…": the dash is not a word, so it never reaches here, and Ava said "Part A Being" as
+    // "part a being" (11/16, Whisper twice); a comma keeps the letter a letter
+    .replace(/\b(Part [AB]) (?!asks\b|and\b)(?=[A-Za-z])/g, '$1, ')   // not "Part A asks…" / "Part A and Part B"
     .replace(/ {2,}/g, ', ')
     .replace(/\s+/g, ' ')
     .trim();

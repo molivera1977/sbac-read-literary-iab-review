@@ -1,2 +1,5 @@
 .DS_Store
 .claude/
+# Ava: the recorder's working copies and the list it recorded (11/16) — the site serves kokoro/, never these
+tools/ava-cache/
+tools/ava-lines.json
