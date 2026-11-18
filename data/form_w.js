@@ -161,7 +161,7 @@ window.FORM_W = {
 
     // Item 2 — word meaning in context
     { id: "W02", p: 0,
-      q: "Read these sentences from the passage. “Last, Leo sprinkled water over the cups. He did not pour it. He let just a few drops fall on each cup, so the seeds would not wash away.” What does the word sprinkled mean in these sentences?",
+      q: "Read these sentences from the passage. “Last, Leo sprinkled water over the cups. He did not pour it. He let just a few drops fall on each cup, so the seeds would not wash away.” What does the word **sprinkled** mean in these sentences?",
       choices: [
         "poured out a lot at one time",
         "dropped a little here and there",
@@ -186,7 +186,7 @@ window.FORM_W = {
     // Item 4 — EBSR: conclusion + supporting sentence
     { id: "W04", p: 0, type: "ebsr",
       partA: {
-        q: "Part A — What conclusion can be drawn about Aunt Rosa from the way she answers Leo's questions?",
+        q: "What conclusion can be drawn about Aunt Rosa from the way she answers Leo's questions?",
         choices: [
           "She likes helping Leo learn new things.",
           "She thinks Leo asks too many questions.",
@@ -196,7 +196,7 @@ window.FORM_W = {
         answer: "She likes helping Leo learn new things.",
         explanation: "In paragraph 3, Leo asks a lot of questions. In paragraph 4, Aunt Rosa laughs. “Those are great questions,” she says. Then she says, “Let's find out together.” She is happy to help Leo learn. She calls his questions great. So she does not think Leo asks too many. The story does not say Aunt Rosa does not like tomatoes. Leo does most of the planting." },
       partB: {
-        q: "Part B — Which sentence from the passage BEST supports the answer in Part A?",
+        q: "Which sentence from the passage **best** supports the answer in Part A?",
         longChoices: true,
         choices: [
           "It was a cold, gray day in March.",
@@ -225,7 +225,7 @@ window.FORM_W = {
 
     // Item 6 — hot text: click 2 sentences from a list
     { id: "W06", p: 0, type: "hottext", layout: "list", pick: 2,
-      q: "The passage shows that Leo is CAREFUL when he plants the seeds. Click on the TWO sentences from the passage that BEST support this idea.",
+      q: "The passage shows that Leo is careful when he plants the seeds. Click on the **two** sentences from the passage that **best** support this idea.",
       choices: [
         "In the bag were an empty egg carton, a small sack of dirt, and a pack of tomato seeds.",
         "Next, Leo filled each cup with dirt.",
@@ -244,7 +244,7 @@ window.FORM_W = {
 
     // Item 7 — summary with a missing key event
     { id: "W07", p: 1,
-      q: "Read this summary of the passage. Which KEY event is MISSING from the summary?",
+      q: "Read this summary of the passage. Which key event is missing from the summary?",
       excerptLabel: "📝 A summary of “One More Shot”",
       excerpt: [
         "The basketball game is tied, and Maya gets one free throw that could win it. She sees her big brother, Theo, in the stands. She remembers how Theo taught her to shoot at the park last summer and never gave up on her. After the game, Maya runs to the stands and hugs Theo."
@@ -260,7 +260,7 @@ window.FORM_W = {
 
     // Item 8 — evidence for a conclusion
     { id: "W08", p: 1, longChoices: true,
-      q: "Which detail from the passage BEST shows that Theo was PATIENT while he was teaching Maya?",
+      q: "Which detail from the passage **best** shows that Theo was patient while he was teaching Maya?",
       choices: [
         "Her big brother, Theo, was in the front row.",
         "Theo ran after the ball every single time, and he never got mad.",
@@ -273,7 +273,7 @@ window.FORM_W = {
     // Item 9 — EBSR: character trait + support
     { id: "W09", p: 1, type: "ebsr",
       partA: {
-        q: "Part A — Which word BEST describes Maya when she takes the last shot?",
+        q: "Which word **best** describes Maya when she takes the last shot?",
         choices: [
           "bored",
           "calm",
@@ -283,7 +283,7 @@ window.FORM_W = {
         answer: "calm",
         explanation: "Calm means quiet and steady, not upset. Right before the shot, Maya takes a deep breath. Then her hands stop shaking (paragraph 6). Her hands were shaking when she walked to the line (paragraph 2). So Maya's hands show a change. Nothing shows Maya is bored or angry. Maya is not careless. She does every step Theo taught her." },
       partB: {
-        q: "Part B — Which sentence from the passage BEST supports the answer in Part A?",
+        q: "Which sentence from the passage **best** supports the answer in Part A?",
         longChoices: true,
         choices: [
           "Maya had butterflies in her stomach as she walked to the line.",
@@ -296,7 +296,7 @@ window.FORM_W = {
 
     // Item 10 — choose TWO: idiom with a literal-reading trap
     { id: "W10", p: 1, type: "ms", pick: 2,
-      q: "Read this sentence from the passage. “Maya had butterflies in her stomach as she walked to the line.” What does the phrase “had butterflies in her stomach” suggest about Maya? Choose TWO answers.",
+      q: "Read this sentence from the passage. “Maya had butterflies in her stomach as she walked to the line.” What does the phrase “had butterflies in her stomach” suggest about Maya? Choose **two** answers.",
       choices: [
         "She felt nervous.",
         "Real butterflies were flying inside her.",
@@ -325,7 +325,7 @@ window.FORM_W = {
 
     // Item 12 — choose TWO synonyms
     { id: "W12", p: 2, type: "ms", pick: 2,
-      q: "Read this sentence from the passage. “Grandmother Wren was so delighted that she laughed out loud.” Which TWO words mean about the same as delighted? Choose TWO answers.",
+      q: "Read this sentence from the passage. “Grandmother Wren was so delighted that she laughed out loud.” Which **two** words mean about the same as **delighted**? Choose **two** answers.",
       choices: [
         "angry",
         "happy",
@@ -342,7 +342,7 @@ window.FORM_W = {
 
     // Item 13 — summary of a bounded section
     { id: "W13", p: 2,
-      q: "Which statement BEST summarizes the LAST THREE paragraphs of the passage?",
+      q: "Which statement **best** summarizes the last three paragraphs of the passage?",
       choices: [
         "Pip gives his carrot to an old man in the cold.",
         "Pip becomes Grandmother Wren's helper.",
@@ -354,7 +354,7 @@ window.FORM_W = {
 
     // Item 14 — choose THREE: what a comparison shows
     { id: "W14", p: 2, type: "ms", pick: 3,
-      q: "Read these sentences from the passage. “Your soup is like our village. One person alone does not have much. But when everyone adds a little, there is enough for all.” What does this comparison show about what Grandmother Wren believes? Choose THREE answers.",
+      q: "Read these sentences from the passage. “Your soup is like our village. One person alone does not have much. But when everyone adds a little, there is enough for all.” What does this comparison show about what Grandmother Wren believes? Choose **three** answers.",
       choices: [
         "Sharing helps everyone have enough.",
         "Every house in the village should grow carrots.",
@@ -372,7 +372,7 @@ window.FORM_W = {
 
     // Item 15 — hot text: click 2 sentences inside a re-shown paragraph
     { id: "W15", p: 2, type: "hottext", layout: "para", pick: 2,
-      q: "Read paragraph 6 from the passage. The passage shows that Pip is KIND. Click on the TWO sentences in the paragraph that BEST support this idea.",
+      q: "Read paragraph 6 from the passage. The passage shows that Pip is kind. Click on the **two** sentences in the paragraph that **best** support this idea.",
       choices: [
         "Pip walked home slowly with his carrot and onion.",
         "On the way, he saw an old man sitting alone in the cold.",

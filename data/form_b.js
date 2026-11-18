@@ -103,28 +103,31 @@ window.FORM_B = {
     },
 
     /* ── PASSAGE 3 ─────────────────────────────────────
-       Fable. An old tortoise tests three animals with a
-       walk up a hill, the humble one wins, and a lantern
-       simile carries the moral. */
+       Fable. An old oriole tests three young birds with a
+       nest in a windy oak. The one whose nest fell twice,
+       and who learned why each time, wins over the one
+       whose nest stood by luck; a map simile carries the
+       moral (a mistake teaches you, if you study it). */
     {
       id: "B-P3",
-      title: "The Slowest Climb",
+      title: "The Nest Teacher",
       source: "Original practice passage",
       genre: "Fable",
       note: "A fable is a short story, often with animals as the characters, that teaches a lesson. The lesson is called the moral.",
       paragraphs: [
-        "Long ago, the animals of Fern Valley had a guardian who watched over them, and for one hundred years that guardian was Grandmother Tortoise. She knew which paths flooded in the spring and which caves stayed warm in the winter. When a young animal wandered off and got lost, she was always the one who found it. But Grandmother Tortoise had grown very old, and her eyes were not as sharp as they used to be. She knew it was time to choose a new guardian.",
-        "One morning she called the animals together at the bottom of Thimble Hill. “Tomorrow at noon, I will choose the next guardian,” she said. “Whoever wishes to be chosen should meet me right here. We will walk to the top of the hill together, and at the top I will make my choice.”",
-        "The next day, three animals were waiting at the bottom of the hill. There was Bear, who was the strongest animal in the valley. There was Fox, who was the cleverest. And there was Field Mouse, who was small and gray and hardly ever spoke at meetings.",
-        "Grandmother Tortoise took one slow step up the path, and then another. Bear could not stand to go so slowly. “Watch this, everyone!” he shouted, and he charged straight up the steepest side of the hill, knocking rocks loose as he went. Fox gave a little smile and slipped into the bushes, for she knew a secret rabbit trail that was shorter than any path. Only Field Mouse stayed behind.",
-        "The climb took the whole afternoon. Every few steps, Grandmother Tortoise stopped to rest, and each time, Field Mouse sat down beside her and waited as if she had nowhere else to be. Halfway up, the path passed a patch of wild strawberries. Then it grew steep and rocky, and Field Mouse ran ahead to push the loose pebbles out of the old tortoise's way. Even when the sun began to sink toward the trees, Field Mouse did not try to hurry her friend along.",
-        "When at last they reached the top, Bear was stretched out on a flat rock in the sun. “What took you so long?” he called. “I've been up here for hours.” Fox stepped out from behind a bush and brushed off her tail. “I would have been here even sooner,” she said, “but I stopped to take a nap. Nobody else knows about the rabbit trail.”",
-        "Grandmother Tortoise caught her breath. Then she said, “Field Mouse will be the next guardian of Fern Valley.”",
-        "Bear and Fox were perplexed. Bear scratched his head with one huge paw, and Fox tilted her head to one side, as if she were trying to solve a riddle. “But I got here first,” said Bear. “And I found the quickest way,” said Fox.",
-        "“I did not ask you to reach the top of the hill,” said Grandmother Tortoise. “I asked you to walk to the top with me. A guardian is like a lantern on a dark path. A lantern does not run ahead so that everyone will look at it. It stays close beside the traveler, so the traveler can see where to step.”",
-        "Field Mouse looked down at her small gray paws. “But I am the smallest one here,” she said quietly. Grandmother Tortoise smiled. “A small lantern lights the path just as well as a big one,” she said.",
-        "That evening, the four of them walked back down Thimble Hill together. Bear carried Grandmother Tortoise on his broad back, one careful step at a time, and Fox walked beside him and pointed out the loose rocks. Field Mouse walked at the front, looking back every few steps to make sure that no one was left behind.",
-        "And it is said that, to this day, whenever the animals of Fern Valley choose a new guardian, they climb Thimble Hill together, and no one is allowed to walk faster than the slowest animal."
+        "Long ago, the young birds of Alder Wood learned to build their nests from Old Oriole. Her nests were so well made that in forty springs, not one of them had ever fallen. But Old Oriole's wings now ached on chilly mornings, so she decided it was time to choose a new nest teacher.",
+        "She invited three young birds, Thrush, Jay, and Finch, to the enormous oak at the edge of the forest. None of them had ever built a nest alone. “Each of you will build a nest in this tree,” Old Oriole told them. “The wind blows especially hard here, so build carefully. In three days I will return, and you will tell me what you learned.”",
+        "Jay did not waste a minute. He grabbed the nearest sticks he could find, piled them where two branches met, close to the trunk, and finished his nest by lunchtime. He did not realize it, but he had built in a spot where the trunk protected his nest from the wind.",
+        "Finch and Thrush built their nests far out on a long, thin branch. That night the wind came roaring through Alder Wood, the thin branch whipped back and forth, and by morning both nests lay broken on the ground. Finch stared at the scattered pieces and shook out her feathers. “Nest building is just not for me,” she announced, and she flew home.",
+        "Thrush hopped down and examined every piece to discover what had gone wrong. The bottom had pulled apart when the branch shook, so she carried mud from the creek, one beakful at a time, and built a second nest with a solid floor. This time the nest itself held together, but that night the thin branch bent so far in the wind that the whole nest tipped over and fell.",
+        "On the third morning, the grass under the oak was wet and cold. Thrush's wings ached from carrying all that mud, but she gathered new sticks and started over for the third time. This time she chose a short, thick branch close to the trunk, where the wind could not bend it. Up in his nest, Jay sang loudly about how quickly he had finished. Thrush did not stop to rest until the last stick was in place, long after the sun had gone down.",
+        "That night the wind roared again, but Thrush's new nest did not move at all. The next morning Old Oriole returned to hear what they had learned, and Finch came along to see who would be chosen.",
+        "Jay puffed out his chest. “I learned that I am just good at this,” he said. “My nest never fell, not even once.” Finch shrugged and said, “I learned that I am not.” Then Thrush spoke. “I learned that a nest needs a mud floor, that thin branches bend in the wind, and that the safest spot is close to the trunk.”",
+        "Old Oriole nodded slowly. “Thrush will be the next nest teacher,” she said.",
+        "Jay and Finch were perplexed. Jay looked from his own nest to Thrush's nest and back again, as if he had missed an important part of the story, and Finch opened her beak and closed it again without saying anything. “But her nest fell down two times,” said Jay. “Mine never fell at all.”",
+        "“Your nest stood, Jay, but you cannot tell me why it stood,” said Old Oriole. “Thrush can. A fallen nest is like a map. It shows you every wrong turn, so you never take that turn again. But a map only helps if you stop and read it. Thrush has two maps, and she has read them both.”",
+        "The following spring, Thrush hung her two fallen nests on a low branch for the young birds to study. Jay and Finch came to her first lesson, and this time, when Finch's nest fell, she did not fly home. She picked up the pieces and looked.",
+        "Ever since then, whenever a young bird's first nest falls in Alder Wood, the older birds never say, “Too bad.” They say, “Good. Now go pick up the pieces and look.”"
       ]
     }
   ],
@@ -163,7 +166,7 @@ window.FORM_B = {
 
     // Item 2 — word meaning in context
     { id: "B02", p: 0,
-      q: "Read this sentence from the passage. “He pulled until the string was taut and the sticks did not wobble at all when he tapped them.” What does the word taut mean in this sentence?",
+      q: "Read this sentence from the passage. “He pulled until the string was taut and the sticks did not wobble at all when he tapped them.” What does the word **taut** mean in this sentence?",
       choices: [
         "loose and floppy",
         "pulled tight",
@@ -188,7 +191,7 @@ window.FORM_B = {
     // Item 4 — EBSR: conclusion + supporting sentence
     { id: "B04", p: 0, type: "ebsr",
       partA: {
-        q: "Part A — What conclusion can be drawn about Desmond?",
+        q: "What conclusion can be drawn about Desmond?",
         choices: [
           "He has never flown a kite, but he wants to learn.",
           "He would rather work alone than with Malik.",
@@ -198,7 +201,7 @@ window.FORM_B = {
         answer: "He has made kites many times before.",
         explanation: "Desmond says he made a kite with Grandpa Ike “every spring.” So he “could do this with my eyes closed.” The words tell us Desmond has made kites many times. He works with Malik the whole time. Nothing shows Desmond is bored. Nothing shows he is new to kites." },
       partB: {
-        q: "Part B — Which sentence from the passage BEST supports the answer in Part A?",
+        q: "Which sentence from the passage **best** supports the answer in Part A?",
         longChoices: true,
         choices: [
           "“Can we get one?” he asked his cousin Desmond, who was fourteen and was staying with Malik's family for spring break.",
@@ -227,7 +230,7 @@ window.FORM_B = {
 
     // Item 6 — hot text: click 2 sentences from a list
     { id: "B06", p: 0, type: "hottext", layout: "list", pick: 2,
-      q: "The passage shows that Desmond wants Malik to do the building HIMSELF while Desmond teaches. Click on the TWO sentences from the passage that BEST support this idea.",
+      q: "The passage shows that Desmond wants Malik to do the building himself while Desmond teaches. Click on the **two** sentences from the passage that **best** support this idea.",
       choices: [
         "Desmond picked up Malik's cap and handed it back.",
         "“You tie it,” Desmond said, handing him the string.",
@@ -246,7 +249,7 @@ window.FORM_B = {
 
     // Item 7 — summary with a missing key event
     { id: "B07", p: 1,
-      q: "Read this summary of the passage. Which KEY event is MISSING from the summary?",
+      q: "Read this summary of the passage. Which key event is missing from the summary?",
       excerptLabel: "📝 A summary of “One Hundred Before Dinner”",
       excerpt: [
         "Kenji steps to the free-throw line with no time left and his team behind by one point. He sees his little sister Mika in the bleachers with a camera and remembers how she chased his rebounds and counted his shots all summer. His first free throw rolls around the rim and drops in to tie the game. After the game, Mika shows Kenji the picture she took."
@@ -262,7 +265,7 @@ window.FORM_B = {
 
     // Item 8 — evidence for a conclusion
     { id: "B08", p: 1, longChoices: true,
-      q: "Which detail from the passage BEST shows that Mika is sure Kenji will succeed?",
+      q: "Which detail from the passage **best** shows that Mika is sure Kenji will succeed?",
       choices: [
         "But she chased down every rebound and bounced the ball back to him, and she kept count out loud.",
         "There in the front row was his little sister, Mika, holding Grandma's old camera up to her eye.",
@@ -275,7 +278,7 @@ window.FORM_B = {
     // Item 9 — EBSR: character trait + support
     { id: "B09", p: 1, type: "ebsr",
       partA: {
-        q: "Part A — Which word BEST describes Kenji at the END of the passage?",
+        q: "Which word **best** describes Kenji at the end of the passage?",
         choices: [
           "jealous",
           "grateful",
@@ -285,7 +288,7 @@ window.FORM_B = {
         answer: "grateful",
         explanation: "Grateful means thankful for what someone did for you. Kenji wins the game. Right then, he gives Mika credit for counting each shot. Kenji does not brag. He is not disappointed. He is glad about Mika's picture. He is not jealous of the picture." },
       partB: {
-        q: "Part B — Which sentence from the passage BEST supports the answer in Part A?",
+        q: "Which sentence from the passage **best** supports the answer in Part A?",
         longChoices: true,
         choices: [
           "He had been fouled on his way to the basket, and now he had two shots.",
@@ -298,7 +301,7 @@ window.FORM_B = {
 
     // Item 10 — choose TWO: idiom with a literal-reading trap
     { id: "B10", p: 1, type: "ms", pick: 2,
-      q: "Read this sentence from the passage. “Mika was still learning the ropes, and most of her pictures came out blurry.” What does the phrase “learning the ropes” suggest about Mika? Choose TWO answers.",
+      q: "Read this sentence from the passage. “Mika was still learning the ropes, and most of her pictures came out blurry.” What does the phrase “learning the ropes” suggest about Mika? Choose **two** answers.",
       choices: [
         "She is just starting to learn how to do something new.",
         "She is learning how to tie knots in a rope.",
@@ -327,66 +330,66 @@ window.FORM_B = {
 
     // Item 12 — choose TWO synonyms
     { id: "B12", p: 2, type: "ms", pick: 2,
-      q: "Read this sentence from the passage. “Bear and Fox were perplexed.” Which TWO words mean about the same as perplexed? Choose TWO answers.",
+      q: "Read this sentence from the passage. “Thrush hopped down and examined every piece to discover what had gone wrong.” Which **two** words mean about the same as **examined**? Choose **two** answers.",
       choices: [
-        "pleased",
-        "puzzled",
-        "sleepy",
-        "confused",
-        "hungry",
-        "proud"
+        "fixed",
+        "studied",
+        "dropped",
+        "checked",
+        "gathered",
+        "hid"
       ],
       answers: [
-        "puzzled",
-        "confused"
+        "studied",
+        "checked"
       ],
-      explanation: "The next sentence is the clue. Bear scratches his head. Fox tilts her head “as if she were trying to solve a riddle.” People act like Bear and Fox when they are puzzled or confused. Bear and Fox are not pleased about the choice. Nothing shows Bear and Fox are sleepy or hungry. Proud does not mean puzzled." },
+      explanation: "The rest of the sentence is the clue. Thrush looks at every piece “to discover what had gone wrong.” To find out what went wrong, you look closely and check each piece. So examined means studied or checked. Thrush fixes the problem later, with mud. But fixed does not mean the same as examined. Gathered, dropped and hid do not mean looked at closely." },
 
     // Item 13 — summary of a bounded section
     { id: "B13", p: 2,
-      q: "Which statement BEST summarizes the LAST THREE paragraphs of the passage?",
+      q: "Which statement **best** summarizes the last three paragraphs of the passage?",
       choices: [
-        "Grandmother Tortoise explains that a guardian should be like a lantern that stays close to others.",
-        "Field Mouse learns that being small does not matter, the four animals walk down the hill together, and the valley still climbs at the slowest animal's pace.",
-        "Bear carries Grandmother Tortoise down Thimble Hill on his broad back.",
-        "Bear and Fox are so upset that Field Mouse was chosen that they leave Fern Valley, and from that day on no animal ever climbs Thimble Hill again."
+        "Jay tells Old Oriole that his nest never fell, not even once.",
+        "Old Oriole explains that a fallen nest can teach you, Thrush uses her fallen nests to teach, and the birds still say to look closely when a nest falls.",
+        "Finch picks up the pieces of her fallen nest and looks at them.",
+        "Old Oriole explains that a good nest never falls, Thrush builds a nest for each young bird, and the birds still build all of their nests close to the trunk."
       ],
-      answer: "Field Mouse learns that being small does not matter, the four animals walk down the hill together, and the valley still climbs at the slowest animal's pace.",
-      explanation: "A good summary of a section covers each paragraph. The last three paragraphs tell three things. First, Field Mouse is worried she is small. Next, all four walk down the hill together. Last, a custom still lasts today. The lesson that a guardian is like a lantern is in paragraph 9, just before the section. Bear carries the tortoise. But the ride is just one detail. Bear and Fox do not leave the valley." },
+      answer: "Old Oriole explains that a fallen nest can teach you, Thrush uses her fallen nests to teach, and the birds still say to look closely when a nest falls.",
+      explanation: "A good summary of a section covers each paragraph. The last three paragraphs tell three things. First, Old Oriole explains that a fallen nest is like a map. Next, Thrush teaches the young birds with her two fallen nests. Last, the older birds still tell a young bird to look at a nest that falls. Finch picking up the pieces is just one detail. Jay's words about his nest come before the section. One choice says a good nest never falls. But Old Oriole chose Thrush, and her nest fell two times. That choice also says Thrush builds a nest for each bird. Nothing in the section shows her building nests for others. And nothing in the section says where the birds build their nests now." },
 
     // Item 14 — choose THREE: what a simile shows
     { id: "B14", p: 2, type: "ms", pick: 3,
-      q: "Read these sentences from the passage. “A guardian is like a lantern on a dark path. A lantern does not run ahead so that everyone will look at it. It stays close beside the traveler, so the traveler can see where to step.” What does this comparison show about what Grandmother Tortoise believes? Choose THREE answers.",
+      q: "Read these sentences from the passage. “A fallen nest is like a map. It shows you every wrong turn, so you never take that turn again. But a map only helps if you stop and read it. Thrush has two maps, and she has read them both.” What does this comparison show about what Old Oriole believes? Choose **three** answers.",
       choices: [
-        "A good guardian helps others instead of trying to be noticed.",
-        "The guardian should carry a lantern when it gets dark.",
-        "A leader should stay close to the ones who need help.",
-        "The path up Thimble Hill is too dark to climb at night.",
-        "Being first matters less than helping others along the way.",
-        "The guardian should be the brightest animal in the valley."
+        "Mistakes can show you what not to do next time.",
+        "Young birds should carry a map when they fly far from home.",
+        "A mistake helps you only if you stop and learn from it.",
+        "Thrush is better than Jay at finding her way through the woods.",
+        "Thrush's two fallen nests were not a waste of time.",
+        "A good nest builder never lets a nest fall, not even once."
       ],
       answers: [
-        "A good guardian helps others instead of trying to be noticed.",
-        "A leader should stay close to the ones who need help.",
-        "Being first matters less than helping others along the way."
+        "Mistakes can show you what not to do next time.",
+        "A mistake helps you only if you stop and learn from it.",
+        "Thrush's two fallen nests were not a waste of time."
       ],
-      explanation: "Grandmother Tortoise says a guardian is like a lantern. The comparison tells why she picked Field Mouse. Bear and Fox ran ahead. They wanted to be first. They wanted to be admired. But Field Mouse stayed by the tortoise. A lantern stays by a traveler the same way. Some wrong choices act like the lantern and the dark are real. One wrong choice says to be the brightest. Her lesson says the opposite." },
+      explanation: "Old Oriole compares a fallen nest to a map. A map shows you the wrong turns. In the same way, a mistake shows you what not to do. But a map helps only if you read it. So you have to stop and learn from a mistake. Thrush has two maps, and she has read them both. So her two fallen nests were worth something. Two wrong choices act like the map is a real map. But Old Oriole is talking about nests, not about finding the way. One wrong choice says a good builder never lets a nest fall. Old Oriole believes the opposite. She chose Thrush, and her nest fell two times." },
 
     // Item 15 — hot text: click 2 sentences inside a re-shown paragraph
     { id: "B15", p: 2, type: "hottext", layout: "para", pick: 2,
-      q: "Read paragraph 5 from the passage. The passage shows that Field Mouse is PATIENT. Click on the TWO sentences in the paragraph that BEST support this idea.",
+      q: "Read paragraph 6 from the passage. The passage shows that Thrush is determined. Click on the **two** sentences in the paragraph that **best** support this idea.",
       choices: [
-        "The climb took the whole afternoon.",
-        "Every few steps, Grandmother Tortoise stopped to rest, and each time, Field Mouse sat down beside her and waited as if she had nowhere else to be.",
-        "Halfway up, the path passed a patch of wild strawberries.",
-        "Then it grew steep and rocky, and Field Mouse ran ahead to push the loose pebbles out of the old tortoise's way.",
-        "Even when the sun began to sink toward the trees, Field Mouse did not try to hurry her friend along."
+        "On the third morning, the grass under the oak was wet and cold.",
+        "Thrush's wings ached from carrying all that mud, but she gathered new sticks and started over for the third time.",
+        "This time she chose a short, thick branch close to the trunk, where the wind could not bend it.",
+        "Up in his nest, Jay sang loudly about how quickly he had finished.",
+        "Thrush did not stop to rest until the last stick was in place, long after the sun had gone down."
       ],
       answers: [
-        "Every few steps, Grandmother Tortoise stopped to rest, and each time, Field Mouse sat down beside her and waited as if she had nowhere else to be.",
-        "Even when the sun began to sink toward the trees, Field Mouse did not try to hurry her friend along."
+        "Thrush's wings ached from carrying all that mud, but she gathered new sticks and started over for the third time.",
+        "Thrush did not stop to rest until the last stick was in place, long after the sun had gone down."
       ],
-      explanation: "Patient means you wait and stay calm. A patient person does not try to rush. Field Mouse sits and waits each time the tortoise rests. She never rushes the tortoise, even late in the day. Pushing the pebbles away shows Field Mouse is helpful. But helpful is not the same as patient. The other choices tell about the climb and the path." }
+      explanation: "Determined means you keep going toward a goal, even when it is hard. Thrush's wings ache, but she starts over a third time. She does not stop to rest until her nest is done, even after dark. Choosing a thick branch shows that Thrush learned from her mistakes. But that sentence tells where she built, not that she kept going. The sentence about the grass only tells what the morning was like. The sentence about Jay does not show Thrush at all." }
 
   ]
 };

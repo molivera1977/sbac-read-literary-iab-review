@@ -100,7 +100,7 @@ window.FORM_C = {
       genre: "Realistic fiction",
       paragraphs: [
         "The stadium lights at Harmon Field came on while the boys' relays were still running, and by the time the girls lined up for the city championship, the sky above the bleachers had turned dark purple. Nia Brooks stood in the last exchange zone and shook out her hands, one and then the other, the way she always did.",
-        "She was the anchor. Her teammates Keisha, Rosa, and Danielle would run the first three legs of the relay, one hundred meters each, and then the baton would come to her. Whatever place the Eastside Eagles were in when it reached her hand, that was the place she had to fix.",
+        "She was the anchor. Her teammates Keisha, Talia, and Danielle would run the first three legs of the relay, one hundred meters each, and then the baton would come to her. Whatever place the Eastside Eagles were in when it reached her hand, that was the place she had to fix.",
         "Across the track, her mother stood at the fence holding her phone up high, recording everything. Nia knew exactly who the video was for.",
         "Two summers ago, before he moved to Atlanta, her brother Andre had trained her himself. Every morning at six, he walked her to the empty track behind the middle school and made her practice handoffs until her arms ached. He was nineteen and had never run a race in his life, but he had watched about a thousand of them on TV, and he talked through every practice like a sports announcer.",
         "“And Brooks takes the baton,” he would say into a hairbrush as she sprinted past him. “She's flying, folks! Nobody has seen speed like this since the invention of the cheetah!”",
@@ -109,12 +109,12 @@ window.FORM_C = {
         "Being a real announcer was his dream. He called her races, their cousins' basketball games, and once, when nothing else was happening, a pigeon trying to land on a power line. Then last spring a radio station in Atlanta hired him to answer phones and carry coffee. It was not announcing, but Mom said he had finally gotten his foot in the door. Andre said that if he carried enough coffee, someday they would let him near a microphone.",
         "He couldn't come home for the championship. “Text me the second it's over,” he had said on the phone the night before. “Not after you cool down. Not after you get a snack. The SECOND.”",
         "The starter's gun cracked, and Nia snapped back to Harmon Field.",
-        "Keisha got out fast. Rosa held their spot around the curve. But on the third leg, Danielle got bumped by a runner from Westside and stumbled, and by the time she came pounding toward Nia's zone, the Eagles were in third place, two long steps behind the leaders.",
+        "Keisha got out fast. Talia held their spot around the curve. But on the third leg, Danielle got bumped by a runner from Westside and stumbled, and by the time she came pounding toward Nia's zone, the Eagles were in third place, two long steps behind the leaders.",
         "Nia started running before Danielle reached her, just the way Andre had taught her. She stretched her hand back without turning her head. “Stick!” Danielle shouted, and the baton slapped into Nia's palm.",
         "When the baton hits your hand, you don't look back. That was the first rule Andre had ever given her. Looking back is how you lose a step.",
         "Nia did not look back. She caught the Southside runner halfway down the straightaway. The Westside girl was still ahead. Fifteen meters left. Ten. Nia's legs were burning, but she pushed harder, because somewhere in her head a voice that sounded a lot like a hairbrush was yelling, She's flying, folks! Nia leaned at the line, and the two runners crossed it so close together that nobody in the bleachers knew who had won.",
         "Then the scoreboard flashed: EASTSIDE — 1.",
-        "Keisha and Rosa and Danielle crashed into Nia all at once, and the four of them fell into a pile on the grass. When Nia finally pulled herself free, the first thing she did was run to the fence. Her mother was already holding out the phone.",
+        "Keisha and Talia and Danielle crashed into Nia all at once, and the four of them fell into a pile on the grass. When Nia finally pulled herself free, the first thing she did was run to the fence. Her mother was already holding out the phone.",
         "Nia typed with shaking thumbs: WE WON. I DIDN'T LOOK BACK.",
         "The answer came less than a minute later. It was a voice message, and it was Andre, shouting so loudly that the phone buzzed. “And BROOKS takes it at the line! Ladies and gentlemen, I have never seen anything like it — and I have seen a pigeon land on a power line!”",
         "Nia laughed so hard she had to sit down. Somewhere in Atlanta, she thought, there was a radio station that had no idea what it was missing."
@@ -122,27 +122,31 @@ window.FORM_C = {
     },
 
     /* ── PASSAGE 3 ─────────────────────────────────────
-       Folktale. An elder tests three young people, the
-       quiet one wins, and a simile carries the moral. */
+       Folktale. An old orchard keeper asks three young
+       people to share twelve apples between two houses.
+       The one who goes and asks what each family needs
+       wins over the even split and the quick guess; a
+       shoe simile carries the moral (fair does not always
+       mean the same). */
     {
       id: "C-P3",
-      title: "The Keeper of the Spring",
+      title: "The Orchard Keeper",
       source: "Original practice passage",
       genre: "Folktale",
       note: "A folktale is a story that people have told and retold for a very long time. Many folktales teach a lesson.",
       paragraphs: [
-        "Long ago, in a village at the bottom of a mountain, there lived an old woman named Ama who was the keeper of the spring. Every morning for fifty years, she had climbed the mountain path to the place where the water came bubbling out of the rocks. She cleared away the fallen leaves, she checked that the water ran clean, and then she followed the stream all the way back down to the village. Because of Ama, no one in the village had ever gone thirsty.",
-        "But Ama's knees had grown stiff, and the path seemed to get a little steeper every year. She knew the time had come to choose the next keeper. She also knew that this choice mattered more than anything else she had done in fifty years, and she did not want to make it in a hurry. For a whole season, she quietly watched the young people of the village at their work and at their play. At last she chose three of them: Tomas, who was the strongest; Lina, who was the cleverest; and Ren, who was so quiet that most people forgot he was there.",
-        "“Tomorrow at sunrise, each of you will go up to the spring,” Ama told them. “Then come back and tell me what you saw.”",
-        "Tomas ran the whole way up the mountain. He was back before the sun had cleared the trees, and he was hardly out of breath. “The spring is running,” he said proudly. “And I made it to the top faster than anyone in the village ever has.”",
-        "Lina came back an hour later with a notebook full of numbers. “There are one thousand, two hundred and twelve steps to the top,” she said. “The water comes out of the rock at about one full bucket every ten breaths. I measured it three times.”",
-        "Ren did not come back until almost noon. His sleeves were wet to the elbows, and there was mud on both of his knees.",
-        "“The spring is fine,” he said. “But halfway down the mountain, a big branch has fallen across the stream. The water is piling up behind it and spilling out onto the path. If it stays there, the houses at the bottom of the village will run low on water by next week.” He looked down at his muddy knees. “I couldn't move the branch by myself, so I dug a little ditch around it. The water is running again, for now. But it needs more than one person.”",
-        "Ama was quiet for a long time. Then she said, “Ren will be the next keeper of the spring.”",
-        "Tomas and Lina were astonished. They looked at each other, then at Ren, then at Ama, as if one of them must have heard wrong. “But I was the fastest,” said Tomas. “And I was the most careful,” said Lina. “I counted every step.”",
-        "“You were both very good at reaching the spring,” said Ama. “But the spring is not where the people live. A village is like a stream. When one stone blocks it at the top, every house at the bottom goes thirsty. The keeper must care for the whole stream, from the first drop to the last house.”",
-        "The next morning, Tomas used his strong arms to lift the branch out of the water, and Lina used her clever mind to plan a low stone wall so that falling branches would never block the stream again. Ren walked beside them the whole way, watching the water.",
-        "And it is said that, to this day, the keepers of that village do not stop when they reach the spring. Every morning they walk the whole stream, from the top of the mountain to the very last house."
+        "There was once a village on a green hill where the apple orchard belonged to everyone. For fifty years, an old man named Hugo had been the keeper of the orchard. Every autumn, he picked the apples and gave them out to the families, so that no one in the village would go hungry during the long winter. But Hugo's back had grown stiff, and the ladders seemed to get taller every year. He knew that the orchard would soon need a new keeper.",
+        "Three young people asked for the job. Anton was the best at numbers in the whole village, and he could add up a long list faster than the schoolteacher. Nell asked more questions than anyone on the hill, and she could talk to anyone about anything. And Bela was the fastest at everything, from running races to finishing her chores.",
+        "Hugo handed each of them a basket of twelve apples. “At the end of Mill Lane there are two houses, a big stone house and a small wooden cottage,” he said. “Decide how to share these apples between those two houses in the fairest way you can. Then come back at sunset and tell me what you decided.”",
+        "Anton did not even need to leave the orchard. He counted the apples twice and split them into two neat piles of six. At sunset he said proudly, “Six apples for each house. Both houses get exactly the same, so it is fair.”",
+        "Bela ran all the way to the end of Mill Lane and back before lunch. “I took one look,” she said. “The stone house is three times as big as the cottage, so more people must live there. I would give nine apples to the big house and three to the little one.”",
+        "Nell came back last, with dust from the lane all over her shoes. She had knocked on both doors and asked who lived inside and how much food each family had saved for the winter. At the cottage, a little boy had pulled her inside to show her the green frog he kept in a jar by the window. She had also counted the children in the cottage twice, because they kept running in and out the door. Then she sat down on the orchard wall to tell Hugo what she had found.",
+        "“The stone house belongs to Mr. Grout, the miller,” said Nell. “He lives there all by himself, and his cellar is already full of flour and cheese. The cottage belongs to the Fenn family. There are nine of them, and all they have left is one sack of potatoes. So I would give one apple to Mr. Grout and eleven apples to the Fenns.”",
+        "Hugo smiled for the first time all day. “Nell will be the next keeper of the orchard,” he said.",
+        "Anton and Bela were astonished. Anton stared down at his two neat piles, and Bela's mouth fell open. “But eleven and one are not the same at all,” said Anton.",
+        "“Fair does not always mean the same,” said Hugo. “Being fair is like making shoes. If you make every pair the same size, the shoes will fit almost no one. You have to measure each foot first. Anton made every pair the same, and Bela guessed the sizes just by looking. Only Nell went and measured.”",
+        "So Nell became the keeper of the orchard. Every autumn, before a single apple was picked, she walked from house to house with her questions. She asked who had a new baby, whose garden had dried up, and who had plenty to share. Then she gave each family what it needed, and no one in the village went hungry.",
+        "And people say that, to this day, the orchard keeper on that green hill knocks on every door before giving out a single apple."
       ]
     }
   ],
@@ -181,7 +185,7 @@ window.FORM_C = {
 
     // Item 2 — word meaning in context
     { id: "C02", p: 0,
-      q: "Read this sentence from the passage. “One by one, the worms burrowed down into the damp newspaper until not a single one could be seen.” What does the word burrowed mean in this sentence?",
+      q: "Read this sentence from the passage. “One by one, the worms burrowed down into the damp newspaper until not a single one could be seen.” What does the word **burrowed** mean in this sentence?",
       choices: [
         "dug their way in",
         "went to sleep",
@@ -206,7 +210,7 @@ window.FORM_C = {
     // Item 4 — EBSR: conclusion + supporting sentence
     { id: "C04", p: 0, type: "ebsr",
       partA: {
-        q: "Part A — What conclusion can be drawn about why Abuela agrees to build the worm bin?",
+        q: "What conclusion can be drawn about why Abuela agrees to build the worm bin?",
         choices: [
           "It reminds her of the way her own family made sure nothing went to waste.",
           "She wants Mateo to earn a good grade from Ms. Rivera for building the worm bin.",
@@ -216,7 +220,7 @@ window.FORM_C = {
         answer: "It reminds her of the way her own family made sure nothing went to waste.",
         explanation: "At first, Abuela is unsure. She says, “Inside, I feel less fine.” She remembers her father's pile in Puebla. Right after, she changes her mind. The story never names a grade. She never says she is tired of the trash. She never says she wants pets. She even says she feels less fine about worms inside." },
       partB: {
-        q: "Part B — Which sentence from the passage BEST supports the answer in Part A?",
+        q: "Which sentence from the passage **best** supports the answer in Part A?",
         longChoices: true,
         choices: [
           "“In our family, we never wasted a single thing.”",
@@ -245,7 +249,7 @@ window.FORM_C = {
 
     // Item 6 — hot text: click 2 sentences from a list
     { id: "C06", p: 0, type: "hottext", layout: "list", pick: 2,
-      q: "The passage shows that Mateo and Abuela work TOGETHER. Click on the TWO sentences from the passage that BEST support this idea.",
+      q: "The passage shows that Mateo and Abuela work together. Click on the **two** sentences from the passage that **best** support this idea.",
       choices: [
         "Mateo did not hear one more word that afternoon.",
         "He reminded her about the tomato plants on the balcony, which never grew more than a handful of small, sour tomatoes.",
@@ -264,7 +268,7 @@ window.FORM_C = {
 
     // Item 7 — summary with a missing key event
     { id: "C07", p: 1,
-      q: "Read this summary of the passage. Which KEY event is MISSING from the summary?",
+      q: "Read this summary of the passage. Which key event is missing from the summary?",
       excerptLabel: "📝 A summary of “Anchor Leg”",
       excerpt: [
         "Nia is the anchor runner for the Eastside Eagles at the city relay championship. While she waits for the baton, she remembers how her brother Andre trained her on the school track and called her practices like a sports announcer. On the third leg of the race, Danielle stumbles, and Nia gets the baton in third place. After the race, Nia texts Andre, and he answers with a funny voice message."
@@ -280,7 +284,7 @@ window.FORM_C = {
 
     // Item 8 — evidence for a conclusion
     { id: "C08", p: 1, longChoices: true,
-      q: "Which detail from the passage BEST shows that Andre cares a lot about how Nia's race turns out?",
+      q: "Which detail from the passage **best** shows that Andre cares a lot about how Nia's race turns out?",
       choices: [
         "“Text me the second it's over,” he had said on the phone the night before.",
         "Then last spring a radio station in Atlanta hired him to answer phones and carry coffee.",
@@ -293,7 +297,7 @@ window.FORM_C = {
     // Item 9 — EBSR: character trait + support
     { id: "C09", p: 1, type: "ebsr",
       partA: {
-        q: "Part A — Which word BEST describes Nia during the race?",
+        q: "Which word **best** describes Nia during the race?",
         choices: [
           "determined",
           "unsure",
@@ -303,7 +307,7 @@ window.FORM_C = {
         answer: "determined",
         explanation: "Determined means you keep pushing toward a goal. You keep pushing even when the goal is hard. Nia starts in third place. Her legs are burning. Nia pushes harder anyway. Nia never brags. She follows Andre's rules exactly. So boastful does not fit Nia. Careless does not fit Nia either. Nia is not unsure. She never stops to wonder what to do. She runs hard all the way to the line." },
       partB: {
-        q: "Part B — Which sentence from the passage BEST supports the answer in Part A?",
+        q: "Which sentence from the passage **best** supports the answer in Part A?",
         longChoices: true,
         choices: [
           "Nia's legs were burning, but she pushed harder, because somewhere in her head a voice that sounded a lot like a hairbrush was yelling, She's flying, folks!",
@@ -316,7 +320,7 @@ window.FORM_C = {
 
     // Item 10 — choose TWO: idiom with a literal-reading trap
     { id: "C10", p: 1, type: "ms", pick: 2,
-      q: "Read this sentence from the passage. “It was not announcing, but Mom said he had finally gotten his foot in the door.” What does the phrase “gotten his foot in the door” suggest about Andre? Choose TWO answers.",
+      q: "Read this sentence from the passage. “It was not announcing, but Mom said he had finally gotten his foot in the door.” What does the phrase “gotten his foot in the door” suggest about Andre? Choose **two** answers.",
       choices: [
         "He has a first chance to work at a place where he wants to be.",
         "His job could lead to the work he really wants someday.",
@@ -345,7 +349,7 @@ window.FORM_C = {
 
     // Item 12 — choose TWO synonyms
     { id: "C12", p: 2, type: "ms", pick: 2,
-      q: "Read this sentence from the passage. “Tomas and Lina were astonished.” Which TWO words mean about the same as astonished? Choose TWO answers.",
+      q: "Read this sentence from the passage. “Anton and Bela were astonished.” Which **two** words mean about the same as **astonished**? Choose **two** answers.",
       choices: [
         "amazed",
         "surprised",
@@ -358,53 +362,53 @@ window.FORM_C = {
         "amazed",
         "surprised"
       ],
-      explanation: "The next sentence is the clue. Tomas and Lina look at each other. They look “as if one of them must have heard wrong.” People act this way when something amazes them. People act this way when something surprises them. Tomas and Lina are not tired or bored. Angry and proud do not mean the same as astonished." },
+      explanation: "The next sentence is the clue. Anton stares down at his two neat piles. Bela's mouth falls open. People act this way when something amazes them. People act this way when something surprises them. Nothing shows that Anton and Bela are tired or bored. Anton argues that the numbers are not the same. But angry does not mean the same as astonished. Anton spoke proudly earlier in the story. But proud does not mean the same as astonished either." },
 
     // Item 13 — summary of a bounded section
     { id: "C13", p: 2,
-      q: "Which statement BEST summarizes the LAST THREE paragraphs of the passage?",
+      q: "Which statement **best** summarizes the last three paragraphs of the passage?",
       choices: [
-        "Ama explains that the keeper must care for the whole village, the three young people fix the stream together, and the keepers still walk the whole stream today.",
-        "Tomas and Lina are upset because they were not chosen to be the keeper of the spring.",
-        "Tomas lifts a heavy branch out of the stream with his strong arms.",
-        "Ama explains that the keeper must be the first to reach the spring, Ren digs a ditch around the branch, and the keepers still race to the spring every morning."
+        "Hugo explains that a keeper must be good with numbers, Nell gives every family the same number of apples, and keepers still count all of the apples twice.",
+        "Anton tells Hugo that eleven apples and one apple are not the same.",
+        "Hugo explains that fair does not always mean the same, Nell asks every family what it needs each autumn, and keepers still knock on every door first.",
+        "Nell asks each family whether it has a new baby."
       ],
-      answer: "Ama explains that the keeper must care for the whole village, the three young people fix the stream together, and the keepers still walk the whole stream today.",
-      explanation: "A good summary covers each paragraph in a part. A good summary uses just a few words. Here the part is the last three paragraphs. First, Ama explains. Next, the three of them fix the stream. Last, the tradition goes on to this day. Tomas lifting the branch is just one detail. Tomas and Lina get surprised before the last part. One choice says the keeper must be first to the spring. But Ama says the keeper must care for the whole stream. Ren digs his ditch before the last part. And the keepers walk the whole stream. They do not race." },
+      answer: "Hugo explains that fair does not always mean the same, Nell asks every family what it needs each autumn, and keepers still knock on every door first.",
+      explanation: "A good summary covers each paragraph in a section. Here the section is the last three paragraphs. First, Hugo explains what fair means. Next, Nell asks every family what it needs each autumn. Last, the keepers still knock on every door today. Asking about a new baby is just one detail. Anton's words about eleven and one come before the section. One choice says a keeper must be good with numbers. But Hugo did not choose Anton, the one who was best at numbers. That choice also says Nell gives every family the same number. But Nell did not plan to give both houses the same. She said she would give one apple to the miller and eleven to the Fenns. Nothing in the section says the keepers count the apples twice." },
 
     // Item 14 — choose THREE: what a simile shows
     { id: "C14", p: 2, type: "ms", pick: 3,
-      q: "Read these sentences from the passage. “A village is like a stream. When one stone blocks it at the top, every house at the bottom goes thirsty.” What does this comparison show about what Ama believes? Choose THREE answers.",
+      q: "Read these sentences from the passage. “Being fair is like making shoes. If you make every pair the same size, the shoes will fit almost no one. You have to measure each foot first.” What does this comparison show about what Hugo believes? Choose **three** answers.",
       choices: [
-        "Everyone in the village is connected to everyone else.",
-        "A small problem in one place can hurt people far away.",
-        "A keeper has to watch out for the whole village, not just one part of it.",
-        "The houses in the village should be moved closer to the spring.",
-        "The keeper should carry stones up to the top of the mountain.",
-        "Only the people at the bottom of the village need water."
+        "Giving everyone the same amount is not always fair.",
+        "The next keeper should learn how to make shoes.",
+        "Different people can need different things.",
+        "Every family in the village needs new shoes for the winter.",
+        "You should find out what people need before you decide.",
+        "Every family should get the same number of apples."
       ],
       answers: [
-        "Everyone in the village is connected to everyone else.",
-        "A small problem in one place can hurt people far away.",
-        "A keeper has to watch out for the whole village, not just one part of it."
+        "Giving everyone the same amount is not always fair.",
+        "Different people can need different things.",
+        "You should find out what people need before you decide."
       ],
-      explanation: "Ama compares the village to a stream. Her comparison tells why she chose Ren. What happens in one spot reaches each house. So the keeper must care for the whole village. The wrong choices read the stones and houses as real. But her words are about how a village works." },
+      explanation: "Hugo compares being fair to making shoes. Shoes that are all one size fit almost no one. In the same way, giving everyone the same amount is not always fair. Feet come in different sizes, and people have different needs. You measure each foot before you make the shoes. So you should find out what people need first. Two wrong choices act like the shoes are real shoes. But Hugo is talking about sharing apples, not about making shoes. One wrong choice says every family should get the same number. Hugo believes the opposite." },
 
     // Item 15 — hot text: click 2 sentences inside a re-shown paragraph
     { id: "C15", p: 2, type: "hottext", layout: "para", pick: 2,
-      q: "Read paragraph 2 from the passage. The passage shows that Ama is CAREFUL about choosing the next keeper. Click on the TWO sentences in the paragraph that BEST support this idea.",
+      q: "Read paragraph 6 from the passage. The passage shows that Nell makes sure she knows the facts about each family. Click on the **two** sentences in the paragraph that **best** support this idea.",
       choices: [
-        "But Ama's knees had grown stiff, and the path seemed to get a little steeper every year.",
-        "She knew the time had come to choose the next keeper.",
-        "She also knew that this choice mattered more than anything else she had done in fifty years, and she did not want to make it in a hurry.",
-        "For a whole season, she quietly watched the young people of the village at their work and at their play.",
-        "At last she chose three of them: Tomas, who was the strongest; Lina, who was the cleverest; and Ren, who was so quiet that most people forgot he was there."
+        "Nell came back last, with dust from the lane all over her shoes.",
+        "She had knocked on both doors and asked who lived inside and how much food each family had saved for the winter.",
+        "At the cottage, a little boy had pulled her inside to show her the green frog he kept in a jar by the window.",
+        "She had also counted the children in the cottage twice, because they kept running in and out the door.",
+        "Then she sat down on the orchard wall to tell Hugo what she had found."
       ],
       answers: [
-        "She also knew that this choice mattered more than anything else she had done in fifty years, and she did not want to make it in a hurry.",
-        "For a whole season, she quietly watched the young people of the village at their work and at their play."
+        "She had knocked on both doors and asked who lived inside and how much food each family had saved for the winter.",
+        "She had also counted the children in the cottage twice, because they kept running in and out the door."
       ],
-      explanation: "To be careful with a choice, you take your time. You also pay close attention. Ama will not hurry. She spends a whole season watching. Then she picks. The other sentences tell why Ama must choose, or who she chose. But those sentences do not show HOW carefully she chose." }
+      explanation: "To make sure of something, you check it so you know it is right. Nell does not guess. She knocks on both doors and asks who lives inside and how much food each family has saved. Then she counts the children twice, so she knows the number is right. The dusty shoes only show that Nell walked down the lane. The frog is just something a boy wanted her to see. Sitting on the wall only tells what Nell did next. Those sentences do not show Nell checking the facts." }
 
   ]
 };

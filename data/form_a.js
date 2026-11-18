@@ -176,7 +176,7 @@ window.FORM_A = {
 
     // Item 2 — word meaning in context
     { id: "A02", p: 0,
-      q: "Read these sentences from the passage. “Uncle Sami tugged hard on the branch two times. It did not bend or crack. ‘Nice and sturdy,’ he said, and he hung the loop over it.” What does the word sturdy mean in these sentences?",
+      q: "Read these sentences from the passage. “Uncle Sami tugged hard on the branch two times. It did not bend or crack. ‘Nice and sturdy,’ he said, and he hung the loop over it.” What does the word **sturdy** mean in these sentences?",
       choices: [
         "old and dry",
         "thin and bendy",
@@ -201,7 +201,7 @@ window.FORM_A = {
     // Item 4 — EBSR: conclusion + supporting sentence
     { id: "A04", p: 0, type: "ebsr",
       partA: {
-        q: "Part A — What conclusion can be drawn about Amira from the way she chooses a place to hang the feeder?",
+        q: "What conclusion can be drawn about Amira from the way she chooses a place to hang the feeder?",
         choices: [
           "She is afraid of Mrs. Ortiz's orange cat.",
           "She wants the feeder to hang as high as it can go.",
@@ -211,7 +211,7 @@ window.FORM_A = {
         answer: "She wants to keep the birds safe while they eat.",
         explanation: "Amira will not hang the feeder near the fence. The cat naps by the fence. Amira is thinking about the birds. The birds will come to eat. Nothing shows she is scared of the cat herself. Amira and Uncle Sami pick a LOW branch. They can see the branch from the kitchen window. So the other two choices are the opposite of what happens." },
       partB: {
-        q: "Part B — Which sentence from the passage BEST supports the answer in Part A?",
+        q: "Which sentence from the passage **best** supports the answer in Part A?",
         longChoices: true,
         choices: [
           "“Not too full,” she said. “Or it will all spill out the first time the wind blows.”",
@@ -240,7 +240,7 @@ window.FORM_A = {
 
     // Item 6 — hot text: click 2 sentences from a list
     { id: "A06", p: 0, type: "hottext", layout: "list", pick: 2,
-      q: "The passage shows that Uncle Sami lets Amira be IN CHARGE of building the feeder. Click on the TWO sentences from the passage that BEST support this idea.",
+      q: "The passage shows that Uncle Sami lets Amira be in charge of building the feeder. Click on the **two** sentences from the passage that **best** support this idea.",
       choices: [
         "Uncle Sami, who lived in the apartment over the garage, came in stamping snow off his boots.",
         "On the first card she wrote SUPPLIES.",
@@ -259,7 +259,7 @@ window.FORM_A = {
 
     // Item 7 — summary with a missing key event
     { id: "A07", p: 1,
-      q: "Read this summary of the passage. Which KEY event is MISSING from the summary?",
+      q: "Read this summary of the passage. Which key event is missing from the summary?",
       excerptLabel: "📝 A summary of “Pick a Spot”",
       excerpt: [
         "The Rockets and the Owls are tied in a championship soccer game, and Lena steps up to take a penalty kick that could win it. She remembers how her older sister, Noor, taught her in the backyard to pick a spot and trust it. She also remembers the night Noor almost stayed home instead of going to college in Colorado. After the game, Lena calls Noor to tell her what happened."
@@ -275,7 +275,7 @@ window.FORM_A = {
 
     // Item 8 — evidence for a conclusion
     { id: "A08", p: 1, longChoices: true,
-      q: "Which detail from the passage BEST shows that Noor was PATIENT while she was teaching Lena?",
+      q: "Which detail from the passage **best** shows that Noor was patient while she was teaching Lena?",
       choices: [
         "Noor was sixteen then and played goalkeeper for the high school team.",
         "Lena missed more kicks than she made that summer, but Noor never once said they should stop.",
@@ -288,7 +288,7 @@ window.FORM_A = {
     // Item 9 — EBSR: character trait + support
     { id: "A09", p: 1, type: "ebsr",
       partA: {
-        q: "Part A — Which word BEST describes Lena when she takes the last kick?",
+        q: "Which word **best** describes Lena when she takes the last kick?",
         choices: [
           "careless",
           "focused",
@@ -298,7 +298,7 @@ window.FORM_A = {
         answer: "focused",
         explanation: "Focused means you pay attention to a single thing. You let nothing distract you. Lena picks her corner first. The goalkeeper waves her arms. But Lena keeps her eyes on the corner the whole time. Lena does just what Noor's plan says. So Lena is not careless or confused. And Lena never brags." },
       partB: {
-        q: "Part B — Which sentence from the passage BEST supports the answer in Part A?",
+        q: "Which sentence from the passage **best** supports the answer in Part A?",
         longChoices: true,
         choices: [
           "Lena reached up and touched the green headband she was wearing.",
@@ -311,7 +311,7 @@ window.FORM_A = {
 
     // Item 10 — choose TWO: idiom with a literal-reading trap
     { id: "A10", p: 1, type: "ms", pick: 2,
-      q: "Read this sentence from the passage. “The night before she left, Noor got cold feet.” What does the phrase “got cold feet” suggest about Noor? Choose TWO answers.",
+      q: "Read this sentence from the passage. “The night before she left, Noor got cold feet.” What does the phrase “got cold feet” suggest about Noor? Choose **two** answers.",
       choices: [
         "She felt nervous about making such a big change.",
         "Her feet were cold from sitting outside at night.",
@@ -340,7 +340,7 @@ window.FORM_A = {
 
     // Item 12 — choose TWO synonyms
     { id: "A12", p: 2, type: "ms", pick: 2,
-      q: "Read this sentence from the passage. “Pell was so anxious that his hands shook as he set his bowl down beside theirs.” Which TWO words mean about the same as anxious? Choose TWO answers.",
+      q: "Read this sentence from the passage. “Pell was so anxious that his hands shook as he set his bowl down beside theirs.” Which **two** words mean about the same as **anxious**? Choose **two** answers.",
       choices: [
         "proud",
         "worried",
@@ -357,7 +357,7 @@ window.FORM_A = {
 
     // Item 13 — summary of a bounded section
     { id: "A13", p: 2,
-      q: "Which statement BEST summarizes the LAST THREE paragraphs of the passage?",
+      q: "Which statement **best** summarizes the last three paragraphs of the passage?",
       choices: [
         "Darin's face turns red when the queen finds out that he bought a new bowl.",
         "Pell becomes the queen's new advisor.",
@@ -369,7 +369,7 @@ window.FORM_A = {
 
     // Item 14 — choose THREE: what a simile shows
     { id: "A14", p: 2, type: "ms", pick: 3,
-      q: "Read these sentences from the passage. “An honest word is like Pell's bowl. It may not look perfect, but it holds what you put in it. A pretty answer that hides the truth is like a painted crack. It looks fine right up until the moment you need it to hold.” What do these comparisons show about what the queen believes? Choose THREE answers.",
+      q: "Read these sentences from the passage. “An honest word is like Pell's bowl. It may not look perfect, but it holds what you put in it. A pretty answer that hides the truth is like a painted crack. It looks fine right up until the moment you need it to hold.” What do these comparisons show about what the queen believes? Choose **three** answers.",
       choices: [
         "Telling the truth matters more than looking perfect.",
         "The queen's advisor must be good at fixing broken bowls.",
@@ -387,7 +387,7 @@ window.FORM_A = {
 
     // Item 15 — hot text: click 2 sentences inside a re-shown paragraph
     { id: "A15", p: 2, type: "hottext", layout: "para", pick: 2,
-      q: "Read paragraph 2 from the passage. The passage shows that Queen Ilsa is HONEST herself. Click on the TWO sentences in the paragraph that BEST support this idea.",
+      q: "Read paragraph 2 from the passage. The passage shows that Queen Ilsa is honest herself. Click on the **two** sentences in the paragraph that **best** support this idea.",
       choices: [
         "Queen Ilsa lived in a white stone palace at the top of the tallest hill.",
         "One spring, when the river flooded and ruined the wheat fields, she did not pretend that all would be well.",

@@ -52,7 +52,7 @@ const SESSION_ID = (() => {
 
 /* A TRY SAVED BEFORE THE QUESTIONS OR STORIES CHANGED STARTS OVER (Marcos 11/18: "Yes, start over"). A save keeps its own
    copy of the questions, but the stories always come from the site, so an old try would show an old question beside a
-   new story ("Arizona" in the question, "Cameron" in the story). Each form's fingerprint is taken once, as the page
+   new story (an old name in the question, a new name in the story). Each form's fingerprint is taken once, as the page
    loads, and stamped on every save; checkResume drops a save with no stamp or a different one -- the same as the
    teacher's Discard, so the student just picks the form again. Saved scores and the sheet's rows are not touched. */
 function formFingerprint(form) {
@@ -81,7 +81,7 @@ let tabSwitchCount = 0;
 function missEntry(m) {
   const picked = m.yourAnswer == null || m.yourAnswer === '' ? '' :
     ` (picked: ${String(m.yourAnswer).replace(/\s*\|\s*/g, ' / ').replace(/\s+/g, ' ').trim()})`;
-  return `[${m.id}] (${m.skill || 'Unsorted'}) ${m.q}${picked}`;
+  return `[${m.id}] (${m.skill || 'Unsorted'}) ${plainCue(m.q)}${picked}`;
 }
 
 function submitScorePartial() {
@@ -293,6 +293,13 @@ let reviewAutoRun   = false;
    the Place Value FIAB ran formatMathText() this site
    escapes instead — every choice here is a real sentence
    out of a story and must render exactly as written. */
+/* Question text as Smarter Balanced writes it (Mr. O 11/18, "go with all recommended fixes"; the proctor: cue words in
+   lowercase and bold — **best**, **two**, the tested word — never CAPITALS): escaped like everything else, then **word**
+   in the data is shown in bold. The read-aloud takes the words off the page, so the voice says them the same way.
+   plainCue() is the same text for the score sheet (no stars). */
+function cue(raw) { return esc(raw).replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>'); }
+function plainCue(raw) { return String(raw == null ? '' : raw).replace(/\*\*([^*]+)\*\*/g, '$1'); }
+
 function esc(raw) {
   if (raw == null) return '';
   return String(raw)
@@ -1154,16 +1161,16 @@ const app = {
     const list = (choices, right) => `<ul class="key-choices">${choices.map(c =>
       `<li class="${right.includes(c) ? 'key-right' : ''}">${esc(c)}${right.includes(c) ? ' ✅' : ''}</li>`).join('')}</ul>`;
     if (q.type === 'ebsr') {
-      return `<p class="key-ask">${esc(q.partA.q)}</p>${list(q.partA.choices, [q.partA.answer])}${why(q.partA.explanation)}` +
-        `<p class="key-ask">${esc(q.partB.q)}</p>${list(q.partB.choices, [q.partB.answer])}${why(q.partB.explanation)}`;
+      return `<p class="key-ask">${cue(q.partA.q)}</p>${list(q.partA.choices, [q.partA.answer])}${why(q.partA.explanation)}` +
+        `<p class="key-ask">${cue(q.partB.q)}</p>${list(q.partB.choices, [q.partB.answer])}${why(q.partB.explanation)}`;
     }
     if (q.type === 'cr') {   // the written answer: the teacher grades it — the tip the student sees, a strong answer, the checklist
-      return `<p class="key-ask">${esc(q.q)}</p><p class="key-note">${esc(q.guidance)}</p>` +
+      return `<p class="key-ask">${cue(q.q)}</p><p class="key-note">${esc(q.guidance)}</p>` +
         `<div class="key-why"><strong>A strong answer:</strong> ${esc(q.model)}</div>` +
         (q.checklist ? `<ul class="key-check">${q.checklist.map(c => `<li>☐ ${esc(c)}</li>`).join('')}</ul>` : '');
     }
     const excerpt = q.excerpt ? `<blockquote class="key-excerpt">${q.excerpt.map(t => `<p>${esc(t)}</p>`).join('')}</blockquote>` : '';
-    return `<p class="key-ask">${esc(q.q)}</p>${excerpt}${list(q.choices, q.answers || [q.answer])}${why(q.explanation)}`;
+    return `<p class="key-ask">${cue(q.q)}</p>${excerpt}${list(q.choices, q.answers || [q.answer])}${why(q.explanation)}`;
   },
 
   printKey() {
@@ -1725,7 +1732,7 @@ const app = {
     const qtEl = document.getElementById('question-text');
     qtEl.innerHTML = q.type === 'ebsr'
       ? 'This question has two parts. Answer <strong>Part A</strong> and <strong>Part B</strong>.'
-      : esc(q.q);
+      : cue(q.q);
 
     // Re-shown excerpt, when the item has one
     const exEl = document.getElementById('excerpt-box');
@@ -1842,7 +1849,7 @@ const app = {
       qRow.className = 'ebsr-q-row';
       const qText = document.createElement('div');
       qText.className = 'ebsr-q';
-      qText.innerHTML = esc(data.q);
+      qText.innerHTML = cue(data.q);
       const qSpeak = document.createElement('button');
       qSpeak.className = 'speak-btn';
       qSpeak.textContent = '🔊';
@@ -2339,7 +2346,7 @@ const app = {
         this.missedQuestions.map(m =>
           `<div class="missed-item">
             <div class="mi-label">${esc(m.id)}${m.skill ? ` · <span class="mi-skill">${esc(m.skill)}</span>` : ''}</div>
-            <div style="margin:3px 0;">${esc(m.q)}</div>
+            <div style="margin:3px 0;">${cue(m.q)}</div>
             <div>Your answer: <span style="color:var(--danger);">${esc(m.yourAnswer)}</span></div>
             <div>✅ Correct: <strong style="color:var(--correct);">${esc(m.correct)}</strong></div>
             ${m.explanation ? `<div style="margin-top:5px;font-size:0.85rem;color:#555;font-style:italic;">💡 ${esc(m.explanation)}</div>` : ''}
