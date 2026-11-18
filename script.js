@@ -107,7 +107,9 @@ function submitScorePartial() {
       missedSkills:   skillTally(app.missedQuestions),
       startedAt:      app.startedAt || '',
       finishedAt:     app.finishedAt || '',
-      events:         JSON.stringify(app.events || []),
+      // where the student is now, for the dashboard's 📍 Right Now: the question of the student's own order; it rides at
+      // the end of this row's copy of the log only (never in app.events), as on Inference Practice
+      events:         JSON.stringify([...(app.events || []), { e: 'on', q: app.currentIndex + 1, of: app.currentBank.length }]),
       timestamp:      new Date().toLocaleString('en-US', { timeZone: 'America/New_York' })
     })
   }).catch(() => {});
@@ -877,6 +879,16 @@ function renderStoryPanel(passage) {
    start · leave · return · resume · close · finish, each with the
    on-task clock. elapsed is time ON TASK: the timer pauses while the
    page is hidden and counts ticks, so a slept device cannot inflate it. */
+/* 📍 RIGHT NOW (Marcos 11/18: "Labels + live updates"; asked earlier: "teacher should know kid is on question 5 of 17, with
+   3 correct and 2 wrong"): each scored part is logged as answered, right or missed, under the number its miss uses
+   (A02.A, A02.B, B06 …). The dashboard's 📍 Right Now draws one box from each; the written answer is scored by hand
+   and gets none. */
+function logAnswers(q, newMisses) {
+  const missed = new Set(newMisses.map(m => m.id));
+  const ids = q.type === 'ebsr' ? [`${q.id}.A`, `${q.id}.B`] : [q.id];
+  ids.forEach(id => logEvent('answer', { id, ok: !missed.has(id) }));
+}
+
 function logEvent(kind, extra) {
   if (!app.events) app.events = [];
   app.events.push(Object.assign({
@@ -1765,7 +1777,7 @@ const app = {
     else if (q.type === 'cr')      this._renderCr(q, wrap);
     else                           this._renderChoices(q, wrap, q.choices, null, q.longChoices);
 
-    if (this.currentIndex > 0 && this.currentIndex % 5 === 0) submitScorePartial();
+    submitScorePartial();   // 📍 Right Now: a row at every question (Marcos 11/18), not every 5th
     this.saveProgress();
     this.startReadTimer();
   },
@@ -2050,6 +2062,7 @@ const app = {
   confirmAnswer() {
     const q = this.currentBank[this.currentIndex];
     if (this.questionLocked) return;
+    const missBefore = this.missedQuestions.length;   // this question's misses come after (logAnswers)
     if (q.type === 'cr') { this._confirmCr(q); return; }
 
     let correct, correctAnswerStr;
@@ -2117,6 +2130,7 @@ const app = {
 
     this.questionLocked = true;
     this.score += pointsEarned;
+    logAnswers(q, this.missedQuestions.slice(missBefore));   // 📍 Right Now: a box per scored part
     this.streak = correct ? this.streak + 1 : 0;
 
     // Freeze the item and mark it up
