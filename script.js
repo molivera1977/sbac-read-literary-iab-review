@@ -50,6 +50,26 @@ const SESSION_ID = (() => {
   return id;
 })();
 
+/* A TRY SAVED BEFORE THE QUESTIONS OR STORIES CHANGED STARTS OVER (Marcos 11/18: "Yes, start over"). A save keeps its own
+   copy of the questions, but the stories always come from the site, so an old try would show an old question beside a
+   new story ("Arizona" in the question, "Cameron" in the story). Each form's fingerprint is taken once, as the page
+   loads, and stamped on every save; checkResume drops a save with no stamp or a different one -- the same as the
+   teacher's Discard, so the student just picks the form again. Saved scores and the sheet's rows are not touched. */
+function formFingerprint(form) {
+  const d = window['FORM_' + form];
+  if (!d) return '';
+  const s = JSON.stringify([d.passages, d.items]);
+  let h = 0x811c9dc5;
+  for (let i = 0; i < s.length; i += 1) { h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193) >>> 0; }
+  return h.toString(16);
+}
+const FORM_SIGS = Object.fromEntries(Object.keys(window).filter(k => /^FORM_[A-Z]$/.test(k))
+  .map(k => [k.slice(5), formFingerprint(k.slice(5))]));
+function saveIsCurrent(raw) {
+  try { const s = JSON.parse(raw); return !!(s && FORM_SIGS[s.currentForm] && s.dataSig === FORM_SIGS[s.currentForm]); }
+  catch (e) { return false; }
+}
+
 /* ── SHEET SUBMISSION ───────────────────────────────── */
 const SHEET_URL = 'https://script.google.com/macros/s/AKfycbzv8CWv1yyi8NeH04now9UxVL4IZm5yMqqsEGMcgGdrcAOWVB-aSp5siTvSSJXIUpzFMA/exec';
 
@@ -1317,9 +1337,12 @@ const app = {
     const formData = window['FORM_' + form];
     this.currentPassages = formData.passages;
 
-    // Choices shuffle; the PASSAGE ORDER never does, and items
-    // never leave their own passage — otherwise the story panel
-    // would flip back and forth between three stories.
+    // Each student's own order (asked 11/18: "rotate the order of the passages, keep the order for each set of
+    // passage questions, but rotate the answer choices per question"): the stories rotate (1-2-3, 2-3-1 or
+    // 3-1-2), each story's questions stay in the real test's order, and every question's choices are mixed.
+    // Items never leave their own story, so the story panel never flips between stories. The whole bank is
+    // saved with the student's place (and spot-sync copies it to the sheet), so a resume, on any computer,
+    // brings back the same order. Teacher Review Mode keeps the book order.
     const shuffleChoices = q => {
       // hot-text sentences stay in story order (they ARE the story),
       // and a written item has no choices at all
@@ -1332,14 +1355,15 @@ const app = {
       return { ...q, choices: [...q.choices].sort(() => Math.random() - 0.5) };
     };
 
+    const nP = this.currentPassages.length;
+    const first = reviewMode ? 0 : Math.floor(Math.random() * nP);
     const bank = [];
-    this.currentPassages.forEach((_, pIdx) => {
-      // Items shuffle inside their story, but the written answer always
-      // comes last in its set — by then the student has worked the story.
-      const group = formData.items.filter(it => it.p === pIdx && it.type !== 'cr').map(shuffleChoices);
-      shuffle(group);
-      bank.push(...group, ...formData.items.filter(it => it.p === pIdx && it.type === 'cr').map(shuffleChoices));
-    });
+    for (let k = 0; k < nP; k += 1) {
+      // the written answer still comes last in its story's set — by then the student has worked the story
+      const pIdx = (first + k) % nP;
+      bank.push(...formData.items.filter(it => it.p === pIdx && it.type !== 'cr').map(shuffleChoices),
+        ...formData.items.filter(it => it.p === pIdx && it.type === 'cr').map(shuffleChoices));
+    }
     this.currentBank = bank;
 
     const banner = document.getElementById('review-mode-banner');
@@ -1380,7 +1404,7 @@ const app = {
 
     const count = this.currentBank.filter(it => it.p === pIdx).length;
     document.getElementById('passage-progress').textContent =
-      `Story ${pIdx + 1} of ${this.currentPassages.length}`;
+      `Story ${[...new Set(this.currentBank.map(it => it.p))].indexOf(pIdx) + 1} of ${this.currentPassages.length}`;
     document.getElementById('passage-qcount').textContent =
       `${count} question${count === 1 ? '' : 's'} coming up`;
 
@@ -1450,7 +1474,9 @@ const app = {
 
   /* ── RESUME ── */
   checkResume() {
-    const saved = localStorage.getItem(STORAGE_KEY);
+    let saved = localStorage.getItem(STORAGE_KEY);
+    // a try saved before the questions or stories changed starts over (Marcos 11/18) -- the teacher's Discard, done for him
+    if (saved && !saveIsCurrent(saved)) { localStorage.removeItem(STORAGE_KEY); saved = null; }
     const rc = document.getElementById('resume-container');
     const formSelect = document.getElementById('form-select-section');
     if (saved && rc) {
@@ -1507,7 +1533,8 @@ const app = {
       timerSeconds:    this.timerSeconds,
       currentAttemptNum: this.currentAttemptNum,
       events: this.events,
-      startedAt: this.startedAt
+      startedAt: this.startedAt,
+      dataSig: FORM_SIGS[this.currentForm] || ''   // the form's words when this try was saved (checkResume)
     }));
   },
 

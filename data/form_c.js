@@ -68,7 +68,7 @@ window.FORM_C = {
              '</svg>'
       },
       paragraphs: [
-        "On Tuesday, Ms. Rivera showed Mateo's class a video about where garbage goes. Most of it, it turned out, rides in a truck to a giant hill outside of town and just sits there for years and years. Ms. Rivera said that almost a third of what a family throws away is food scraps: banana peels, apple cores, coffee grounds, the ends of carrots.",
+        "On Tuesday, Ms. Rivera showed Mateo's class a video about where garbage goes. Most of it, it turned out, rides in a truck to a giant hill outside of town and just sits there for years and years. Ms. Rivera said that a big part of what a family throws away is food scraps: banana peels, apple cores, coffee grounds, the ends of carrots.",
         "“Those don't belong in the trash at all,” she said. “Worms can eat them and turn them into rich, dark soil. It's called composting, and you can do it in a box at home.”",
         "Mateo did not hear one more word that afternoon. He drew boxes in the margins of his math worksheet, and then he drew worms in the boxes. When the bell rang, he was the first one out the door, and he ran all six blocks home with his backpack bouncing, practicing what he was going to say.",
         "“Abuela,” he called, before the door had even closed behind him, “how do you feel about worms?”",
@@ -209,12 +209,12 @@ window.FORM_C = {
         q: "Part A — What conclusion can be drawn about why Abuela agrees to build the worm bin?",
         choices: [
           "It reminds her of the way her own family made sure nothing went to waste.",
-          "She wants Mateo to earn a good grade from Ms. Rivera.",
-          "She is tired of carrying the trash down to the street.",
-          "She has always wanted to keep worms as pets."
+          "She wants Mateo to earn a good grade from Ms. Rivera for building the worm bin.",
+          "She is tired of carrying the trash all the way down to the street.",
+          "She has always wanted to keep a few worms as pets inside the apartment."
         ],
         answer: "It reminds her of the way her own family made sure nothing went to waste.",
-        explanation: "At first, Abuela is unsure. She says, “Inside, I feel less fine.” She remembers her father's pile in Puebla. Right after, she changes her mind. The story never names a grade. She never says she is tired of the trash. She never says she wants pets." },
+        explanation: "At first, Abuela is unsure. She says, “Inside, I feel less fine.” She remembers her father's pile in Puebla. Right after, she changes her mind. The story never names a grade. She never says she is tired of the trash. She never says she wants pets. She even says she feels less fine about worms inside." },
       partB: {
         q: "Part B — Which sentence from the passage BEST supports the answer in Part A?",
         longChoices: true,
@@ -236,12 +236,12 @@ window.FORM_C = {
       ],
       choices: [
         "Mateo and Abuela begin to build the worm bin.",
-        "Mateo explains why worms need air.",
-        "Abuela learns how to use a drill.",
+        "Mateo explains that air goes in through the holes at the top.",
+        "Abuela learns how to use a drill to make holes in the bin.",
         "The worms arrive from the worm farm."
       ],
       answer: "Mateo and Abuela begin to build the worm bin.",
-      explanation: "Paragraphs 9 and 10 are about the first building steps. Step one is to drill the holes. Step two is to set one bin in the other bin. Air is just a small detail in paragraph 9. Abuela never uses the drill. The worms do not come until later." },
+      explanation: "Paragraphs 9 and 10 are about the first building steps. Step one is to drill the holes. Step two is to set one bin in the other bin. Air is just a small detail in paragraph 9. Abuela never uses the drill. She holds the bin while Mateo drills. The worms do not come until later." },
 
     // Item 6 — hot text: click 2 sentences from a list
     { id: "C06", p: 0, type: "hottext", layout: "list", pick: 2,
@@ -271,8 +271,8 @@ window.FORM_C = {
       ],
       choices: [
         "Nia passes the other runners and wins the race at the finish line.",
-        "Nia's mother records the race on her phone.",
-        "Danielle gets bumped and falls behind.",
+        "Nia's mother stands at the fence and records the whole race on her phone.",
+        "Danielle gets bumped by a runner from Westside and falls behind on the third leg.",
         "Nia's teammates pile on top of her on the grass."
       ],
       answer: "Nia passes the other runners and wins the race at the finish line.",
@@ -282,13 +282,13 @@ window.FORM_C = {
     { id: "C08", p: 1, longChoices: true,
       q: "Which detail from the passage BEST shows that Andre cares a lot about how Nia's race turns out?",
       choices: [
-        "“Text me the second it's over,” he had said on the phone the night before. “Not after you cool down. Not after you get a snack. The SECOND.”",
+        "“Text me the second it's over,” he had said on the phone the night before.",
         "Then last spring a radio station in Atlanta hired him to answer phones and carry coffee.",
         "Andre said that if he carried enough coffee, someday they would let him near a microphone.",
-        "“Don't interrupt the broadcast,” said Andre."
+        "“And Brooks takes the baton,” he would say into a hairbrush as she sprinted past him."
       ],
-      answer: "“Text me the second it's over,” he had said on the phone the night before. “Not after you cool down. Not after you get a snack. The SECOND.”",
-      explanation: "Andre cannot be at the race. So he makes Nia promise. She will tell him the very second the race ends. Andre even says the same thing three ways. His words show he cares a lot. He cares about how the race turns out. The other choices are about his own life or his jokes. The other choices are not about this race." },
+      answer: "“Text me the second it's over,” he had said on the phone the night before.",
+      explanation: "Andre cannot be at the race. So he asks Nia to text him the very second the race is over. He does not want to wait even a little to find out how it went. His words show he cares a lot about how the race turns out. Two choices are about his new job. One choice is about how he talked like an announcer at practice. Those choices are not about this race." },
 
     // Item 9 — EBSR: character trait + support
     { id: "C09", p: 1, type: "ebsr",
@@ -301,7 +301,7 @@ window.FORM_C = {
           "careless"
         ],
         answer: "determined",
-        explanation: "Determined means you keep pushing toward a goal. You keep pushing even when the goal is hard. Nia starts in third place. Her legs are burning. Nia pushes harder anyway. Nia never brags. She follows Andre's rules exactly. So boastful does not fit Nia. Careless does not fit Nia either." },
+        explanation: "Determined means you keep pushing toward a goal. You keep pushing even when the goal is hard. Nia starts in third place. Her legs are burning. Nia pushes harder anyway. Nia never brags. She follows Andre's rules exactly. So boastful does not fit Nia. Careless does not fit Nia either. Nia is not unsure. She never stops to wonder what to do. She runs hard all the way to the line." },
       partB: {
         q: "Part B — Which sentence from the passage BEST supports the answer in Part A?",
         longChoices: true,
@@ -358,7 +358,7 @@ window.FORM_C = {
         "amazed",
         "surprised"
       ],
-      explanation: "The next sentence is the clue. Tomas and Lina look at each other. They look “as if one of them must have heard wrong.” People act this way when something amazes them. People act this way when something surprises them. Tomas and Lina are not tired or bored. Nothing shows anger or pride." },
+      explanation: "The next sentence is the clue. Tomas and Lina look at each other. They look “as if one of them must have heard wrong.” People act this way when something amazes them. People act this way when something surprises them. Tomas and Lina are not tired or bored. Angry and proud do not mean the same as astonished." },
 
     // Item 13 — summary of a bounded section
     { id: "C13", p: 2,
@@ -367,10 +367,10 @@ window.FORM_C = {
         "Ama explains that the keeper must care for the whole village, the three young people fix the stream together, and the keepers still walk the whole stream today.",
         "Tomas and Lina are upset because they were not chosen to be the keeper of the spring.",
         "Tomas lifts a heavy branch out of the stream with his strong arms.",
-        "Ren becomes the keeper because he was the last one to come back down the mountain."
+        "Ama explains that the keeper must be the first to reach the spring, Ren digs a ditch around the branch, and the keepers still race to the spring every morning."
       ],
       answer: "Ama explains that the keeper must care for the whole village, the three young people fix the stream together, and the keepers still walk the whole stream today.",
-      explanation: "A good summary covers each paragraph in a part. A good summary uses just a few words. Here the part is the last three paragraphs. First, Ama explains. Next, the three of them fix the stream. Last, the tradition goes on to this day. Tomas lifting the branch is just one detail. Tomas and Lina get surprised before the last part. Ren was not picked for being last." },
+      explanation: "A good summary covers each paragraph in a part. A good summary uses just a few words. Here the part is the last three paragraphs. First, Ama explains. Next, the three of them fix the stream. Last, the tradition goes on to this day. Tomas lifting the branch is just one detail. Tomas and Lina get surprised before the last part. One choice says the keeper must be first to the spring. But Ama says the keeper must care for the whole stream. Ren digs his ditch before the last part. And the keepers walk the whole stream. They do not race." },
 
     // Item 14 — choose THREE: what a simile shows
     { id: "C14", p: 2, type: "ms", pick: 3,

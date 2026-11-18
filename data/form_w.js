@@ -161,7 +161,7 @@ window.FORM_W = {
 
     // Item 2 — word meaning in context
     { id: "W02", p: 0,
-      q: "Read these sentences from the passage. “Last, Leo sprinkled water over the cups. He did not pour it.” Then he lets “just a few drops” fall on each cup. What does the word sprinkled mean?",
+      q: "Read these sentences from the passage. “Last, Leo sprinkled water over the cups. He did not pour it. He let just a few drops fall on each cup, so the seeds would not wash away.” What does the word sprinkled mean in these sentences?",
       choices: [
         "poured out a lot at one time",
         "dropped a little here and there",
@@ -227,7 +227,7 @@ window.FORM_W = {
     { id: "W06", p: 0, type: "hottext", layout: "list", pick: 2,
       q: "The passage shows that Leo is CAREFUL when he plants the seeds. Click on the TWO sentences from the passage that BEST support this idea.",
       choices: [
-        "Leo's Aunt Rosa came over with a paper bag.",
+        "In the bag were an empty egg carton, a small sack of dirt, and a pack of tomato seeds.",
         "Next, Leo filled each cup with dirt.",
         "Leo put exactly two seeds in each cup, not one more.",
         "He covered them with a thin layer of dirt, just like the seed pack said.",
@@ -238,7 +238,7 @@ window.FORM_W = {
         "Leo put exactly two seeds in each cup, not one more.",
         "He covered them with a thin layer of dirt, just like the seed pack said."
       ],
-      explanation: "Paragraph 7 shows Leo is careful. He puts exactly two seeds in each cup, not one more. He covers the seeds with a thin layer of dirt. He does just what the seed pack said. The wrong choices tell about the bag and the dirt. The wrong choices tell about the windowsill and the sprouts too. The wrong choices do not show Leo being careful." },
+      explanation: "Paragraph 7 shows Leo is careful. He puts exactly two seeds in each cup, not one more. He covers the seeds with a thin layer of dirt. He does just what the seed pack said. The wrong choices tell what was in the bag and how Leo filled the cups. The wrong choices tell about the windowsill and the sprouts too. The wrong choices do not show Leo being careful." },
 
     /* ── PASSAGE 2 · items 7–11 ── */
 
@@ -346,11 +346,11 @@ window.FORM_W = {
       choices: [
         "Pip gives his carrot to an old man in the cold.",
         "Pip becomes Grandmother Wren's helper.",
-        "Grandmother Wren chooses Pip because he can cook faster than anyone else.",
+        "Grandmother Wren loves Pip's soup. She picks him as her helper because he cooked faster than Bo and Lin. Pip cooks soup by himself every winter after that.",
         "Grandmother Wren loves Pip's soup. She picks him as her helper because sharing makes enough for all. Pip shares soup every winter after that."
       ],
       answer: "Grandmother Wren loves Pip's soup. She picks him as her helper because sharing makes enough for all. Pip shares soup every winter after that.",
-      explanation: "A good summary of a section covers each paragraph. A good summary uses a few words. Look at the last three paragraphs. Grandmother Wren tastes the soups. She picks Pip and tells the lesson. Then Pip cooks each winter. Pip becoming her helper is just one part. Pip gives his carrot away before the section. Grandmother Wren chose Pip for sharing. She did not pick him for being fast. Lin was the fast one." },
+      explanation: "A good summary of a section covers each paragraph. A good summary uses a few words. Look at the last three paragraphs. Grandmother Wren tastes the soups. She picks Pip and tells the lesson. Then Pip cooks each winter. Pip becoming her helper is just one part. Pip gives his carrot away before the section. One choice says Pip was picked for cooking faster. But Grandmother Wren chose Pip for sharing. Lin was the fast one. That choice also says Pip cooks by himself. But in paragraph 11, people come to help him." },
 
     // Item 14 — choose THREE: what a comparison shows
     { id: "W14", p: 2, type: "ms", pick: 3,

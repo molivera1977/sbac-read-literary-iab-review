@@ -85,7 +85,7 @@ window.FORM_B = {
       source: "Original practice passage",
       genre: "Realistic fiction",
       paragraphs: [
-        "Two seconds were left on the clock, and the Hillcrest Hawks were behind the Bay View Bulldogs, 42 to 41. Kenji Watanabe stood at the free-throw line with the ball in his hands. The gym was so quiet that he could hear the scoreboard buzzing. He had been fouled on his way to the basket, and now he had two shots. Make one, and the game would be tied. Make both, and the Hawks would be the league champions.",
+        "No time was left on the clock, and the Hillcrest Hawks were behind the Bay View Bulldogs, 42 to 41. Kenji Watanabe stood at the free-throw line with the ball in his hands. The gym was so quiet that he could hear the scoreboard buzzing. He had been fouled on his way to the basket, and now he had two shots. Make one, and the game would be tied. Make both, and the Hawks would be the league champions.",
         "Kenji bounced the ball once, twice, three times. His palms were damp, and the rim looked smaller than it ever had before. He glanced up at the bleachers. There in the front row was his little sister, Mika, holding Grandma's old camera up to her eye.",
         "All summer long, Mika had been the reason Kenji practiced. The court at the end of Larch Street had a bent rim and a net made of chains, and every afternoon before dinner, the two of them walked down there with Kenji's ball. Mika was eight, two years younger than Kenji, and much too short to block a shot. But she chased down every rebound and bounced the ball back to him, and she kept count out loud. “Forty-one. Forty-two. That one doesn't count. It hit the backboard first.”",
         "“One hundred before dinner,” she said every single day, the way a coach would. Some days it took until the streetlights came on, but Mika never once asked to go home early, not even when the mosquitoes came out.",
@@ -219,11 +219,11 @@ window.FORM_B = {
       choices: [
         "Malik cuts the sail out of a plastic garbage bag.",
         "Malik and Desmond find the parts they need in the garage.",
-        "Desmond explains why a kite needs a tail.",
-        "Malik and Desmond build the frame of the kite."
+        "Desmond uses the scissors to scratch a tiny notch into each end of both sticks.",
+        "Malik and Desmond build the part that gives the kite its shape."
       ],
-      answer: "Malik and Desmond build the frame of the kite.",
-      explanation: "Paragraph 5 starts with “First, they made the frame.” Paragraph 6 adds the frame string to finish the frame. Paragraphs 5 and 6 are about the sticks and string. The sticks and string hold the kite together. Finding the parts comes first. The sail and tail come later." },
+      answer: "Malik and Desmond build the part that gives the kite its shape.",
+      explanation: "Paragraph 5 starts with “First, they made the frame.” The frame is the sticks and the string. In paragraph 6, Malik runs the frame string around the sticks. Then Desmond says, “That's the shape of the whole kite.” So both paragraphs are about building the part that gives the kite its shape. Scratching the notches is just one small step. Finding the parts comes first. The sail comes later." },
 
     // Item 6 — hot text: click 2 sentences from a list
     { id: "B06", p: 0, type: "hottext", layout: "list", pick: 2,
@@ -249,7 +249,7 @@ window.FORM_B = {
       q: "Read this summary of the passage. Which KEY event is MISSING from the summary?",
       excerptLabel: "📝 A summary of “One Hundred Before Dinner”",
       excerpt: [
-        "Kenji steps to the free-throw line with two seconds left and his team behind by one point. He sees his little sister Mika in the bleachers with a camera and remembers how she chased his rebounds and counted his shots all summer. His first free throw rolls around the rim and drops in to tie the game. After the game, Mika shows Kenji the picture she took."
+        "Kenji steps to the free-throw line with no time left and his team behind by one point. He sees his little sister Mika in the bleachers with a camera and remembers how she chased his rebounds and counted his shots all summer. His first free throw rolls around the rim and drops in to tie the game. After the game, Mika shows Kenji the picture she took."
       ],
       choices: [
         "Kenji's first free throw ties the score.",
@@ -340,7 +340,7 @@ window.FORM_B = {
         "puzzled",
         "confused"
       ],
-      explanation: "The next sentence is the clue. Bear scratches his head. Fox tilts her head “as if she were trying to solve a riddle.” People act like Bear and Fox when they are puzzled or confused. Bear and Fox are not pleased about the choice. Nothing shows Bear and Fox are sleepy or hungry." },
+      explanation: "The next sentence is the clue. Bear scratches his head. Fox tilts her head “as if she were trying to solve a riddle.” People act like Bear and Fox when they are puzzled or confused. Bear and Fox are not pleased about the choice. Nothing shows Bear and Fox are sleepy or hungry. Proud does not mean puzzled." },
 
     // Item 13 — summary of a bounded section
     { id: "B13", p: 2,
@@ -352,7 +352,7 @@ window.FORM_B = {
         "Bear and Fox are so upset that Field Mouse was chosen that they leave Fern Valley, and from that day on no animal ever climbs Thimble Hill again."
       ],
       answer: "Field Mouse learns that being small does not matter, the four animals walk down the hill together, and the valley still climbs at the slowest animal's pace.",
-      explanation: "A good summary of a section covers each paragraph. The last three paragraphs tell three things. First, Field Mouse is worried she is small. Next, all four walk down the hill together. Last, a custom still lasts today. The lantern part comes just before the section. Bear carries the tortoise. But the ride is just one detail. Bear and Fox do not leave the valley." },
+      explanation: "A good summary of a section covers each paragraph. The last three paragraphs tell three things. First, Field Mouse is worried she is small. Next, all four walk down the hill together. Last, a custom still lasts today. The lesson that a guardian is like a lantern is in paragraph 9, just before the section. Bear carries the tortoise. But the ride is just one detail. Bear and Fox do not leave the valley." },
 
     // Item 14 — choose THREE: what a simile shows
     { id: "B14", p: 2, type: "ms", pick: 3,

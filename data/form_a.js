@@ -70,11 +70,11 @@ window.FORM_A = {
         "That evening, Amira took a pencil and a stack of index cards out of the kitchen drawer. On the first card she wrote SUPPLIES. On the next five cards she wrote STEP 1 through STEP 5. Then she asked Uncle Sami to tell her everything he remembered, and she wrote it all down in her neatest printing. When he mixed up two of the steps, she crossed them out and made fresh cards. By bedtime, the cards sat in a tidy stack on the counter, held together with a clothespin so not one of them could get lost.",
         "On Saturday morning, Amira read the SUPPLIES card out loud while Uncle Sami set everything on the table: the milk jug, washed and dried; a pair of strong scissors; a marker; a long nail; an old wooden spoon; a bag of birdseed; and a ball of string. “You're the boss of this project,” Uncle Sami said. “I'm just the helper with the sharp things.”",
         "“Step one,” Amira read. “Cut a window.” Uncle Sami did not pick up the scissors until she had read the whole card. Amira drew a big square on the front of the jug, leaving about two inches of plastic below it so the seed would not spill out. The plastic was too tough for her hands, so Uncle Sami did the cutting while Amira held the jug still.",
-        "“Step two. Poke drainage holes.” Uncle Sami turned the jug upside down, and Amira used the nail to poke four tiny holes in the bottom. “Rain and snow will get in,” Uncle Sami explained, “so the water needs a way out. Wet seed turns moldy, and moldy seed can make birds sick.”",
+        "“Step two. Poke drainage holes.” Uncle Sami turned the jug upside down, and Amira used the nail to poke tiny holes in the bottom. “Rain and snow will get in,” Uncle Sami explained, “so the water needs a way out. Wet seed turns moldy, and moldy seed can make birds sick.”",
         "“Step three. Add a perch.” This was Amira's favorite part. Just below the window, she poked a hole in each side of the jug. Then she pushed the handle of the wooden spoon in one hole and out the other, so it stuck out on both sides like a tiny bar. “Now they have somewhere to stand while they eat,” she said.",
         "“Step four. Fill it with seed.” Amira poured the birdseed in through the window, slowly, until it came up just below the bottom edge. “Not too full,” she said. “Or it will all spill out the first time the wind blows.”",
         "“Step five. Hang it up.” Uncle Sami tied the string tightly around the neck of the jug, just under the cap, and made a loop at the top. Then they pulled on their boots and carried the feeder out into the snow.",
-        "Amira looked at the fence, where Mrs. Ortiz's orange cat liked to nap. “Not near the fence,” she said. “Too close to Pumpkin.” They chose a low branch of the maple tree instead, right where they could see it from the kitchen window. Uncle Sami tugged hard on the branch two times. It did not bend or crack. “Nice and sturdy,” he said, and he hung the loop over it.",
+        "Amira looked at the fence, where Mrs. Ortiz's orange cat, Pumpkin, liked to nap. “Not near the fence,” she said. “Too close to Pumpkin.” They chose a low branch of the maple tree instead, right where they could see it from the kitchen window. Uncle Sami tugged hard on the branch two times. It did not bend or crack. “Nice and sturdy,” he said, and he hung the loop over it.",
         "Back inside, Amira took one more blank card from the drawer. She wrote STEP 6: WAIT and clipped it to the front of the stack. Then she pulled a chair up to the window, rested her chin on her hands, and watched the feeder sway in the cold air.",
         "“How long will it take?” she asked.",
         "“Could be an hour,” said Uncle Sami. “Could be a week. First the birds have to find it, and then they have to decide to trust it.”",
@@ -176,7 +176,7 @@ window.FORM_A = {
 
     // Item 2 — word meaning in context
     { id: "A02", p: 0,
-      q: "Read these sentences from the passage. “Uncle Sami tugged hard on the branch two times. It did not bend or crack.” Then he calls the branch “nice and sturdy.” What does the word sturdy mean?",
+      q: "Read these sentences from the passage. “Uncle Sami tugged hard on the branch two times. It did not bend or crack. ‘Nice and sturdy,’ he said, and he hung the loop over it.” What does the word sturdy mean in these sentences?",
       choices: [
         "old and dry",
         "thin and bendy",
@@ -220,14 +220,14 @@ window.FORM_A = {
           "Then she pulled a chair up to the window, rested her chin on her hands, and watched the feeder sway in the cold air."
         ],
         answer: "“Not near the fence,” she said. “Too close to Pumpkin.”",
-        explanation: "Amira says no to the fence. The fence is too close to the cat. Here is the moment Amira keeps the birds out of danger. The seed line is about not spilling. The tug line is Uncle Sami checking the branch. The chair line is about waiting." } },
+        explanation: "Amira says no to the fence. The fence is too close to Pumpkin, the cat. Here is the moment Amira keeps the birds out of danger. The seed line is about not spilling. The tug line is Uncle Sami checking the branch. The chair line is about waiting." } },
 
     // Item 5 — main idea of re-shown building paragraphs
     { id: "A05", p: 0,
       q: "Read paragraphs 5 and 6 from the passage again. What is the main idea of these paragraphs?",
       excerpt: [
         "“Step one,” Amira read. “Cut a window.” Uncle Sami did not pick up the scissors until she had read the whole card. Amira drew a big square on the front of the jug, leaving about two inches of plastic below it so the seed would not spill out. The plastic was too tough for her hands, so Uncle Sami did the cutting while Amira held the jug still.",
-        "“Step two. Poke drainage holes.” Uncle Sami turned the jug upside down, and Amira used the nail to poke four tiny holes in the bottom. “Rain and snow will get in,” Uncle Sami explained, “so the water needs a way out. Wet seed turns moldy, and moldy seed can make birds sick.”"
+        "“Step two. Poke drainage holes.” Uncle Sami turned the jug upside down, and Amira used the nail to poke tiny holes in the bottom. “Rain and snow will get in,” Uncle Sami explained, “so the water needs a way out. Wet seed turns moldy, and moldy seed can make birds sick.”"
       ],
       choices: [
         "Uncle Sami explains why wet seed is bad for birds.",
@@ -329,7 +329,7 @@ window.FORM_A = {
     { id: "A11", p: 1, type: "cr",
       q: "What can you infer about the relationship between Lena and her sister Noor? Use details from the passage to support your answer.",
       guidance: "Tell what kind of relationship they have. Then give at least TWO details from the story that prove it, and explain how each one shows it.",
-      model: "Lena and Noor are very close, and they help each other be brave. Noor spent her summer evenings teaching Lena penalty kicks in the backyard, and she never said they should stop, even when Lena missed most of her kicks. Later, when Noor got cold feet about leaving for college, Lena used Noor's own advice, “pick your spot,” to help her go. Noor gave Lena her green headband, and Lena wore it in the big game and called Noor right after she scored. Each sister helps the other one go after her goal.",
+      model: "Lena and Noor are very close, and they help each other be brave. Noor spent her summer evenings teaching Lena penalty kicks in the backyard, and she never said they should stop, even when Lena missed most of her kicks. Later, when Noor got cold feet about leaving for college, Lena used Noor's own advice, “pick your spot,” to help her go. Noor gave Lena her green headband, and Lena wore it in the big game and called Noor after the game. Each sister helps the other one go after her goal.",
       checklist: [
         "I said what their relationship is like — not just that they are sisters.",
         "I used at least TWO details from the story.",
@@ -361,11 +361,11 @@ window.FORM_A = {
       choices: [
         "Darin's face turns red when the queen finds out that he bought a new bowl.",
         "Pell becomes the queen's new advisor.",
-        "The queen chooses Pell because he fixed his bowl better than anyone else in the kingdom could.",
+        "The queen explains that an advisor must be good at fixing things, Pell becomes her advisor because his bowl held water, and families keep a cracked bowl to remember him.",
         "The queen explains why honesty matters, Pell becomes her advisor and always tells her the truth, and families still use a cracked bowl to teach the lesson."
       ],
       answer: "The queen explains why honesty matters, Pell becomes her advisor and always tells her the truth, and families still use a cracked bowl to teach the lesson.",
-      explanation: "A good summary of a section covers each paragraph. A good summary uses a few words. The last three paragraphs tell three things. First comes the queen's lesson. Next come Pell's years as her advisor. Last comes the cracked bowl families still keep. Pell gets the advisor job. But the job is only part of the section. Darin's red face comes before the section. The queen chose Pell because he was honest. She did not choose Pell for his fixing skills." },
+      explanation: "A good summary of a section covers each paragraph. A good summary uses a few words. The last three paragraphs tell three things. First comes the queen's lesson. Next come Pell's years as her advisor. Last comes the cracked bowl families still keep. Pell gets the advisor job. But the job is only part of the section. Darin's red face comes before the section. One choice says the queen wants an advisor who is good at fixing things. But her lesson is about telling the truth. She chose Pell because he was honest." },
 
     // Item 14 — choose THREE: what a simile shows
     { id: "A14", p: 2, type: "ms", pick: 3,
